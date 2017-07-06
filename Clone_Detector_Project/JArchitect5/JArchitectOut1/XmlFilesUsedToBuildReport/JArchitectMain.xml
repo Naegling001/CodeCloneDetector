@@ -1,0 +1,1079 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<NDepend>
+  <ReportInfo AppName="jproject (v1.0)" NDependDate="11/30/2016 03:29:05" BuiltDuration="00:08" ComparisonAvailable="False" CoverageAvailable="False" ComparedWith="No baseline for comparison defined." NDependVersion="5.0.0.4687 (Evaluation: 11 days left)" />
+<ProjectSortForCompilOrObfusk>
+  <Project Project="junit">3</Project>
+</ProjectSortForCompilOrObfusk>
+<ProjectSortForCompilOrObfusk>
+  <Project Project="junit">3</Project>
+</ProjectSortForCompilOrObfusk>
+<ApplicationMetrics NAsm="1" NbSourceFiles="0" NbLinesOfCode="8032" NbLinesOfComment="6245" PercentageComment="43" NType="1338" NClass="1274" NAbstractClass="30" NInterface="60" NValueType="0" NExceptionType="25" NAttributeType="31" NDelegateType="0" NEnumType="4" NGenericMethodsDefinition="0" NGenericTypesDefinition="11" NILInstruction="53546" NMethods="5195" NFields="1106" NPackages="63" NThirdPartyProjects="2" NThirdPartyPackages="23" NThirdPartyTypes="223" NThirdPartyMethods="543" NThirdPartyFields="18" PercentCodeCoverage="0" PercentPublicType="75.56" PercentPublicMethod="86.6" PercentClassWithAtLeastOnePublicField="17.12">
+  <PropertyOnInterface Occ="61" Avg="0" StdDev="0" MaxVal="0" MaxName="junit.extensions.package-info" />
+  <MethodOnInterface Occ="61" Avg="0.69" StdDev="1.41" MaxVal="8" MaxName="junit.samples.money.IMoney" />
+  <ArgOnMethodOnInterface Occ="42" Avg="0.98" StdDev="0.83" MaxVal="3" MaxName="junit.runner.TestRunListener.testFailed(int,String,String)" />
+  <PublicPropertyOnClass Occ="1273" Avg="0" StdDev="0" MaxVal="0" MaxName="junit.extensions.ActiveTestSuite$1" />
+  <PublicMethodOnClass Occ="1273" Avg="3.49" StdDev="4.94" MaxVal="93" MaxName="org.junit.tests.assertion.AssertionTest" />
+  <ArgOnPublicMethodOnClass Occ="4444" Avg="0.48" StdDev="0.81" MaxVal="6" MaxName="org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms$TypeVariablesAbound.forItem(Object,Collection,Map,List,Object[],Collection[])&lt;D,E,F,G&gt;" />
+  <ILInstructionInNonAbstractMethods Occ="5195" Avg="10.31" StdDev="13.46" MaxVal="293" MaxName="org.junit.rules.ExpectedExceptionTest.testsWithEventMatcher()" />
+  <TypeWithTheMostILInstruction Occ="1274" Avg="41.85" StdDev="93.3" MaxVal="1941" MaxName="org.junit.tests.assertion.AssertionTest" />
+  <MethodCC Occ="5195" Avg="1.25" StdDev="0.82" MaxVal="16" MaxName="org.junit.internal.ComparisonCriteria.arrayEquals(String,Object,Object,boolean)" />
+</ApplicationMetrics>
+<ProjectDependencies>
+  <Dependencies_For Project="rt v1.0" />
+  <Dependencies_For Project="MISSING v1.0" />
+  <Dependencies_For Project="junit v1.0">
+    <DependsOn>
+      <DependsOn_Name>rt v1.0</DependsOn_Name>
+      <DependsOn_Name>MISSING v1.0</DependsOn_Name>
+    </DependsOn>
+  </Dependencies_For>
+</ProjectDependencies>
+<ProjectsMetrics>
+  <Project Project="junit v1.0" NTypes="1338" NAbstractTypes="90" NILInstructionInAsm="53546" NbLinesOfCodeInAsm="8032" NbLinesOfCommentInAsm="6245" PercentageCommentInAsm="43" PercentageCoverageInAsm="-" AfferentCoupling="0" EfferentCoupling="154" RelationalCohesion="3.04" Instability="1" Abstractness="0.07" DistFrMainSeq="0.05" NormDistFrMainSeq="0.07" />
+</ProjectsMetrics>
+<PackagesMetrics>
+  <Package Package="junit.extensions" NTypes="7" NILInstruction="194" NbLinesOfCode="40" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="3" EfferentCoupling="2" />
+  <Package Package="junit.framework" NTypes="18" NILInstruction="2017" NbLinesOfCode="358" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="22" EfferentCoupling="7" />
+  <Package Package="junit.runner" NTypes="4" NILInstruction="515" NbLinesOfCode="119" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="3" EfferentCoupling="7" />
+  <Package Package="junit.textui" NTypes="3" NILInstruction="521" NbLinesOfCode="104" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="8" EfferentCoupling="6" />
+  <Package Package="junit.samples" NTypes="4" NILInstruction="250" NbLinesOfCode="45" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="5" />
+  <Package Package="junit.samples.money" NTypes="5" NILInstruction="963" NbLinesOfCode="154" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="4" />
+  <Package Package="junit.tests" NTypes="3" NILInstruction="33" NbLinesOfCode="7" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="4" EfferentCoupling="6" />
+  <Package Package="junit.tests.extensions" NTypes="13" NILInstruction="449" NbLinesOfCode="95" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="5" />
+  <Package Package="junit.tests.framework" NTypes="40" NILInstruction="1717" NbLinesOfCode="362" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="5" />
+  <Package Package="junit.tests.runner" NTypes="22" NILInstruction="983" NbLinesOfCode="160" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="8" />
+  <Package Package=".project::org.hamcrest" NTypes="1" NILInstruction="3" NbLinesOfCode="0" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="1" />
+  <Package Package="org.junit" NTypes="18" NILInstruction="1220" NbLinesOfCode="183" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="38" EfferentCoupling="9" />
+  <Package Package="org.junit.function" NTypes="1" NILInstruction="0" NbLinesOfCode="0" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="3" EfferentCoupling="1" />
+  <Package Package="org.junit.matchers" NTypes="2" NILInstruction="33" NbLinesOfCode="8" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="4" />
+  <Package Package="org.junit.rules" NTypes="274" NILInstruction="8478" NbLinesOfCode="1101" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="12" EfferentCoupling="25" />
+  <Package Package="org.junit.validator" NTypes="25" NILInstruction="473" NbLinesOfCode="64" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="11" />
+  <Package Package="org.junit.experimental" NTypes="2" NILInstruction="85" NbLinesOfCode="19" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="5" />
+  <Package Package="org.junit.experimental.categories" NTypes="102" NILInstruction="1900" NbLinesOfCode="283" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="14" />
+  <Package Package="org.junit.experimental.max" NTypes="7" NILInstruction="520" NbLinesOfCode="89" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="10" />
+  <Package Package="org.junit.experimental.results" NTypes="6" NILInstruction="210" NbLinesOfCode="31" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="6" EfferentCoupling="7" />
+  <Package Package="org.junit.experimental.runners" NTypes="1" NILInstruction="44" NbLinesOfCode="6" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="5" />
+  <Package Package="org.junit.experimental.theories" NTypes="15" NILInstruction="917" NbLinesOfCode="149" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="10" EfferentCoupling="9" />
+  <Package Package="org.junit.experimental.theories.internal" NTypes="7" NILInstruction="989" NbLinesOfCode="179" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="4" EfferentCoupling="6" />
+  <Package Package="org.junit.experimental.theories .suppliers" NTypes="2" NILInstruction="40" NbLinesOfCode="6" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="4" />
+  <Package Package="org.junit.internal" NTypes="23" NILInstruction="1092" NbLinesOfCode="180" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="21" EfferentCoupling="10" />
+  <Package Package="org.junit.internal.builders" NTypes="15" NILInstruction="433" NbLinesOfCode="71" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="4" EfferentCoupling="10" />
+  <Package Package="org.junit.internal.management" NTypes="12" NILInstruction="237" NbLinesOfCode="46" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="4" />
+  <Package Package="org.junit.internal.matchers" NTypes="6" NILInstruction="299" NbLinesOfCode="10" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="5" />
+  <Package Package="org.junit.internal.requests" NTypes="6" NILInstruction="164" NbLinesOfCode="24" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="1" EfferentCoupling="7" />
+  <Package Package="org.junit.internal.runners" NTypes="21" NILInstruction="1941" NbLinesOfCode="374" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="8" EfferentCoupling="14" />
+  <Package Package="org.junit.internal.runners.model" NTypes="3" NILInstruction="98" NbLinesOfCode="18" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="7" />
+  <Package Package="org.junit.internal.runners.rules" NTypes="12" NILInstruction="434" NbLinesOfCode="43" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="5" />
+  <Package Package="org.junit.internal.runners.statements" NTypes="12" NILInstruction="905" NbLinesOfCode="186" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="8" />
+  <Package Package="org.junit.runner" NTypes="45" NILInstruction="2341" NbLinesOfCode="336" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="41" EfferentCoupling="23" />
+  <Package Package="org.junit.runner.manipulation" NTypes="10" NILInstruction="185" NbLinesOfCode="27" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="10" EfferentCoupling="3" />
+  <Package Package="org.junit.runner.notification" NTypes="34" NILInstruction="1628" NbLinesOfCode="250" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="23" EfferentCoupling="13" />
+  <Package Package="org.junit.runners" NTypes="25" NILInstruction="1658" NbLinesOfCode="173" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="36" EfferentCoupling="21" />
+  <Package Package="org.junit.runners.model" NTypes="41" NILInstruction="1953" NbLinesOfCode="284" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="26" EfferentCoupling="14" />
+  <Package Package="org.junit.runners.parameterized" NTypes="14" NILInstruction="1016" NbLinesOfCode="131" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="10" />
+  <Package Package="org.junit.samples" NTypes="4" NILInstruction="247" NbLinesOfCode="40" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="7" />
+  <Package Package="org.junit.samples.money" NTypes="2" NILInstruction="550" NbLinesOfCode="68" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="4" />
+  <Package Package="org.junit.tests" NTypes="4" NILInstruction="100" NbLinesOfCode="15" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="11" />
+  <Package Package="org.junit.tests.assertion" NTypes="7" NILInstruction="2279" NbLinesOfCode="311" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="11" />
+  <Package Package="org.junit.tests.deprecated" NTypes="4" NILInstruction="65" NbLinesOfCode="8" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="5" />
+  <Package Package="org.junit.tests.description" NTypes="11" NILInstruction="347" NbLinesOfCode="33" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="6" />
+  <Package Package="org.junit.tests.junit3compatibility" NTypes="58" NILInstruction="1446" NbLinesOfCode="236" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="16" />
+  <Package Package="org.junit.tests.listening" NTypes="21" NILInstruction="487" NbLinesOfCode="69" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="11" />
+  <Package Package="org.junit.tests.manipulation" NTypes="29" NILInstruction="700" NbLinesOfCode="89" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="9" />
+  <Package Package="org.junit.tests.experimental" NTypes="13" NILInstruction="451" NbLinesOfCode="82" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="10" />
+  <Package Package="org.junit.tests.experimental.max" NTypes="16" NILInstruction="833" NbLinesOfCode="154" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="16" />
+  <Package Package="org.junit.tests.experimental.parallel" NTypes="6" NILInstruction="189" NbLinesOfCode="40" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="7" />
+  <Package Package="org.junit.tests.experimental.results" NTypes="4" NILInstruction="166" NbLinesOfCode="14" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="10" />
+  <Package Package="org.junit.tests.experimental.theories" NTypes="9" NILInstruction="297" NbLinesOfCode="46" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="2" EfferentCoupling="11" />
+  <Package Package="org.junit.tests.experimental.theories .extendingwithstubs" NTypes="13" NILInstruction="519" NbLinesOfCode="52" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="12" />
+  <Package Package="org.junit.tests.experimental.theories .internal" NTypes="16" NILInstruction="726" NbLinesOfCode="80" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="11" />
+  <Package Package=".project::org.junit.tests.experimental .theories.runner" NTypes="75" NILInstruction="1585" NbLinesOfCode="151" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="13" />
+  <Package Package="org.junit.tests.running" NTypes="1" NILInstruction="3" NbLinesOfCode="0" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="3" />
+  <Package Package="org.junit.tests.running.core" NTypes="14" NILInstruction="648" NbLinesOfCode="111" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="7" />
+  <Package Package="org.junit.tests.running.methods" NTypes="70" NILInstruction="2227" NbLinesOfCode="353" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="12" />
+  <Package Package="org.junit.tests.running.classes" NTypes="82" NILInstruction="2411" NbLinesOfCode="315" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="16" />
+  <Package Package="org.junit.tests.running.classes.parent" NTypes="6" NILInstruction="187" NbLinesOfCode="33" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="10" />
+  <Package Package="org.junit.tests.validation" NTypes="10" NILInstruction="138" NbLinesOfCode="17" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="7" />
+  <Package Package="org.junit.tests.validation .anotherpackage" NTypes="2" NILInstruction="7" NbLinesOfCode="0" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="2" />
+</PackagesMetrics>
+<TypesMetrics />
+<TrendCharts>
+  <TrendChart><![CDATA[
+
+<hr/>
+<div id='chart0' class='chart'>
+    <h4>Lines of Code</h4>
+</div>
+<hr/>
+<div id='chart1' class='chart'>
+    <h4>Rules Violated</h4>
+</div>
+<hr/>
+<div id='chart2' class='chart'>
+    <h4>Rules Violations</h4>
+</div>
+<hr/>
+<div id='chart3'>
+    <h4>Percentage Coverage by Tests</h4>
+    <img src=".\JArchitectReportFiles\StatusError.png"/> No Trend Data has been logged for this Chart.
+</div>
+<hr/>
+<div id='chart4' class='chart'>
+    <h4>Max</h4>
+</div>
+<hr/>
+<div id='chart5' class='chart'>
+    <h4>Average</h4>
+</div>
+<hr/>
+<div id='chart6' class='chart'>
+    <h4>Third-Party Usage</h4>
+</div>
+
+
+<script>
+var ChartData0 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Lines of Code",'line'],
+    ['x1',"# Lines of Code Covered",'area'],
+    ['x2',"# Lines of Code (NotMyCode)",'area'],
+    ['x3',"# Lines of Comments",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 8032,
+    x1: 0,
+    x2: 0,
+    x3: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 8032,
+    x1: 0,
+    x2: 0,
+    x3: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData1 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Rules",'line'],
+    ['x1',"# Rules Violated",'area'],
+    ['x2',"# Critical Rules Violated",'area'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 78,
+    x1: 43,
+    x2: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 78,
+    x1: 43,
+    x2: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData2 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Rules Violations",'area'],
+    ['x1',"# Critical Rules Violations",'area'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 9543,
+    x1: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 9543,
+    x1: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData3 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Percentage Code Coverage",'area'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+]
+};
+var ChartData4 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Max BC Cyclomatic Complexity for Methods",'line'],
+    ['x1',"Max # Lines of Code for Methods (JustMyCode)",'line'],
+    ['x2',"Max # of Methods for Types",'line'],
+    ['x3',"Max BC Nesting Depth for Methods",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 16,
+    x1: 34,
+    x2: 97,
+    x3: 5,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 16,
+    x1: 34,
+    x2: 97,
+    x3: 5,
+    tooltip: "v1.0"},
+]
+};
+var ChartData5 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Average BC Cyclomatic Complexity for Methods",'line'],
+    ['x1',"Average # Lines of Code for Methods",'line'],
+    ['x2',"Average # Methods for Types",'line'],
+    ['x3',"Average BC Nesting Depth for Methods",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 1.25,
+    x1: 2.73,
+    x2: 3.88,
+    x3: 0.06,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 1.25,
+    x1: 2.73,
+    x2: 3.88,
+    x3: 0.06,
+    tooltip: "v1.0"},
+]
+};
+var ChartData6 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Third-Party Types Used",'line'],
+    ['x1',"# Third-Party Methods Used",'line'],
+    ['x2',"# Third-Party Projects Used  x 10",'line'],
+    ['x3',"# Third-Party Packages Used  x 10",'line'],
+    ['x4',"# Third-Party Fields Used  x 10",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 223,
+    x1: 543,
+    x2: 20,
+    x3: 230,
+    x4: 180,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 223,
+    x1: 543,
+    x2: 20,
+    x3: 230,
+    x4: 180,
+    tooltip: "v1.0"},
+]
+};
+
+</script>
+
+
+<script>
+    (function ($) {
+        var MND3 = {
+            init: function (target, obj) {
+                if (!obj) {
+                    console.log('No data available');
+                    return false;
+                }
+
+                var data = obj.ChartValues;
+		        if(data.length == 0) {
+		            console.log('No data value available');
+                    return false;
+		        }
+
+                if (!MND3.initiated) {
+                   $(document).mousemove(function(event) {
+                      MND3.x = event.pageX;
+                      MND3.y = event.pageY;
+                   });
+                   MND3.initiated = 1;
+                }
+     
+                var labels = obj.ChartLabels;
+                var lines = [];
+
+                var minDate = data[0].date,
+                    maxDate = data[data.length - 1].date;
+
+                $(labels).each(function () {
+                    var exclude = ['date', 'tooltip', 'annotation'];
+                    if (exclude.indexOf(this[0]) === -1) {
+                        lines.push([this[0], this[2], data[0][this[0]]]);
+                    }
+                });
+
+                var minValue = data[0][lines[0][0]],
+                    maxValue = data[0][lines[0][0]];
+
+                var minDate = data[0]['date'],
+                    maxDate = data[0]['date'];
+
+                $(data).each(function () {
+                    var _this = this;
+                    $(lines).each(function () {
+                        var value = _this[this[0]];
+                        if (value < minValue) {
+                            minValue = value;
+                        }
+                        if (value > maxValue) {
+                            maxValue = value;
+                        }
+                        if (value > this[2]) {
+                            this[2] = value;
+                        }
+                    });
+                    var date = this['date'];
+                    if (date < minDate) {
+                       minDate = date;
+                    }
+                    if (date > maxDate) {
+                       maxDate = date;
+                    }
+                });
+
+                lines.sort(MND3.sortLayers);
+
+                var w = 620,
+                    h = 380,
+                    pl = 60,
+                    pr = 0,
+                    pb = 70,
+                    pt = 15,
+                    th = h + pt + pb,
+                    tw = w + pr + pl,
+                    y = d3.scale.linear().domain([minValue, maxValue]).range([h, 0]),
+                    x = d3.time.scale().domain([minDate, maxDate]).range([0, w]);
+
+                var vis = d3.select(target)
+                .data([data])
+                .append("svg:svg")
+                .attr("width", tw)
+                .attr("height", th)
+                .append("svg:g")
+                .attr("transform", "translate(" + pl + ", " + pt + ")");
+
+                target = $(target);
+                this.populateTooltip(labels, target);
+                this.populateDefinitions(labels, lines, target);
+
+                var text = vis.selectAll("text")
+                            .data(data)
+                            .enter()
+                            .append("text");
+
+                var versionCount = 0;
+
+                var textLabels = text
+                     .attr("x", function (d) { return x(d.date); })
+                     .attr("y", function (d) { return th - 20; })
+                     .text(function (d) {
+                         if (d['annotation']) {
+                             versionCount++;
+                             return d['annotation'];
+                         }
+                     });
+
+                var axisTick = Math.floor(20 / versionCount);
+
+                vis.append("svg:path")
+                .attr("class", "annotation")
+                .attr("d", d3.svg.line()
+                    .x(function (d) { return x(d.date) })
+                    .y(function (d) { if (d['annotation']) { versionCount-- }; return (th - 50 + (versionCount * axisTick)); })
+                );
+
+                
+                
+
+                // Define the right date tick to show on chart x-axis
+                var ticks;
+                var timeDiff = (maxDate - minDate) / 60 / 60 / 24;  
+
+                // In timeDiff one day equals 1000  
+                if (timeDiff < 10) {  // 10 is like 7 minutes, tick every minute  (1440 minutes in a day)
+                    ticks = [d3.time.minute, 1];
+
+                } else if (timeDiff < 250) {  // 250 is like 6h, tick every hour
+                    ticks = [d3.time.hour, 1];
+
+                } else if (timeDiff < 6*1000) { // 6 days, tick every day
+                    ticks = [d3.time.day, 1];
+
+                } else if (timeDiff < 3*7*1000) { // 3 weeks, tick every 3 days
+                    ticks = [d3.time.day, 3];
+
+                } else if (timeDiff < 6*7*1000) { // 6 weeks, tick every week
+                    ticks = [d3.time.week, 1];
+
+                } else if (timeDiff < 3*30*1000) { // 3 months, tick every 2 weeks
+                    ticks = [d3.time.week, 2];
+
+                } else if (timeDiff < 6*30*1000) { // 6 monthes, tick every month
+                    ticks = [d3.time.month, 1];
+
+                } else if (timeDiff < 18*30*1000) { // 18 monthes, tick every 3 monthes
+                    ticks = [d3.time.month, 3];
+
+                } else if (timeDiff < 36*30*1000) { // 36 monthes, tick every 6 monthes
+                    ticks = [d3.time.month, 6];
+
+                } else if (timeDiff < 10*365*1000) { // 10 years, tick every year
+                    ticks = [d3.time.year, 1];
+
+                } else { // Tick every 3 years
+                    ticks = [d3.time.year, 3];
+                }
+  
+                var dateFormat;
+                if (timeDiff < 36*30*1000) { // 36 months, 3 years, show the day!
+                    dateFormat = "%m/%d/%Y";
+                } else {
+                    dateFormat = "%m/%Y";
+                }
+
+                var xAxis = d3.svg.axis()
+                  .outerTickSize(2)
+                  .scale(x)
+                  .orient("bottom")
+                  .ticks(ticks[0], ticks[1])
+                  .tickFormat(d3.time.format(dateFormat));
+
+                vis.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0, " + h + ")")
+                  .call(xAxis);
+
+                var yAxis = d3.svg.axis()
+                  .outerTickSize(2)
+                  .scale(y)
+                  .orient("left");
+
+                vis.append("g")
+                  .attr("class", "y axis")
+                  .call(yAxis);
+
+                vis.append("g")
+                    .attr("class", "grid")
+                    .attr("transform", "translate(0," + h + ")")
+                    .call(xAxis
+                        .tickSize(-h, 0, 0)
+                        .tickFormat("")
+                    )
+
+                vis.append("g")
+                    .attr("class", "grid")
+                    .call(yAxis
+                        .tickSize(-w, 0, 0)
+                        .tickFormat("")
+                    )
+                $(lines).each(function () {
+
+                    var lineLabel = this[0];
+                    var lineType = this[1];
+
+                    if (lineType === 'line') {
+                        vis.append("svg:path")
+                        .attr("class", "line")
+                        .attr("data-group", lineLabel)
+                        .attr("data-type", 'line')
+                        .attr("d", d3.svg.line()
+                            .x(function (d) { return x(d.date) })
+                            .y(function (d) { return y(d[lineLabel]) })
+                        )
+                        .on('mouseover', MND3.nearestPointFocus)
+                        .on('mousemove', MND3.nearestPointFocus)
+                        .on('click', MND3.lockTooltip);
+                    }
+                    if (lineType === 'area') {
+                        vis.append("svg:path")
+                        .attr("class", "area")
+                        .attr("data-group", lineLabel)
+                        .attr("data-type", 'area')
+                        .attr("d", d3.svg.area()
+                            .x(function (d) { return x(d.date) })
+                            .y0(function (d) { return y(minValue) })
+                            .y1(function (d) { return y(d[lineLabel]) })
+                        )
+                        .on('mouseover', MND3.nearestPointFocus)
+                        .on('mousemove', MND3.nearestPointFocus)
+                        .on('click', MND3.lockTooltip);
+                    }
+
+                    vis.selectAll("circle.line")
+                    .data(data)
+                    .enter().append("svg:circle")
+                    .attr("class", "point")
+                    .attr("data-group", lineLabel)
+                    .attr("data-value", function(d) { return d[lineLabel] })
+                    .attr("data-date", function(d) { return d.date })
+                    .attr("data-version", function(d) { return d['tooltip'] })
+                    .attr("cx", function (d) { return x(d.date) })
+                    .attr("cy", function (d) { return y(d[lineLabel]) })
+                    .attr("r", 3)
+                    .on('mouseover', MND3.pointFocus)
+                    .on('click', MND3.lockTooltip);
+
+                });
+
+            },
+            nearestPointFocus: function(useless, useless2, useless3, _this) {
+                _this = _this || this;
+                var target = $(_this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    return false;
+                }
+                var grp = $(_this).attr('data-group');
+                var nearest = $.nearest(
+                    {x: MND3.x, y: MND3.y},
+                    target.find(".point[data-group='" + grp + "']"),
+                    {onlyX: true}
+                ).first();
+                if (nearest[0] !== MND3.last) {
+                    MND3.groupBlur(target);
+                    MND3.pointFocus({}, null, null, nearest[0]);
+                }
+            },
+            pointFocus: function(data, useless, useless2, _this) {
+                _this = _this || this;
+                var target = $(_this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    return false;
+                }
+                MND3.groupBlur(target);
+                var grp = $(_this).attr('data-group');
+                var type = $(_this).attr('data-type');
+                var line = target.find("path[data-group='" + grp + "']");
+                if (type === 'line') {
+                    line.attr("class", "active line");
+                }
+                if (type === 'area') {
+                    line.attr("class", "active area");
+                }
+
+                var groupCoord = $(_this).attr('data-date');
+                var circleOffset = $(_this).offset();
+                var chartOffset = $(target).offset();
+                var tooltipPosition = {top: circleOffset.top - chartOffset.top, left: circleOffset.left - chartOffset.left};
+  
+
+                MND3.groupFocus(groupCoord, target);
+                MND3.updateTooltip(groupCoord, target, tooltipPosition, grp);
+            },
+            groupFocus: function(groupCoord, target){
+                target.find(".point[data-date='" + groupCoord + "']").attr('r', 5).attr('class','point active');
+            },
+            pointBlur: function () {
+                var target = $(this).parents('.chart');
+                var grp = $(this).attr('data-group');
+                var type = $(this).attr('data-type');
+                var line = target.find("path[data-group='" + grp + "']");
+                if (type === 'line') {
+                    line.attr("class", "active line");
+                }
+                if (type === 'area') {
+                    line.attr("class", "active area");
+                }
+
+                MND3.groupBlur(target);
+            },
+            groupBlur: function (target) {
+                target.find('.point.active').attr('r', 3).attr('class', 'point');
+                target.find('.tooltip .focused').removeClass('focused');
+                target.find('.tooltip').hide();
+            },
+            populateTooltip: function (labels, target) {
+                var tooltip = $("<div class='tooltip'><div class='close'>x</div></div>");
+                var row = $("<div class='row'><span class='color'></span><span class='label'></span><span class='value'></span></div>");
+                $(labels).each(function () {
+                    var thisRow = row.clone();
+                    thisRow.attr('data-group', this[0]);
+                    thisRow.find('.label').html(this[1] + ' : ');
+                    tooltip.append(thisRow);
+                });
+                $(target).on('click', '.tooltip .close', function() {
+                    MND3.groupBlur(target);
+                    MND3.unlockTooltip(target);
+                });
+                target.append(tooltip);
+            },
+            updateTooltip: function(groupCoord, target, tooltipPosition, grp){
+                target.find('.tooltip').css('top', tooltipPosition.top);
+                target.find('.tooltip').css('left', tooltipPosition.left + 20);
+
+                target.find('.tooltip .row').hide();
+
+                var date = new Date(groupCoord);
+                var format = d3.time.format("%m/%d/%Y %H:%M:%S");
+                date = date ? format(date) : 'N/A';
+                target.find(".tooltip .row[data-group='date']").show().find('.value').text(date);
+
+                var one = target.find(".point[data-date='" + groupCoord + "']").first();
+                var version = one.attr('data-version');
+                target.find(".tooltip .row[data-group='tooltip']").show().find('.value').text(version);
+
+                target.find(".point[data-date='" + groupCoord + "']").each(function(){
+                    var group = $(this).attr('data-group');
+                    var row = target.find(".tooltip .row[data-group='"+ group +"']");
+                    if(grp === group){
+                        row.addClass('focused');
+                    }
+                    var val = $(this).attr('data-value');
+                    row.find(".value").text(val);
+                    row.show();
+                });
+
+                target.find('.tooltip').show();
+            },        
+            lockTooltip: function() {
+                var target = $(this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    MND3.unlockTooltip(target);
+                    MND3.nearestPointFocus(null, null, null, this);
+                } else {
+                    target.addClass('locked');
+                }
+            },
+            unlockTooltip: function(target) {
+                target.removeClass('locked');
+            },
+            populateDefinitions: function (labels, lines, target) {
+                var definitions = $("<div class='definitions'></div>");
+                var row = $("<div class='row'><span class='color'></span><span class='label'></span></div>");
+                $(lines).each(function () {
+                    var thisRow = row.clone();
+                    thisRow.attr('data-group', this[0]);
+                    definitions.append(thisRow);
+                });
+                $(labels).each(function () {
+                    definitions.find("[data-group='" + this[0] + "'] .label").html(this[1]);
+                });
+                target.append(definitions);
+            },
+            sortLayers: function (a, b) {
+                if (a[2] < b[2])
+                    return 1;
+                if (a[2] > b[2])
+                    return -1;
+                return 0;
+            },
+            x:0,
+            y:0,
+            last:{},
+            initiated:0
+        };
+
+        $(document).ready(function () {
+                MND3.init('#chart0', ChartData0);
+    MND3.init('#chart1', ChartData1);
+    MND3.init('#chart2', ChartData2);
+
+    MND3.init('#chart4', ChartData4);
+    MND3.init('#chart5', ChartData5);
+    MND3.init('#chart6', ChartData6);
+
+        });
+    }(jQuery));
+</script>
+<style type='text/css'>
+.chart{
+    font-family:Arial; 
+    font-size:14px;
+    position: relative;
+    width:940px;
+    float:left;
+    padding-bottom:30px;
+}
+.chart > svg{
+    position:relative;
+    float:left;
+}
+.tooltip{
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 5px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+.tooltip .color, .definitions .color{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    margin-top:2px;
+    margin-right:6px;
+}
+.tooltip .focused{
+    font-weight:bold;
+}
+.tooltip .close{
+    position: absolute;
+    top:0;
+    right:5px;
+    cursor:pointer;
+}
+.tooltip .close:hover{
+    font-weight:bold;
+}
+.definitions{
+    float:right;
+}
+.grid{
+    stroke:#888888;
+}
+
+.annotation {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.line {
+    fill: none;
+    stroke-width: 3px;
+}
+.line.active, .line:hover {
+    stroke-width: 5px;
+}
+
+.area {
+    fill-opacity: 0.6;
+    stroke-width: 3px;
+}
+.area.active, .area:hover {
+    stroke-width: 5px;
+}
+
+.point {
+    stroke: none;
+    fill-opacity: 0;
+}
+
+.point.active {
+    fill-opacity: 1;
+}
+
+#chart0 .line[data-group="x0"]{stroke: #00BFFF;}
+#chart0 .line[data-group="x1"]{stroke: #32CD32;}
+#chart0 .line[data-group="x2"]{stroke: #A9A9A9;}
+#chart0 .line[data-group="x3"]{stroke: #008000;}
+#chart0 .area[data-group="x0"]{stroke: #00BFFF; fill: #00D2FF;}
+#chart0 .area[data-group="x1"]{stroke: #32CD32; fill: #37E137;}
+#chart0 .area[data-group="x2"]{stroke: #A9A9A9; fill: #B9B9B9;}
+#chart0 .area[data-group="x3"]{stroke: #008000; fill: #008C00;}
+#chart0 .point[data-group="x0"]{fill: #00BFFF;}
+#chart0 .point[data-group="x1"]{fill: #32CD32;}
+#chart0 .point[data-group="x2"]{fill: #A9A9A9;}
+#chart0 .point[data-group="x3"]{fill: #008000;}
+#chart0 .row[data-group="x0"] .color{background: #00BFFF;}
+#chart0 .row[data-group="x1"] .color{background: #32CD32;}
+#chart0 .row[data-group="x2"] .color{background: #A9A9A9;}
+#chart0 .row[data-group="x3"] .color{background: #008000;}
+
+#chart1 .line[data-group="x0"]{stroke: #66CDAA;}
+#chart1 .line[data-group="x1"]{stroke: #FF8C00;}
+#chart1 .line[data-group="x2"]{stroke: #FF0000;}
+#chart1 .area[data-group="x0"]{stroke: #66CDAA; fill: #70E1BB;}
+#chart1 .area[data-group="x1"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart1 .area[data-group="x2"]{stroke: #FF0000; fill: #FF0000;}
+#chart1 .point[data-group="x0"]{fill: #66CDAA;}
+#chart1 .point[data-group="x1"]{fill: #FF8C00;}
+#chart1 .point[data-group="x2"]{fill: #FF0000;}
+#chart1 .row[data-group="x0"] .color{background: #66CDAA;}
+#chart1 .row[data-group="x1"] .color{background: #FF8C00;}
+#chart1 .row[data-group="x2"] .color{background: #FF0000;}
+
+#chart2 .line[data-group="x0"]{stroke: #FF8C00;}
+#chart2 .line[data-group="x1"]{stroke: #FF0000;}
+#chart2 .area[data-group="x0"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart2 .area[data-group="x1"]{stroke: #FF0000; fill: #FF0000;}
+#chart2 .point[data-group="x0"]{fill: #FF8C00;}
+#chart2 .point[data-group="x1"]{fill: #FF0000;}
+#chart2 .row[data-group="x0"] .color{background: #FF8C00;}
+#chart2 .row[data-group="x1"] .color{background: #FF0000;}
+
+
+#chart4 .line[data-group="x0"]{stroke: #FF0000;}
+#chart4 .line[data-group="x1"]{stroke: #0000FF;}
+#chart4 .line[data-group="x2"]{stroke: #32CD32;}
+#chart4 .line[data-group="x3"]{stroke: #FFD700;}
+#chart4 .area[data-group="x0"]{stroke: #FF0000; fill: #FF0000;}
+#chart4 .area[data-group="x1"]{stroke: #0000FF; fill: #0000FF;}
+#chart4 .area[data-group="x2"]{stroke: #32CD32; fill: #37E137;}
+#chart4 .area[data-group="x3"]{stroke: #FFD700; fill: #FFEC00;}
+#chart4 .point[data-group="x0"]{fill: #FF0000;}
+#chart4 .point[data-group="x1"]{fill: #0000FF;}
+#chart4 .point[data-group="x2"]{fill: #32CD32;}
+#chart4 .point[data-group="x3"]{fill: #FFD700;}
+#chart4 .row[data-group="x0"] .color{background: #FF0000;}
+#chart4 .row[data-group="x1"] .color{background: #0000FF;}
+#chart4 .row[data-group="x2"] .color{background: #32CD32;}
+#chart4 .row[data-group="x3"] .color{background: #FFD700;}
+
+#chart5 .line[data-group="x0"]{stroke: #FF0000;}
+#chart5 .line[data-group="x1"]{stroke: #0000FF;}
+#chart5 .line[data-group="x2"]{stroke: #32CD32;}
+#chart5 .line[data-group="x3"]{stroke: #FFD700;}
+#chart5 .area[data-group="x0"]{stroke: #FF0000; fill: #FF0000;}
+#chart5 .area[data-group="x1"]{stroke: #0000FF; fill: #0000FF;}
+#chart5 .area[data-group="x2"]{stroke: #32CD32; fill: #37E137;}
+#chart5 .area[data-group="x3"]{stroke: #FFD700; fill: #FFEC00;}
+#chart5 .point[data-group="x0"]{fill: #FF0000;}
+#chart5 .point[data-group="x1"]{fill: #0000FF;}
+#chart5 .point[data-group="x2"]{fill: #32CD32;}
+#chart5 .point[data-group="x3"]{fill: #FFD700;}
+#chart5 .row[data-group="x0"] .color{background: #FF0000;}
+#chart5 .row[data-group="x1"] .color{background: #0000FF;}
+#chart5 .row[data-group="x2"] .color{background: #32CD32;}
+#chart5 .row[data-group="x3"] .color{background: #FFD700;}
+
+#chart6 .line[data-group="x0"]{stroke: #0000FF;}
+#chart6 .line[data-group="x1"]{stroke: #FF0000;}
+#chart6 .line[data-group="x2"]{stroke: #646464;}
+#chart6 .line[data-group="x3"]{stroke: #32CD32;}
+#chart6 .line[data-group="x4"]{stroke: #FFD700;}
+#chart6 .area[data-group="x0"]{stroke: #0000FF; fill: #0000FF;}
+#chart6 .area[data-group="x1"]{stroke: #FF0000; fill: #FF0000;}
+#chart6 .area[data-group="x2"]{stroke: #646464; fill: #6E6E6E;}
+#chart6 .area[data-group="x3"]{stroke: #32CD32; fill: #37E137;}
+#chart6 .area[data-group="x4"]{stroke: #FFD700; fill: #FFEC00;}
+#chart6 .point[data-group="x0"]{fill: #0000FF;}
+#chart6 .point[data-group="x1"]{fill: #FF0000;}
+#chart6 .point[data-group="x2"]{fill: #646464;}
+#chart6 .point[data-group="x3"]{fill: #32CD32;}
+#chart6 .point[data-group="x4"]{fill: #FFD700;}
+#chart6 .row[data-group="x0"] .color{background: #0000FF;}
+#chart6 .row[data-group="x1"] .color{background: #FF0000;}
+#chart6 .row[data-group="x2"] .color{background: #646464;}
+#chart6 .row[data-group="x3"] .color{background: #32CD32;}
+#chart6 .row[data-group="x4"] .color{background: #FFD700;}
+
+
+
+</style>
+
+]]></TrendChart>
+</TrendCharts>
+
+<Dashboard>
+  <Table>
+    <Row>
+      <Cell>
+        <Table>
+          <Row>
+            <Cell>
+              <Table>
+                <Row>
+                  <Cell>
+                    <Table IsVisible="True">
+                      <Row>
+                        <Cell>
+                          <ItemMetricTitle Name= "# Lines of Code" Value= "8 032"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricNotMyCode Value= "0  (NotMyCode)"  />
+                        </Cell>
+                      </Row>
+                    </Table>
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Separator Orientation= "Horizontal"  />
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Table IsVisible="True">
+                      <Row>
+                        <Cell>
+                          <ItemMetricTitle Name= "# Types" Value= "1 338"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Projects" Value= "1"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Packages" Value= "63"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Methods" Value= "4 941"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Fields" Value= "820"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Source Files" Value= "441"  />
+                        </Cell>
+                      </Row>
+                    </Table>
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Separator Orientation= "Horizontal"  />
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Table IsVisible="True">
+                      <Row>
+                        <Cell>
+                          <ItemMetricTitle Name= "Comment" Value= "43.74%"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Lines of Comment" Value= "6 245"  />
+                        </Cell>
+                      </Row>
+                    </Table>
+                  </Cell>
+                </Row>
+              </Table>
+            </Cell>
+            <Cell>
+              <Separator Orientation= "Vertical"  />
+            </Cell>
+            <Cell>
+              <Table>
+                <Row>
+                  <Cell>
+                    <Table IsVisible="True">
+                      <Row>
+                        <Cell>
+                          <ItemMetricTitle Name= "Method Complexity"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Max" Value= "21"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Average" Value= "1.41"  />
+                        </Cell>
+                      </Row>
+                    </Table>
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Separator Orientation= "Horizontal"  />
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Table IsVisible="True">
+                      <Row>
+                        <Cell>
+                          <ItemMetricTitle Name= "Code Coverage by Tests" Error= "N/A because no coverage data specified"  />
+                        </Cell>
+                      </Row>
+                    </Table>
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Separator Orientation= "Horizontal"  />
+                  </Cell>
+                </Row>
+                <Row>
+                  <Cell>
+                    <Table IsVisible="True">
+                      <Row>
+                        <Cell>
+                          <ItemMetricTitle Name= "Third-Party Usage"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Projects used" Value= "2"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Packages used" Value= "23"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Types used" Value= "223"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Methods used" Value= "543"  />
+                        </Cell>
+                      </Row>
+                      <Row>
+                        <Cell>
+                          <ItemMetricSub Name= "Fields used" Value= "18"  />
+                        </Cell>
+                      </Row>
+                    </Table>
+                  </Cell>
+                </Row>
+              </Table>
+            </Cell>
+          </Row>
+        </Table>
+      </Cell>
+    </Row>
+  </Table>
+</Dashboard>
+<InfoWarnings>
+  <Info>Begin full analysis with JArchitect v5.0.0.4687</Info>
+  <Info>No Baseline for Comparison loaded.</Info>
+  <Info>Bytecode parsing</Info>
+  <Info>Third Party parsing</Info>
+  <Info>Parsing Source Files</Info>
+  <Info>PMD is disabled.You can enable it from 'Project Properties=&gt;Plugins Tab' to have more checks</Info>
+  <Info>CheckStyle is disabled.You can enable it from 'Project Properties=&gt;Plugins Tab' to have more checks</Info>
+  <Info>FindBugs is disabled.You can enable it from 'Project Properties=&gt;Plugins Tab' to have more checks</Info>
+  <Info>No dependency cycle detected in assemblies referencement graph.</Info>
+  <Info>Analyse dependencies of your application.</Info>
+  <Info>Execute queries and rules</Info>
+  <Info>JArchitect analysis done. Duration: 00:08</Info>
+  <Info>Building the report (standard).</Info>
+</InfoWarnings><RuleResult NbQueries="12" NbErrors="0" NbWarns="0" NbWarnsCritical="0">
+  <Group Name="Project Rules" FullName="Project Rules" GroupId="GroupOfRules115547692" NbQueries="206" NbErrors="0" NbWarns="38" NbWarnsCritical="0" HasChildren="True" Status="Ok">
+    <Group Name="Code Quality Regression" FullName="Project Rules \ Code Quality Regression" GroupId="GroupOfRules210516795" NbQueries="12" NbErrors="0" NbWarns="0" NbWarnsCritical="0" Status="Ok" />
+  </Group>
+  <Group Name="Rules extracted from Source Code" FullName="Rules extracted from Source Code" GroupId="GroupOfRules1206142379" NbQueries="0" NbErrors="0" NbWarns="0" NbWarnsCritical="0" Status="Not yet compiled" />
+</RuleResult></NDepend>

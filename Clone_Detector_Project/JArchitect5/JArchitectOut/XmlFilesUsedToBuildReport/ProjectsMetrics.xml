@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ProjectsMetrics>
+  <Project Project="Cricket v1.0" NTypes="10" NAbstractTypes="0" NILInstructionInAsm="10672" NbLinesOfCodeInAsm="1646" NbLinesOfCommentInAsm="202" PercentageCommentInAsm="10" PercentageCoverageInAsm="-" AfferentCoupling="0" EfferentCoupling="48" RelationalCohesion="2.6" Instability="1" Abstractness="0" DistFrMainSeq="0" NormDistFrMainSeq="0" />
+</ProjectsMetrics>

@@ -1,0 +1,2937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="58" tokens="0">
+<file line="25" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<file line="24" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+    @SuppressWarnings("all")
+    public static class EverythingWrong {
+        private EverythingWrong() {
+        }
+
+
+        @BeforeClass
+        public void notStaticBC() {
+        }
+
+
+        @BeforeClass
+        static void notPublicBC() {
+        }
+
+
+        @BeforeClass
+        public static int nonVoidBC() {
+            return 0;
+        }
+
+
+        @BeforeClass
+        public static void argumentsBC(int i) {
+        }
+
+
+        @BeforeClass
+        public static void fineBC() {
+        }
+
+
+        @AfterClass
+        public void notStaticAC() {
+        }
+
+
+        @AfterClass
+        static void notPublicAC() {
+        }
+
+
+        @AfterClass
+        public static int nonVoidAC() {
+            return 0;
+        }
+
+
+        @AfterClass
+        public static void argumentsAC(int i) {
+        }
+
+
+        @AfterClass
+        public static void fineAC() {
+        }
+
+
+        @After
+        public static void staticA() {
+        }
+
+
+        @After
+        void notPublicA() {
+        }
+
+
+        @After
+        public int nonVoidA() {
+            return 0;
+        }
+
+
+        @After
+        public void argumentsA(int i) {
+        }
+
+
+        @After
+        public void fineA() {
+        }
+
+
+        @Before
+        public static void staticB() {
+        }
+
+
+        @Before
+        void notPublicB() {
+        }
+
+
+        @Before
+        public int nonVoidB() {
+            return 0;
+        }
+
+
+        @Before
+        public void argumentsB(int i) {
+        }
+
+
+        @Before
+        public void fineB() {
+        }
+
+
+        @Test
+        public static void staticT() {
+        }
+
+
+        @Test
+        void notPublicT() {
+        }
+
+
+        @Test
+        public int nonVoidT() {
+            return 0;
+        }
+
+
+        @Test
+        public void argumentsT(int i) {
+        }
+
+
+        @Test
+        public void fineT() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="40" tokens="0">
+<file line="243" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<file line="222" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\MethodRulesTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class WrongTypedField {
+        @Rule
+        public int x = 5;
+
+
+        @Test
+        public void foo() {
+    @Test
+    public void validateWrongTypedField() {
+        assertThat(testResult(WrongTypedField.class),
+                hasSingleFailureContaining("must implement MethodRule"));
+    public static class SonOfWrongTypedField extends WrongTypedField {
+    @Test
+    public void validateWrongTypedFieldInSuperclass() {
+        assertThat(testResult(SonOfWrongTypedField.class),
+                hasSingleFailureContaining("must implement MethodRule"));
+    public static class PrivateRule {
+        @Rule
+        private TestRule rule = new TestName();
+
+
+        @Test
+        public void foo() {
+    @Test
+    public void validatePrivateRule() {
+        assertThat(testResult(PrivateRule.class),
+                hasSingleFailureContaining("must be public"));
+    public static class CustomTestName implements TestRule {
+        public String name = null;
+
+
+        public Statement apply(final Statement base, final Description description) {
+            return new Statement() {
+                @Override
+                public void evaluate() throws Throwable {
+                    name = description.getMethodName();
+                    base.evaluate();
+    public static class UsesCustomMethodRule {
+        @Rule
+        public CustomTestName counter = new CustomTestName();
+
+
+        @Test
+        public void foo() {
+            assertEquals("foo", counter.name);
+    @Test
+    public void useCustomMethodRule() {
+        assertThat(testResult(UsesCustomMethodRule.class), isSuccessful());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="30" tokens="0">
+<file line="283" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<file line="314" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertArrayEquals(String message, Object[] expecteds,
+            Object[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(Object[] expecteds, Object[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, boolean[] expecteds,
+            boolean[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(boolean[] expecteds, boolean[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, byte[] expecteds,
+            byte[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(byte[] expecteds, byte[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, char[] expecteds,
+            char[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(char[] expecteds, char[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, short[] expecteds,
+            short[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(short[] expecteds, short[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, int[] expecteds,
+            int[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(int[] expecteds, int[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="30" tokens="0">
+<file line="48" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\notification\RunNotifierTest.java"/>
+<file line="60" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\notification\RunNotifierTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void addAndRemoveWithNonThreadSafeListener() {
+        CountingListener listener = new CountingListener();
+        assertThat(listener.fTestStarted.get(), is(0));
+        fNotifier.addListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+        fNotifier.removeListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+    @Test
+    public void addFirstAndRemoveWithNonThreadSafeListener() {
+        CountingListener listener = new CountingListener();
+        assertThat(listener.fTestStarted.get(), is(0));
+        fNotifier.addFirstListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+        fNotifier.removeListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+    @Test
+    public void addAndRemoveWithThreadSafeListener() {
+        ThreadSafeListener listener = new ThreadSafeListener();
+        assertThat(listener.fTestStarted.get(), is(0));
+        fNotifier.addListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+        fNotifier.removeListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="26" tokens="0">
+<file line="11" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\framework\DoublePrecisionAssertTest.java"/>
+<file line="11" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\framework\FloatAssertTest.java"/>
+<codefragment>
+<![CDATA[
+    public void testAssertEqualsNaNFails() {
+        try {
+            assertEquals(1.234, Double.NaN, 0.0);
+            fail();
+        } catch (AssertionFailedError e) {
+    public void testAssertNaNEqualsFails() {
+        try {
+            assertEquals(Double.NaN, 1.234, 0.0);
+            fail();
+        } catch (AssertionFailedError e) {
+    public void testAssertNaNEqualsNaN() {
+        assertEquals(Double.NaN, Double.NaN, 0.0);
+    public void testAssertPosInfinityNotEqualsNegInfinity() {
+        try {
+            assertEquals(Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, 0.0);
+            fail();
+        } catch (AssertionFailedError e) {
+    public void testAssertPosInfinityNotEquals() {
+        try {
+            assertEquals(Double.POSITIVE_INFINITY, 1.23, 0.0);
+            fail();
+        } catch (AssertionFailedError e) {
+    public void testAssertPosInfinityEqualsInfinity() {
+        assertEquals(Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY, 0.0);
+    public void testAssertNegInfinityEqualsInfinity() {
+        assertEquals(Double.NEGATIVE_INFINITY, Double.NEGATIVE_INFINITY, 0.0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="25" tokens="0">
+<file line="283" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<file line="341" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertArrayEquals(String message, Object[] expecteds,
+            Object[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(Object[] expecteds, Object[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, boolean[] expecteds,
+            boolean[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(boolean[] expecteds, boolean[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, byte[] expecteds,
+            byte[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(byte[] expecteds, byte[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, char[] expecteds,
+            char[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(char[] expecteds, char[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, short[] expecteds,
+            short[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(short[] expecteds, short[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="22" tokens="0">
+<file line="51" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\runners\ClassRoadie.java"/>
+<file line="128" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\runners\MethodRoadie.java"/>
+<codefragment>
+<![CDATA[
+    private void runBefores() throws FailedBefore {
+        try {
+            try {
+                List<Method> befores = testClass.getBefores();
+                for (Method before : befores) {
+                    before.invoke(null);
+                }
+            } catch (InvocationTargetException e) {
+                throw e.getTargetException();
+            }
+        } catch (AssumptionViolatedException e) {
+            throw new FailedBefore();
+        } catch (Throwable e) {
+            addFailure(e);
+            throw new FailedBefore();
+    private void runAfters() {
+        List<Method> afters = testClass.getAfters();
+        for (Method after : afters) {
+            try {
+                after.invoke(null);
+            } catch (InvocationTargetException e) {
+                addFailure(e.getTargetException());
+            } catch (Throwable e) {
+                addFailure(e); // Untested, but seems impossible
+]]>
+</codefragment>
+</duplication>
+<duplication lines="22" tokens="0">
+<file line="85" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithParameterSupplier.java"/>
+<file line="112" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithParameterSupplier.java"/>
+<codefragment>
+<![CDATA[
+    public static class SupplierWithUnknownConstructor extends ParameterSupplier {
+        
+
+        public SupplierWithUnknownConstructor(String param) {
+        }
+
+
+        @Override
+        public List<PotentialAssignment> getValueSources(ParameterSignature sig) {
+            return null;
+    @RunWith(Theories.class)
+    public static class TestClassUsingSupplierWithUnknownConstructor {
+
+
+        @Theory
+        public void theory(@ParametersSuppliedBy(SupplierWithUnknownConstructor.class) String param) {
+    @Test
+    public void shouldRejectSuppliersWithUnknownConstructors() throws Exception {
+        expected.expect(InitializationError.class);
+        new Theories(TestClassUsingSupplierWithUnknownConstructor.class);
+    public static class SupplierWithTwoConstructors extends ParameterSupplier {
+        
+
+        public SupplierWithTwoConstructors(String param) {
+        }
+
+
+        @Override
+        public List<PotentialAssignment> getValueSources(ParameterSignature sig) {
+            return null;
+    @RunWith(Theories.class)
+    public static class TestClassUsingSupplierWithTwoConstructors {
+
+
+        @Theory
+        public void theory(@ParametersSuppliedBy(SupplierWithTwoConstructors.class) String param) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="20" tokens="0">
+<file line="293" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\assertion\AssertionTest.java"/>
+<file line="246" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\assertion\AssertionTest.java"/>
+<codefragment>
+<![CDATA[
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{true}, {}},
+                new Object[][]{{}, {}},
+                "not equal: array lengths differed, expected.length=1 actual.length=0; arrays first differed at element [0][0]; expected:<true> but was:<end of array>");
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{}, {true}},
+                new Object[][]{{}, {}},
+                "not equal: array lengths differed, expected.length=1 actual.length=0; arrays first differed at element [1][0]; expected:<true> but was:<end of array>");
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{}, {}},
+                new Object[][]{{true}, {}},
+                "not equal: array lengths differed, expected.length=0 actual.length=1; arrays first differed at element [0][0]; expected:<end of array> but was:<true>");
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{}, {}},
+                new Object[][]{{}, {true}},
+                "not equal: array lengths differed, expected.length=0 actual.length=1; arrays first differed at element [1][0]; expected:<end of array> but was:<true>");
+]]>
+</codefragment>
+</duplication>
+<duplication lines="20" tokens="0">
+<file line="283" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<file line="366" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertArrayEquals(String message, Object[] expecteds,
+            Object[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(Object[] expecteds, Object[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, boolean[] expecteds,
+            boolean[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(boolean[] expecteds, boolean[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, byte[] expecteds,
+            byte[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(byte[] expecteds, byte[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, char[] expecteds,
+            char[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(char[] expecteds, char[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="20" tokens="0">
+<file line="316" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\TestCase.java"/>
+<file line="301" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\TestCase.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertEquals(String message, boolean expected, boolean actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(boolean expected, boolean actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, byte expected, byte actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(byte expected, byte actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, char expected, char actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(char expected, char actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, short expected, short actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(short expected, short actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, int expected, int actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(int expected, int actual) {
+        Assert.assertEquals(expected, actual);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="20" tokens="0">
+<file line="48" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\notification\RunNotifierTest.java"/>
+<file line="72" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\notification\RunNotifierTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void addAndRemoveWithNonThreadSafeListener() {
+        CountingListener listener = new CountingListener();
+        assertThat(listener.fTestStarted.get(), is(0));
+        fNotifier.addListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+        fNotifier.removeListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+    @Test
+    public void addFirstAndRemoveWithNonThreadSafeListener() {
+        CountingListener listener = new CountingListener();
+        assertThat(listener.fTestStarted.get(), is(0));
+        fNotifier.addFirstListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+        fNotifier.removeListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="0">
+<file line="55" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\SynchronizedRunListener.java"/>
+<file line="39" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\SynchronizedRunListener.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    public void testSuiteStarted(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testSuiteStarted(description);
+    @Override
+    public void testSuiteFinished(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testSuiteFinished(description);
+    @Override
+    public void testStarted(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testStarted(description);
+    @Override
+    public void testFinished(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testFinished(description);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="0">
+<file line="55" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\SynchronizedRunListener.java"/>
+<file line="32" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\SynchronizedRunListener.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    public void testSuiteStarted(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testSuiteStarted(description);
+    @Override
+    public void testSuiteFinished(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testSuiteFinished(description);
+    @Override
+    public void testStarted(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testStarted(description);
+    @Override
+    public void testFinished(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testFinished(description);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="0">
+<file line="152" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\MultiCategoryTest.java"/>
+<file line="132" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\MultiCategoryTest.java"/>
+<codefragment>
+<![CDATA[
+    public static final class InheritanceAnyAllTest {
+        @Test @Category(X.class) public void x() {}
+        @Test @Category(Y.class) public void y() {}
+        @Test @Category(Z.class) public void z() {}
+        @Test @Category(W.class) public void w() { fail(); }
+        @Test @Category(Q.class) public void q() { fail(); }
+        @Test @Category(Runnable.class) public void runnable() { fail(); }
+        @Test public void t() { fail(); }
+    public static final class InheritanceAllAnyTest {
+        @Test @Category(X.class) public void x() { fail(); }
+        @Test @Category(Y.class) public void y() { fail(); }
+        @Test @Category(Z.class) public void z() { fail(); }
+        @Test @Category(W.class) public void w() { fail(); }
+        @Test @Category(Q.class) public void q() { fail(); }
+        @Test @Category(Runnable.class) public void runnable() { fail(); }
+        @Test public void t() { fail(); }
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="0">
+<file line="70" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\FilterOptionIntegrationTest.java"/>
+<file line="51" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\FilterOptionIntegrationTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void shouldIncludeSomeTests() {
+        Result result = runJUnit(
+                INCLUDES_DUMMY_CATEGORY_0,
+                DummyTestClass.class.getName(),
+                DummyTestClass0.class.getName(),
+                DummyTestClass1.class.getName(),
+                DummyTestClass01.class.getName(),
+                DummyTestClass0TestMethod1.class.getName());
+
+
+        assertWasNotRun(DummyTestClass.class);
+        assertWasRun(DummyTestClass0.class);
+        assertWasNotRun(DummyTestClass1.class);
+        assertWasRun(DummyTestClass01.class);
+        assertWasRun(DummyTestClass0TestMethod1.class);
+        assertThat("runCount does not match", result.getRunCount(), is(3));
+        assertThat("failureCount does not match", result.getFailureCount(), is(0));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="16" tokens="0">
+<file line="331" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\TestCase.java"/>
+<file line="301" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\TestCase.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertEquals(String message, byte expected, byte actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(byte expected, byte actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, char expected, char actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(char expected, char actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, short expected, short actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(short expected, short actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, int expected, int actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(int expected, int actual) {
+        Assert.assertEquals(expected, actual);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="0">
+<file line="696" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<file line="218" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\ClassRulesTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class CallMethodOnlyOnceRule {
+        int countOfMethodCalls = 0;
+
+
+        private static class Dummy implements TestRule {
+            public Statement apply(final Statement base, Description description) {
+                return new Statement() {
+                    @Override
+                    public void evaluate() throws Throwable {
+                        base.evaluate();
+                    }
+
+
+                    ;
+                };
+            }
+        }
+
+
+        @Rule
+        public Dummy both() {
+            countOfMethodCalls++;
+            return new Dummy();
+        }
+
+
+        @Test
+        public void onlyOnce() {
+            assertEquals(1, countOfMethodCalls);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="0">
+<file line="283" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<file line="391" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertArrayEquals(String message, Object[] expecteds,
+            Object[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(Object[] expecteds, Object[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, boolean[] expecteds,
+            boolean[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(boolean[] expecteds, boolean[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, byte[] expecteds,
+            byte[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(byte[] expecteds, byte[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="0">
+<file line="153" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\MethodSorterTest.java"/>
+<file line="93" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\MethodSorterTest.java"/>
+<codefragment>
+<![CDATA[
+    @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+    static class DummySortWithNameAsc {
+        Object alpha(int i, double d, Thread t) {
+            return null;
+        }
+
+
+        void beta(int[][] x) {
+        }
+
+
+        int gamma() {
+            return 0;
+        }
+
+
+        void gamma(boolean b) {
+        }
+
+
+        void delta() {
+        }
+
+
+        void epsilon() {
+    @Test
+    public void testAscendingMethodSorter() {
+        List<String> expected = Arrays.asList(ALPHA, BETA, DELTA, EPSILON, GAMMA_VOID, GAMMA_BOOLEAN);
+        List<String> actual = getDeclaredMethodNames(DummySortWithNameAsc.class);
+        assertEquals(expected, actual);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="0">
+<file line="53" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<file line="338" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void ruleIsIntroducedAndEvaluated() {
+        wasRun = false;
+        JUnitCore.runClasses(ExampleTest.class);
+        assertTrue(wasRun);
+    public static class BothKindsOfRule implements TestRule, org.junit.rules.MethodRule {
+        public int applications = 0;
+
+
+        public Statement apply(Statement base, FrameworkMethod method,
+                Object target) {
+            applications++;
+            return base;
+        }
+
+
+        public Statement apply(Statement base, Description description) {
+            applications++;
+            return base;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="0">
+<file line="52" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\AnnotationTest.java"/>
+<file line="69" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\AnnotationTest.java"/>
+<codefragment>
+<![CDATA[
+    public void testAnnotatedMethodWithFutureProofExplicitRunner() throws Exception {
+        JUnitCore runner = new JUnitCore();
+        runner.run(SimpleTestWithFutureProofExplicitRunner.class);
+        assertTrue(run);
+    static public class SetupTest {
+        @Before
+        public void before() {
+            run = true;
+        }
+
+
+        @Test
+        public void success() {
+    public void testSetup() throws Exception {
+        JUnitCore runner = new JUnitCore();
+        runner.run(SetupTest.class);
+        assertTrue(run);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="0">
+<file line="29" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\extensions\ActiveTestTest.java"/>
+<file line="38" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\extensions\ActiveTestTest.java"/>
+<codefragment>
+<![CDATA[
+    public void testActiveRepeatedTest() {
+        Test test = new RepeatedTest(createActiveTestSuite(), 5);
+        TestResult result = new TestResult();
+        test.run(result);
+        assertEquals(500, result.runCount());
+        assertEquals(0, result.failureCount());
+        assertEquals(0, result.errorCount());
+    public void testActiveRepeatedTest0() {
+        Test test = new RepeatedTest(createActiveTestSuite(), 0);
+        TestResult result = new TestResult();
+        test.run(result);
+        assertEquals(0, result.runCount());
+        assertEquals(0, result.failureCount());
+        assertEquals(0, result.errorCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="0">
+<file line="80" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\internal\SpecificDataPointsSupplierTest.java"/>
+<file line="69" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\internal\SpecificDataPointsSupplierTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void shouldReturnOnlyTheNamedMethodDataPoints() throws Throwable {
+        SpecificDataPointsSupplier supplier = new SpecificDataPointsSupplier(new TestClass(TestClassWithNamedDataPoints.class));
+
+
+        List<PotentialAssignment> assignments = supplier.getValueSources(signature("methodWantingNamedMethodString"));
+        List<String> assignedStrings = getStringValuesFromAssignments(assignments);
+
+
+        assertEquals(1, assignedStrings.size());
+        assertThat(assignedStrings, hasItem("named method"));
+    @Test
+    public void shouldReturnOnlyTheNamedSingleFieldDataPoints() throws Throwable {
+        SpecificDataPointsSupplier supplier = new SpecificDataPointsSupplier(new TestClass(TestClassWithNamedDataPoints.class));
+
+
+        List<PotentialAssignment> assignments = supplier.getValueSources(signature("methodWantingNamedSingleFieldString"));
+        List<String> assignedStrings = getStringValuesFromAssignments(assignments);
+
+
+        assertEquals(1, assignedStrings.size());
+        assertThat(assignedStrings, hasItem("named single value"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="14" tokens="0">
+<file line="91" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\internal\SpecificDataPointsSupplierTest.java"/>
+<file line="69" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\internal\SpecificDataPointsSupplierTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void shouldReturnOnlyTheNamedSingleFieldDataPoints() throws Throwable {
+        SpecificDataPointsSupplier supplier = new SpecificDataPointsSupplier(new TestClass(TestClassWithNamedDataPoints.class));
+
+
+        List<PotentialAssignment> assignments = supplier.getValueSources(signature("methodWantingNamedSingleFieldString"));
+        List<String> assignedStrings = getStringValuesFromAssignments(assignments);
+
+
+        assertEquals(1, assignedStrings.size());
+        assertThat(assignedStrings, hasItem("named single value"));
+    @Test
+    public void shouldReturnOnlyTheNamedSingleMethodDataPoints() throws Throwable {
+        SpecificDataPointsSupplier supplier = new SpecificDataPointsSupplier(new TestClass(TestClassWithNamedDataPoints.class));
+
+
+        List<PotentialAssignment> assignments = supplier.getValueSources(signature("methodWantingNamedSingleMethodString"));
+        List<String> assignedStrings = getStringValuesFromAssignments(assignments);
+
+
+        assertEquals(1, assignedStrings.size());
+        assertThat(assignedStrings, hasItem("named single method value"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="18" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestWatcherTest.java"/>
+<file line="98" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestWatcherTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class ViolatedAssumptionTest {
+        private static StringBuilder watchedLog = new StringBuilder();
+
+
+        @Rule
+        public TestRule watcher = new LoggingTestWatcher(watchedLog);
+
+
+        @Test
+        public void succeeds() {
+            assumeTrue(false);
+    @Test
+    public void neitherLogSuccessNorFailedForViolatedAssumption() {
+        ViolatedAssumptionTest.watchedLog = new StringBuilder();
+        runClasses(ViolatedAssumptionTest.class);
+        assertThat(ViolatedAssumptionTest.watchedLog.toString(),
+                is("starting skipped finished "));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="155" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<file line="56" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<codefragment>
+<![CDATA[
+        @Before
+        public void resetLog() {
+            log = "";
+        @Test
+        public void sortingForwardWorksOnTestClassRunner() {
+            Request forward = Request.aClass(SortMe.class).sortWith(forward());
+
+
+            new JUnitCore().run(forward);
+            assertEquals("abc", log);
+        @Test
+        public void sortingBackwardWorksOnTestClassRunner() {
+            Request backward = Request.aClass(SortMe.class).sortWith(backward());
+
+
+            new JUnitCore().run(backward);
+            assertEquals("cba", log);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="139" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<file line="131" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void whenRunWithPreJava5DebugArgumentsInReverseOrderTestShouldFail() {
+        JUnitCore core = new JUnitCore();
+        Result result = core
+                .run(PreJava5DebugArgumentsReversedTest.class);
+        assertEquals("Should run the test", 1, result.getRunCount());
+        assertEquals("Test should not have failed", 0, result.getFailureCount());
+    @Test
+    public void whenRunWithPostJava5DebugArgumentsTestShouldFail() {
+        JUnitCore core = new JUnitCore();
+        Result result = core.run(PostJava5DebugArgumentsTest.class);
+        assertEquals("Should run the test", 1, result.getRunCount());
+        assertEquals("Test should not have failed", 0, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="131" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<file line="96" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\MethodRulesTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void multipleRulesAreRun() {
+        runCount = 0;
+        JUnitCore.runClasses(MultipleRuleTest.class);
+        assertEquals(2, runCount);
+    public static class NoRulesTest {
+        public int x;
+
+
+        @Test
+        public void nothing() {
+    @Test
+    public void ignoreNonRules() {
+        Result result = JUnitCore.runClasses(NoRulesTest.class);
+        assertEquals(0, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="131" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<file line="426" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void multipleRulesAreRun() {
+        runCount = 0;
+        JUnitCore.runClasses(MultipleRuleTest.class);
+        assertEquals(2, runCount);
+    public static class NoRulesTest {
+        public int x;
+
+
+        @Test
+        public void nothing() {
+    @Test
+    public void ignoreNonRules() {
+        Result result = JUnitCore.runClasses(NoRulesTest.class);
+        assertEquals(0, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="96" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\MethodRulesTest.java"/>
+<file line="426" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void multipleRulesAreRun() {
+        runCount = 0;
+        JUnitCore.runClasses(MultipleRuleTest.class);
+        assertEquals(2, runCount);
+    public static class NoRulesTest {
+        public int x;
+
+
+        @Test
+        public void nothing() {
+    @Test
+    public void ignoreNonRules() {
+        Result result = JUnitCore.runClasses(NoRulesTest.class);
+        assertEquals(0, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="15" tokens="0">
+<file line="36" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\junit3compatibility\ForwardCompatibilityPrintingTest.java"/>
+<file line="98" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\runner\TextFeedbackTest.java"/>
+<codefragment>
+<![CDATA[
+        String expected = expected(new String[]{".E", "Time: 0",
+                "Errors here", "", "FAILURES!!!",
+                "Tests run: 1,  Failures: 0,  Errors: 1", ""});
+        ResultPrinter printer = new TestResultPrinter(new PrintStream(output)) {
+            @Override
+            public void printErrors(TestResult result) {
+                getWriter().println("Errors here");
+        runner.setPrinter(printer);
+        TestSuite suite = new TestSuite();
+        suite.addTest(new TestCase() {
+            @Override
+            public void runTest() throws Exception {
+                throw new Exception();
+        runner.doRun(suite);
+        assertEquals(expected, output.toString());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="197" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParameterizedTestTest.java"/>
+<file line="165" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParameterizedTestTest.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Parameterized.class)
+    static public class BadNumberOfAnnotatedFieldTest {
+        @Parameters
+        public static Collection<Object[]> data() {
+            return Arrays.asList(new Object[][]{{0, 0}});
+        }
+
+
+        @Parameter(0)
+        public int fInput;
+
+
+        public int fExpected;
+
+
+        @Test
+        public void test() {
+            assertEquals(fExpected, fib(fInput));
+        }
+
+
+        private int fib(int x) {
+            return 0;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="284" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\AnnotationTest.java"/>
+<file line="262" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\AnnotationTest.java"/>
+<codefragment>
+<![CDATA[
+    static public class OneTimeTeardown {
+        @AfterClass
+        public static void once() {
+            count++;
+        }
+
+
+        @Test
+        public void one() {
+        }
+
+
+        @Test
+        public void two() {
+    public void testOneTimeTeardown() throws Exception {
+        count = 0;
+        JUnitCore core = new JUnitCore();
+        core.run(OneTimeTeardown.class);
+        assertEquals(1, count);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="141" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\VerifierRuleTest.java"/>
+<file line="121" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\VerifierRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void usedErrorCollectorCheckThrowsMatchingClassShouldPass() {
+        PrintableResult testResult = testResult(UsesErrorCollectorCheckThrowsMatchingClass.class);
+        assertThat(testResult, isSuccessful());
+    public static class UsesErrorCollectorCheckThrowsClassMismatch {
+        @Rule
+        public ErrorCollector collector = new ErrorCollector();
+
+
+        @Test
+        public void example() {
+            collector.checkThrows(IllegalArgumentException.class, new ThrowingRunnable() {
+                public void run() throws Throwable {
+                    throw new NullPointerException();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="50" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\builders\AnnotatedBuilderTest.java"/>
+<file line="32" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\builders\AnnotatedBuilderTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void annotatedMemberClassInsideAnnotatedTopLevelClass_isRunWithOwnRunner() throws Exception {
+        Runner runner = builder.runnerForClass(OuterClass.InnerClassWithOwnRunWith.class);
+        assertThat(runner, is(instanceOf(InnerRunner.class)));
+
+
+        RunnerSpy runnerSpy = (RunnerSpy) runner;
+        assertThat(runnerSpy.getInvokedTestClass(), is((Object) OuterClass.InnerClassWithOwnRunWith.class));
+    @Test
+    public void memberClassDeepInsideAnnotatedMemberClass_isRunWithParentMemberClassRunner() throws Exception {
+        Runner runner = builder.runnerForClass(OuterClass.InnerClassWithOwnRunWith.MostInnerClass.class);
+        assertThat(runner, is(instanceOf(InnerRunner.class)));
+
+
+        RunnerSpy runnerSpy = (RunnerSpy) runner;
+        assertThat(runnerSpy.getInvokedTestClass(), is((Object) OuterClass.InnerClassWithOwnRunWith.MostInnerClass.class));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="314" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\AnnotationTest.java"/>
+<file line="150" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\junit3compatibility\ForwardCompatibilityTest.java"/>
+<codefragment>
+<![CDATA[
+        @Before
+        public void before() {
+            log += "before ";
+        @Test
+        public void test() {
+            log += "test ";
+        @After
+        public void after() {
+            log += "after ";
+        @AfterClass
+        public static void onceAfter() {
+            log += "afterClass ";
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="15" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestWatchmanTest.java"/>
+<file line="33" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestWatchmanTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class ViolatedAssumptionTest {
+        static StringBuilder log = new StringBuilder();
+        @Rule
+        public LoggingTestWatchman watchman = new LoggingTestWatchman(log);
+
+
+        @Test
+        public void succeeds() {
+            assumeTrue(false);
+    @Test
+    public void neitherLogSuccessNorFailedForViolatedAssumption() {
+        runClasses(ViolatedAssumptionTest.class);
+        assertThat(ViolatedAssumptionTest.log.toString(),
+                is("starting finished "));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="66" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<file line="75" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class PreJava5DebugArgumentsTest extends
+            AbstractDisableOnDebugTest {
+
+
+        public PreJava5DebugArgumentsTest() {
+            super(PRE_JAVA5_DEBUG_ARGUMENTS);
+    public static class PreJava5DebugArgumentsReversedTest extends
+            AbstractDisableOnDebugTest {
+
+
+        public PreJava5DebugArgumentsReversedTest() {
+            super(PRE_JAVA5_DEBUG_ARGUMENTS_IN_REVERSE_ORDER);
+    public static class PostJava5DebugArgumentsTest extends
+            AbstractDisableOnDebugTest {
+
+
+        public PostJava5DebugArgumentsTest() {
+            super(POST_JAVA5_DEBUG_ARGUMENTS);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="70" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\SynchronizedRunListener.java"/>
+<file line="32" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\SynchronizedRunListener.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    public void testSuiteFinished(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testSuiteFinished(description);
+    @Override
+    public void testStarted(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testStarted(description);
+    @Override
+    public void testFinished(Description description) throws Exception {
+        synchronized (monitor) {
+            listener.testFinished(description);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="148" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<file line="131" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void whenRunWithPostJava5DebugArgumentsTestShouldFail() {
+        JUnitCore core = new JUnitCore();
+        Result result = core.run(PostJava5DebugArgumentsTest.class);
+        assertEquals("Should run the test", 1, result.getRunCount());
+        assertEquals("Test should not have failed", 0, result.getFailureCount());
+    @Test
+    public void whenRunWithoutDebugFlagsTestShouldPass() {
+        JUnitCore core = new JUnitCore();
+        Result result = core.run(WithoutDebugArgumentsTest.class);
+        assertEquals("Should run the test", 1, result.getRunCount());
+        assertEquals("Test should have failed", 1, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="117" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<file line="99" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<codefragment>
+<![CDATA[
+    public void fireTestSuiteStarted(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteStarted(description);
+            }
+        }.run();
+    public void fireTestSuiteFinished(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteFinished(description);
+            }
+        }.run();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="99" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<file line="191" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<codefragment>
+<![CDATA[
+    public void fireTestRunFinished(final Result result) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testRunFinished(result);
+            }
+        }.run();
+    public void fireTestSuiteStarted(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteStarted(description);
+            }
+        }.run();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="99" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<file line="205" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<codefragment>
+<![CDATA[
+    public void fireTestRunFinished(final Result result) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testRunFinished(result);
+            }
+        }.run();
+    public void fireTestSuiteStarted(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteStarted(description);
+            }
+        }.run();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="117" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<file line="191" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<codefragment>
+<![CDATA[
+    public void fireTestSuiteStarted(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteStarted(description);
+            }
+        }.run();
+    public void fireTestSuiteFinished(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteFinished(description);
+            }
+        }.run();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="117" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<file line="87" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<codefragment>
+<![CDATA[
+    public void fireTestSuiteStarted(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteStarted(description);
+            }
+        }.run();
+    public void fireTestSuiteFinished(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testSuiteFinished(description);
+            }
+        }.run();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="191" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<file line="205" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<codefragment>
+<![CDATA[
+    public void fireTestAssumptionFailed(final Failure failure) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testAssumptionFailure(failure);
+            }
+        }.run();
+    public void fireTestIgnored(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testIgnored(description);
+            }
+        }.run();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="87" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<file line="205" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\RunNotifier.java"/>
+<codefragment>
+<![CDATA[
+    public void fireTestRunStarted(final Description description) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testRunStarted(description);
+            }
+        }.run();
+    public void fireTestRunFinished(final Result result) {
+        new SafeNotifier() {
+            @Override
+            protected void notifyListener(RunListener each) throws Exception {
+                each.testRunFinished(result);
+            }
+        }.run();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="76" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<file line="56" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Theories.class)
+    public static class HasIgnoredFailingMultipleDataPointMethod {
+        @DataPoint
+        public static int num = 10;
+
+
+        @DataPoints(ignoredExceptions=Throwable.class)
+        public static int[] failingDataPoint() {
+            throw new RuntimeException();
+        }
+
+
+        @Theory
+        public void theory(int x) {
+    @Test
+    public void shouldIgnoreMultipleDataPointMethodExceptionsOnRequest() {
+        assertThat(testResult(HasIgnoredFailingMultipleDataPointMethod.class), isSuccessful());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="111" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<file line="91" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void shouldNotIgnoreNonMatchingSingleDataPointExceptions() {
+        assertThat(testResult(HasWronglyIgnoredFailingSingleDataPointMethod.class), not(isSuccessful()));
+    @RunWith(Theories.class)
+    public static class HasWronglyIgnoredFailingMultipleDataPointMethod {
+        @DataPoint
+        public static int num = 10;
+
+
+        @DataPoint(ignoredExceptions=NullPointerException.class)
+        public static int failingDataPoint() {
+            throw new RuntimeException();
+        }
+
+
+        @Theory
+        public void theory(int x) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="96" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<file line="56" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Theories.class)
+    public static class HasWronglyIgnoredFailingSingleDataPointMethod {
+        @DataPoint
+        public static int num = 10;
+
+
+        @DataPoint(ignoredExceptions=NullPointerException.class)
+        public static int failingDataPoint() {
+            throw new RuntimeException();
+        }
+
+
+        @Theory
+        public void theory(int x) {
+    @Test
+    public void shouldNotIgnoreNonMatchingSingleDataPointExceptions() {
+        assertThat(testResult(HasWronglyIgnoredFailingSingleDataPointMethod.class), not(isSuccessful()));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="111" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<file line="51" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void shouldNotIgnoreNonMatchingSingleDataPointExceptions() {
+        assertThat(testResult(HasWronglyIgnoredFailingSingleDataPointMethod.class), not(isSuccessful()));
+    @RunWith(Theories.class)
+    public static class HasWronglyIgnoredFailingMultipleDataPointMethod {
+        @DataPoint
+        public static int num = 10;
+
+
+        @DataPoint(ignoredExceptions=NullPointerException.class)
+        public static int failingDataPoint() {
+            throw new RuntimeException();
+        }
+
+
+        @Theory
+        public void theory(int x) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="96" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<file line="16" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Theories.class)
+    public static class HasWronglyIgnoredFailingSingleDataPointMethod {
+        @DataPoint
+        public static int num = 10;
+
+
+        @DataPoint(ignoredExceptions=NullPointerException.class)
+        public static int failingDataPoint() {
+            throw new RuntimeException();
+        }
+
+
+        @Theory
+        public void theory(int x) {
+    @Test
+    public void shouldNotIgnoreNonMatchingSingleDataPointExceptions() {
+        assertThat(testResult(HasWronglyIgnoredFailingSingleDataPointMethod.class), not(isSuccessful()));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="116" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<file line="16" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\FailingDataPointMethods.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Theories.class)
+    public static class HasWronglyIgnoredFailingMultipleDataPointMethod {
+        @DataPoint
+        public static int num = 10;
+
+
+        @DataPoint(ignoredExceptions=NullPointerException.class)
+        public static int failingDataPoint() {
+            throw new RuntimeException();
+        }
+
+
+        @Theory
+        public void theory(int x) {
+    @Test
+    public void shouldNotIgnoreNonMatchingMultipleDataPointExceptions() {
+        assertThat(testResult(HasWronglyIgnoredFailingMultipleDataPointMethod.class), not(isSuccessful()));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="309" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\AnnotationTest.java"/>
+<file line="140" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\junit3compatibility\ForwardCompatibilityTest.java"/>
+<codefragment>
+<![CDATA[
+        @BeforeClass
+        public static void onceBefore() {
+            log += "beforeClass ";
+        @Before
+        public void before() {
+            log += "before ";
+        @Test
+        public void test() {
+            log += "test ";
+        @After
+        public void after() {
+            log += "after ";
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="26" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\categories\IncludeCategories.java"/>
+<file line="26" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\categories\ExcludeCategories.java"/>
+<codefragment>
+<![CDATA[
+public final class IncludeCategories extends CategoryFilterFactory {
+    /**
+     * Creates a {@link Filter} which is only passed by tests that are
+     * categorized with any of the specified categories.
+     *
+     * @param categories Category classes.
+     */
+    @Override
+    protected Filter createFilter(List<Class<?>> categories) {
+        return new IncludesAny(categories);
+    }
+
+
+    private static class IncludesAny extends CategoryFilter {
+        public IncludesAny(List<Class<?>> categories) {
+            this(new HashSet<Class<?>>(categories));
+        }
+
+
+        public IncludesAny(Set<Class<?>> categories) {
+            super(true, categories, true, null);
+        }
+
+
+        @Override
+        public String describe() {
+            return "includes " + super.describe();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="29" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\extensions\RepeatedTestTest.java"/>
+<file line="37" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\extensions\RepeatedTestTest.java"/>
+<codefragment>
+<![CDATA[
+    public void testRepeatedOnce() {
+        Test test = new RepeatedTest(fSuite, 1);
+        assertEquals(2, test.countTestCases());
+        TestResult result = new TestResult();
+        test.run(result);
+        assertEquals(2, result.runCount());
+    public void testRepeatedMoreThanOnce() {
+        Test test = new RepeatedTest(fSuite, 3);
+        assertEquals(6, test.countTestCases());
+        TestResult result = new TestResult();
+        test.run(result);
+        assertEquals(6, result.runCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="69" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\MultiCategoryTest.java"/>
+<file line="77" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\MultiCategoryTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void inheritanceAnyIncluded() {
+        Result testResult= JUnitCore.runClasses(InheritanceAny.class);
+        assertThat("unexpected run count", testResult.getRunCount(), is(equalTo(3)));
+        assertThat("unexpected failure count", testResult.getFailureCount(), is(equalTo(0)));
+        assertThat("unexpected failure count", testResult.getIgnoreCount(), is(equalTo(0)));
+    @Test
+    public void inheritanceAllIncluded() {
+        Result testResult= JUnitCore.runClasses(InheritanceAll.class);
+        assertThat("unexpected run count", testResult.getRunCount(), is(equalTo(1)));
+        assertThat("unexpected failure count", testResult.getFailureCount(), is(equalTo(0)));
+        assertThat("unexpected failure count", testResult.getIgnoreCount(), is(equalTo(0)));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="81" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerFilteringTest.java"/>
+<file line="112" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerFilteringTest.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Suite.class)
+    @SuiteClasses({ExampleTest.class})
+    public static class ExampleSuite {
+    @Test
+    public void testSuiteFiltering() throws Exception {
+        Runner runner = Request.aClass(ExampleSuite.class).getRunner();
+        Filter filter = notThisMethodName("test1");
+        try {
+            filter.apply(runner);
+        } catch (NoTestsRemainException e) {
+            return;
+        }
+        fail("Expected 'NoTestsRemainException' due to complete filtering");
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="229" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerTest.java"/>
+<file line="194" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void parentRunnerTestMethods() throws InitializationError {
+        CountingRunListener countingRunListener = runTestWithParentRunner(TestTest.class);
+        Assert.assertEquals(1, countingRunListener.testSuiteStarted);
+        Assert.assertEquals(1, countingRunListener.testSuiteFinished);
+        Assert.assertEquals(0, countingRunListener.testSuiteFailure);
+        Assert.assertEquals(0, countingRunListener.testSuiteAssumptionFailure);
+
+
+        Assert.assertEquals(3, countingRunListener.testStarted);
+        Assert.assertEquals(3, countingRunListener.testFinished);
+        Assert.assertEquals(1, countingRunListener.testFailure);
+        Assert.assertEquals(1, countingRunListener.testAssumptionFailure);
+        Assert.assertEquals(1, countingRunListener.testIgnored);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="229" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerTest.java"/>
+<file line="168" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void parentRunnerTestMethods() throws InitializationError {
+        CountingRunListener countingRunListener = runTestWithParentRunner(TestTest.class);
+        Assert.assertEquals(1, countingRunListener.testSuiteStarted);
+        Assert.assertEquals(1, countingRunListener.testSuiteFinished);
+        Assert.assertEquals(0, countingRunListener.testSuiteFailure);
+        Assert.assertEquals(0, countingRunListener.testSuiteAssumptionFailure);
+
+
+        Assert.assertEquals(3, countingRunListener.testStarted);
+        Assert.assertEquals(3, countingRunListener.testFinished);
+        Assert.assertEquals(1, countingRunListener.testFailure);
+        Assert.assertEquals(1, countingRunListener.testAssumptionFailure);
+        Assert.assertEquals(1, countingRunListener.testIgnored);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="194" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerTest.java"/>
+<file line="168" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\classes\ParentRunnerTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void assumptionViolatedAtParentLevel() throws InitializationError {
+        CountingRunListener countingRunListener = runTestWithParentRunner(AssumptionViolatedAtParentLevelTest.class);
+        Assert.assertEquals(1, countingRunListener.testSuiteStarted);
+        Assert.assertEquals(1, countingRunListener.testSuiteFinished);
+        Assert.assertEquals(0, countingRunListener.testSuiteFailure);
+        Assert.assertEquals(1, countingRunListener.testSuiteAssumptionFailure);
+
+
+        Assert.assertEquals(0, countingRunListener.testStarted);
+        Assert.assertEquals(0, countingRunListener.testFinished);
+        Assert.assertEquals(0, countingRunListener.testFailure);
+        Assert.assertEquals(0, countingRunListener.testAssumptionFailure);
+        Assert.assertEquals(0, countingRunListener.testIgnored);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="173" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\Assert.java"/>
+<file line="158" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\Assert.java"/>
+<codefragment>
+<![CDATA[
+    static public void assertEquals(String message, boolean expected, boolean actual) {
+        assertEquals(message, Boolean.valueOf(expected), Boolean.valueOf(actual));
+    static public void assertEquals(boolean expected, boolean actual) {
+        assertEquals(null, expected, actual);
+    static public void assertEquals(String message, byte expected, byte actual) {
+        assertEquals(message, Byte.valueOf(expected), Byte.valueOf(actual));
+    static public void assertEquals(byte expected, byte actual) {
+        assertEquals(null, expected, actual);
+    static public void assertEquals(String message, char expected, char actual) {
+        assertEquals(message, Character.valueOf(expected), Character.valueOf(actual));
+    static public void assertEquals(char expected, char actual) {
+        assertEquals(null, expected, actual);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="188" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\Assert.java"/>
+<file line="158" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\Assert.java"/>
+<codefragment>
+<![CDATA[
+    static public void assertEquals(String message, byte expected, byte actual) {
+        assertEquals(message, Byte.valueOf(expected), Byte.valueOf(actual));
+    static public void assertEquals(byte expected, byte actual) {
+        assertEquals(null, expected, actual);
+    static public void assertEquals(String message, char expected, char actual) {
+        assertEquals(message, Character.valueOf(expected), Character.valueOf(actual));
+    static public void assertEquals(char expected, char actual) {
+        assertEquals(null, expected, actual);
+    static public void assertEquals(String message, short expected, short actual) {
+        assertEquals(message, Short.valueOf(expected), Short.valueOf(actual));
+    static public void assertEquals(short expected, short actual) {
+        assertEquals(null, expected, actual);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="203" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\Assert.java"/>
+<file line="158" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\Assert.java"/>
+<codefragment>
+<![CDATA[
+    static public void assertEquals(String message, char expected, char actual) {
+        assertEquals(message, Character.valueOf(expected), Character.valueOf(actual));
+    static public void assertEquals(char expected, char actual) {
+        assertEquals(null, expected, actual);
+    static public void assertEquals(String message, short expected, short actual) {
+        assertEquals(message, Short.valueOf(expected), Short.valueOf(actual));
+    static public void assertEquals(short expected, short actual) {
+        assertEquals(null, expected, actual);
+    static public void assertEquals(String message, int expected, int actual) {
+        assertEquals(message, Integer.valueOf(expected), Integer.valueOf(actual));
+    static public void assertEquals(int expected, int actual) {
+        assertEquals(null, expected, actual);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="346" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\TestCase.java"/>
+<file line="301" path="C:\Users\User\workspace\Asig4\src\main\java\junit\framework\TestCase.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertEquals(String message, char expected, char actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(char expected, char actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, short expected, short actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(short expected, short actual) {
+        Assert.assertEquals(expected, actual);
+    public static void assertEquals(String message, int expected, int actual) {
+        Assert.assertEquals(message, expected, actual);
+    public static void assertEquals(int expected, int actual) {
+        Assert.assertEquals(expected, actual);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="171" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\ClassRulesTest.java"/>
+<file line="50" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\ClassRulesTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void methodRuleIsAppliedOnce() {
+        MethodExampleTestWithClassRule.counter.count = 0;
+        JUnitCore.runClasses(MethodExampleTestWithClassRule.class);
+        assertEquals(1, MethodExampleTestWithClassRule.counter.count);
+    public static class MethodSubclassOfTestWithClassRule extends
+            MethodExampleTestWithClassRule {
+    @Test
+    public void methodRuleIsIntroducedAndEvaluatedOnSubclass() {
+        MethodExampleTestWithClassRule.counter.count = 0;
+        JUnitCore.runClasses(MethodSubclassOfTestWithClassRule.class);
+        assertEquals(1, MethodExampleTestWithClassRule.counter.count);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="13" tokens="0">
+<file line="168" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\VerifierRuleTest.java"/>
+<file line="147" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\VerifierRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class UsesErrorCollectorCheckThrowsNothingThrown {
+        @Rule
+        public ErrorCollector collector = new ErrorCollector();
+
+
+        @Test
+        public void example() {
+            collector.checkThrows(IllegalArgumentException.class, new ThrowingRunnable() {
+                public void run() throws Throwable {
+    @Test
+    public void usedErrorCollectorCheckThrowsNothingThrownShouldFail() {
+        PrintableResult testResult = testResult(UsesErrorCollectorCheckThrowsNothingThrown.class);
+        assertThat(testResult, hasFailureContaining("but nothing was thrown"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="168" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\VerifierRuleTest.java"/>
+<file line="127" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\VerifierRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class UsesErrorCollectorCheckThrowsNothingThrown {
+        @Rule
+        public ErrorCollector collector = new ErrorCollector();
+
+
+        @Test
+        public void example() {
+            collector.checkThrows(IllegalArgumentException.class, new ThrowingRunnable() {
+                public void run() throws Throwable {
+    @Test
+    public void usedErrorCollectorCheckThrowsNothingThrownShouldFail() {
+        PrintableResult testResult = testResult(UsesErrorCollectorCheckThrowsNothingThrown.class);
+        assertThat(testResult, hasFailureContaining("but nothing was thrown"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="109" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<file line="102" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\DisableOnDebugTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void givenPreJava5DebugArgumentsInReverseIsDebuggingShouldReturnTrue() {
+        DisableOnDebug subject = new DisableOnDebug(
+                new FailOnExecution(),
+                PRE_JAVA5_DEBUG_ARGUMENTS_IN_REVERSE_ORDER);
+        assertTrue("Should be debugging", subject.isDebugging());
+    @Test
+    public void givenPostJava5DebugArgumentsIsDebuggingShouldReturnTrue() {
+        DisableOnDebug subject = new DisableOnDebug(
+                new FailOnExecution(), POST_JAVA5_DEBUG_ARGUMENTS);
+        assertTrue("Should be debugging", subject.isDebugging());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="86" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\notification\SynchronizedRunListenerTest.java"/>
+<file line="112" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\runner\notification\SynchronizedRunListener.java"/>
+<codefragment>
+<![CDATA[
+        @Override
+        public int hashCode() {
+            return fName.hashCode();
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (!(obj instanceof NamedListener)) {
+                return false;
+            }
+            NamedListener that = (NamedListener) obj;
+            return this.fName.equals(that.fName);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="26" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\parallel\ParallelClassTest.java"/>
+<file line="42" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\parallel\ParallelClassTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class Example1 {
+        @Test
+        public void one() throws InterruptedException {
+            fSynchronizer.countDown();
+            assertTrue(fSynchronizer.await(TIMEOUT, TimeUnit.SECONDS));
+            fExample1One = Thread.currentThread();
+        }
+
+
+        @Test
+        public void two() throws InterruptedException {
+            fSynchronizer.countDown();
+            assertTrue(fSynchronizer.await(TIMEOUT, TimeUnit.SECONDS));
+            fExample1Two = Thread.currentThread();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="45" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TimeoutTest.java"/>
+<file line="29" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TimeoutTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class FailureWithTimeoutRunTimeExceptionTest {
+        @Test(timeout = 1000)
+        public void failure() {
+            throw new NullPointerException();
+    @Test
+    public void failureWithTimeoutRunTimeException() throws Exception {
+        JUnitCore core = new JUnitCore();
+        Result result = core.run(FailureWithTimeoutRunTimeExceptionTest.class);
+        assertEquals(1, result.getRunCount());
+        assertEquals(1, result.getFailureCount());
+        assertEquals(NullPointerException.class, result.getFailures().get(0).getException().getClass());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="31" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\AssumptionTest.java"/>
+<file line="64" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\AssumptionTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class HasFailingAssumption {
+        @Test
+        public void assumptionsFail() {
+            assumeThat(3, is(4));
+            fail();
+    @Test
+    public void failedAssumptionsMeanPassing() {
+        Result result = JUnitCore.runClasses(HasFailingAssumption.class);
+        assertThat(result.getRunCount(), is(1));
+        assertThat(result.getIgnoreCount(), is(0));
+        assertThat(result.getFailureCount(), is(0));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="29" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<file line="50" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @BeforeClass
+        public void notStaticBC() {
+        @BeforeClass
+        static void notPublicBC() {
+        @BeforeClass
+        public static int nonVoidBC() {
+            return 0;
+        @BeforeClass
+        public static void argumentsBC(int i) {
+        @BeforeClass
+        public static void fineBC() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="30" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<file line="51" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @BeforeClass
+        public void notStaticBC() {
+        @BeforeClass
+        static void notPublicBC() {
+        @BeforeClass
+        public static int nonVoidBC() {
+            return 0;
+        @BeforeClass
+        public static void argumentsBC(int i) {
+        @BeforeClass
+        public static void fineBC() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="32" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\junit3compatibility\ForwardCompatibilityPrintingTest.java"/>
+<file line="65" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\junit3compatibility\ForwardCompatibilityPrintingTest.java"/>
+<codefragment>
+<![CDATA[
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        TestRunner runner = new TestRunner(new TestResultPrinter(
+                new PrintStream(output)));
+        String expected = expected(new String[]{".E", "Time: 0",
+                "Errors here", "", "FAILURES!!!",
+                "Tests run: 1,  Failures: 0,  Errors: 1", ""});
+        ResultPrinter printer = new TestResultPrinter(new PrintStream(output)) {
+            @Override
+            public void printErrors(TestResult result) {
+                getWriter().println("Errors here");
+        runner.setPrinter(printer);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="448" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<file line="475" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class MethodOnFailureTest {
+        private TestRule watchman = new TestWatcher() {
+            @Override
+            protected void failed(Throwable e, Description description) {
+                log += description + " " + e.getClass().getSimpleName();
+            }
+        };
+
+
+        @Rule
+        public TestRule getWatchman() {
+            return watchman;
+        }
+
+
+        @Test
+        public void nothing() {
+            fail();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="126" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TimeoutRuleTest.java"/>
+<file line="139" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TimeoutRuleTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void timeUnitTimeout() {
+        HasGlobalTimeUnitTimeout.logger.setLength(0);
+        Result result = JUnitCore.runClasses(HasGlobalTimeUnitTimeout.class);
+        assertEquals(6, result.getFailureCount());
+        assertThat(HasGlobalTimeUnitTimeout.logger.toString(), containsString("run1"));
+        assertThat(HasGlobalTimeUnitTimeout.logger.toString(), containsString("run2"));
+        assertThat(HasGlobalTimeUnitTimeout.logger.toString(), containsString("run3"));
+        assertThat(HasGlobalTimeUnitTimeout.logger.toString(), containsString("run4"));
+        assertThat(HasGlobalTimeUnitTimeout.logger.toString(), containsString("run5"));
+        assertThat(HasGlobalTimeUnitTimeout.logger.toString(), containsString("run6"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="280" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\max\MaxStarterTest.java"/>
+<file line="251" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\max\MaxStarterTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void correctErrorFromHalfMalformedTest() {
+        Request request = Request.aClass(HalfMalformedJUnit38TestMethod.class);
+        JUnitCore core = new JUnitCore();
+        Request sorted = fMax.sortRequest(request);
+        Runner runner = sorted.getRunner();
+        Result result = core.run(runner);
+        Failure failure = result.getFailures().get(0);
+        assertThat(failure.toString(), containsString("MalformedJUnit38TestMethod"));
+        assertThat(failure.toString(), containsString("testNothing"));
+        assertThat(failure.toString(), containsString("isn't public"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="190" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\ClassRulesTest.java"/>
+<file line="152" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\ClassRulesTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class MethodExampleTestWithCustomClassRule {
+        private static CustomCounter counter = new CustomCounter();
+
+
+        @ClassRule
+        public static CustomCounter getCounter() {
+            return counter;
+        }
+
+
+        @Test
+        public void firstTest() {
+            assertEquals(1, counter.count);
+        }
+
+
+        @Test
+        public void secondTest() {
+            assertEquals(1, counter.count);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="92" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<file line="71" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @Before
+        public static void staticB() {
+        @Before
+        void notPublicB() {
+        @Before
+        public int nonVoidB() {
+            return 0;
+        @Before
+        public void argumentsB(int i) {
+        @Before
+        public void fineB() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="113" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<file line="92" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public static void staticT() {
+        @Test
+        void notPublicT() {
+        @Test
+        public int nonVoidT() {
+            return 0;
+        @Test
+        public void argumentsT(int i) {
+        @Test
+        public void fineT() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="93" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<file line="72" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @Before
+        public static void staticB() {
+        @Before
+        void notPublicB() {
+        @Before
+        public int nonVoidB() {
+            return 0;
+        @Before
+        public void argumentsB(int i) {
+        @Before
+        public void fineB() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="114" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<file line="93" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public static void staticT() {
+        @Test
+        void notPublicT() {
+        @Test
+        public int nonVoidT() {
+            return 0;
+        @Test
+        public void argumentsT(int i) {
+        @Test
+        public void fineT() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="113" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<file line="71" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\TestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public static void staticT() {
+        @Test
+        void notPublicT() {
+        @Test
+        public int nonVoidT() {
+            return 0;
+        @Test
+        public void argumentsT(int i) {
+        @Test
+        public void fineT() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="114" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<file line="72" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\running\methods\ParameterizedTestMethodTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public static void staticT() {
+        @Test
+        void notPublicT() {
+        @Test
+        public int nonVoidT() {
+            return 0;
+        @Test
+        public void argumentsT(int i) {
+        @Test
+        public void fineT() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="80" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\CategoriesAndParameterizedTest.java"/>
+<file line="48" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\CategoriesAndParameterizedTest.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Categories.class)
+    @IncludeCategory(Token.class)
+    @SuiteClasses({ ParameterizedTestWithCategory.class })
+    public static class SuiteWithParameterizedTestWithCategory {
+    @Test
+    public void runsTestsWithoutCategory() {
+        Result result = new JUnitCore()
+                .run(SuiteWithParameterizedTestWithCategory.class);
+        assertEquals(2, result.getRunCount());
+        assertEquals(0, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="116" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\CategoriesAndParameterizedTest.java"/>
+<file line="80" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\CategoriesAndParameterizedTest.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Categories.class)
+    @IncludeCategory(Token.class)
+    @SuiteClasses({ ParameterizedTestWithMethodWithCategory.class })
+    public static class SuiteWithParameterizedTestWithMethodWithCategory {
+    @Test
+    public void runsTestMethodWithCategory() {
+        Result result = new JUnitCore()
+                .run(SuiteWithParameterizedTestWithMethodWithCategory.class);
+        assertEquals(2, result.getRunCount());
+        assertEquals(0, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="116" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\CategoriesAndParameterizedTest.java"/>
+<file line="48" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\experimental\categories\CategoriesAndParameterizedTest.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Categories.class)
+    @IncludeCategory(Token.class)
+    @SuiteClasses({ ParameterizedTestWithMethodWithCategory.class })
+    public static class SuiteWithParameterizedTestWithMethodWithCategory {
+    @Test
+    public void runsTestMethodWithCategory() {
+        Result result = new JUnitCore()
+                .run(SuiteWithParameterizedTestWithMethodWithCategory.class);
+        assertEquals(2, result.getRunCount());
+        assertEquals(0, result.getFailureCount());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="123" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\MethodSorterTest.java"/>
+<file line="93" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\MethodSorterTest.java"/>
+<codefragment>
+<![CDATA[
+    @FixMethodOrder(MethodSorters.JVM)
+    static class DummySortJvm {
+        Object alpha(int i, double d, Thread t) {
+            return null;
+        }
+
+
+        void beta(int[][] x) {
+        }
+
+
+        int gamma() {
+            return 0;
+        }
+
+
+        void gamma(boolean b) {
+        }
+
+
+        void delta() {
+        }
+
+
+        void epsilon() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="72" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<file line="56" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void whereTypeVariableIsOnWildcardUpperBoundOnTheoryParm() {
+        PrintableResult result = testResult(TypeVariableOnWildcardUpperBoundOnTheoryParm.class);
+        assertThat(result, hasSingleFailureContaining("unresolved type variable U"));
+    @RunWith(Theories.class)
+    public static class TypeVariableOnWildcardUpperBoundOnTheoryParm {
+        @DataPoint
+        public static List<String> strings = Arrays.asList("foo", "bar");
+
+
+        @Theory
+        public <U> void forItems(Collection<? extends U> items) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="88" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<file line="72" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void whereTypeVariableIsOnWildcardLowerBoundOnTheoryParm() {
+        PrintableResult result = testResult(TypeVariableOnWildcardLowerBoundOnTheoryParm.class);
+        assertThat(result, hasSingleFailureContaining("unresolved type variable V"));
+    @RunWith(Theories.class)
+    public static class TypeVariableOnWildcardLowerBoundOnTheoryParm {
+        @DataPoint
+        public static List<String> strings = Arrays.asList("foo", "bar");
+
+
+        @Theory
+        public <V> void forItems(Collection<? super V> items) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="88" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<file line="56" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void whereTypeVariableIsOnWildcardLowerBoundOnTheoryParm() {
+        PrintableResult result = testResult(TypeVariableOnWildcardLowerBoundOnTheoryParm.class);
+        assertThat(result, hasSingleFailureContaining("unresolved type variable V"));
+    @RunWith(Theories.class)
+    public static class TypeVariableOnWildcardLowerBoundOnTheoryParm {
+        @DataPoint
+        public static List<String> strings = Arrays.asList("foo", "bar");
+
+
+        @Theory
+        public <V> void forItems(Collection<? super V> items) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="94" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<file line="30" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<codefragment>
+<![CDATA[
+    @RunWith(Theories.class)
+    public static class TypeVariableOnWildcardLowerBoundOnTheoryParm {
+        @DataPoint
+        public static List<String> strings = Arrays.asList("foo", "bar");
+
+
+        @Theory
+        public <V> void forItems(Collection<? super V> items) {
+    @Test
+    public void whereTypeVariableIsOnArrayTypeOnTheoryParm() {
+        PrintableResult result = testResult(TypeVariableOnArrayTypeOnTheoryParm.class);
+        assertThat(result, hasSingleFailureContaining("unresolved type variable T"));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="56" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<file line="24" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\theories\runner\WithUnresolvedGenericTypeVariablesOnTheoryParms.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void whereTypeVariableIsOnParameterizedTheoryParm() {
+        PrintableResult result = testResult(TypeVariableOnParameterizedTheoryParm.class);
+        assertThat(result, hasSingleFailureContaining("unresolved type variable T"));
+    @RunWith(Theories.class)
+    public static class TypeVariableOnParameterizedTheoryParm {
+        @DataPoint
+        public static List<String> strings = Arrays.asList("foo", "bar");
+
+
+        @Theory
+        public <T> void forItems(Collection<T> items) {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="79" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<file line="39" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<codefragment>
+<![CDATA[
+            public static class A {
+                @Test
+                public void a() {
+                    log += "Aa";
+                }
+
+
+                @Test
+                public void b() {
+                    log += "Ab";
+                }
+
+
+                @Test
+                public void c() {
+                    log += "Ac";
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="96" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<file line="39" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<codefragment>
+<![CDATA[
+            public static class B {
+                @Test
+                public void a() {
+                    log += "Ba";
+                }
+
+
+                @Test
+                public void b() {
+                    log += "Bb";
+                }
+
+
+                @Test
+                public void c() {
+                    log += "Bc";
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="96" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<file line="79" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<codefragment>
+<![CDATA[
+            public static class B {
+                @Test
+                public void a() {
+                    log += "Ba";
+                }
+
+
+                @Test
+                public void b() {
+                    log += "Bb";
+                }
+
+
+                @Test
+                public void c() {
+                    log += "Bc";
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="183" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\AssumptionTest.java"/>
+<file line="166" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\AssumptionTest.java"/>
+<codefragment>
+<![CDATA[
+    public static class HasFailingAssumeInBeforeClass {
+        @BeforeClass
+        public static void checkForSomethingThatIsntThere() {
+            assumeTrue(false);
+        }
+
+
+        @Test
+        public void failing() {
+            fail();
+    @Test
+    public void failingAssumptionInBeforeClassIgnoresClass() {
+        assertThat(testResult(HasFailingAssumeInBeforeClass.class), isSuccessful());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="192" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\framework\TestCaseTest.java"/>
+<file line="185" path="C:\Users\User\workspace\Asig4\src\test\java\junit\tests\framework\TestCaseTest.java"/>
+<codefragment>
+<![CDATA[
+    void verifyFailure(TestCase test) {
+        TestResult result = test.run();
+        assertTrue(result.runCount() == 1);
+        assertTrue(result.failureCount() == 1);
+        assertTrue(result.errorCount() == 0);
+    void verifySuccess(TestCase test) {
+        TestResult result = test.run();
+        assertTrue(result.runCount() == 1);
+        assertTrue(result.failureCount() == 0);
+        assertTrue(result.errorCount() == 0);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="32" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\parallel\ParallelMethodTest.java"/>
+<file line="43" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\parallel\ParallelClassTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public void one() throws InterruptedException {
+            fSynchronizer.countDown();
+            assertTrue(fSynchronizer.await(TIMEOUT, TimeUnit.SECONDS));
+            fOne = Thread.currentThread();
+        @Test
+        public void two() throws InterruptedException {
+            fSynchronizer.countDown();
+            assertTrue(fSynchronizer.await(TIMEOUT, TimeUnit.SECONDS));
+            fTwo = Thread.currentThread();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="32" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\parallel\ParallelMethodTest.java"/>
+<file line="27" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\parallel\ParallelClassTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public void one() throws InterruptedException {
+            fSynchronizer.countDown();
+            assertTrue(fSynchronizer.await(TIMEOUT, TimeUnit.SECONDS));
+            fOne = Thread.currentThread();
+        @Test
+        public void two() throws InterruptedException {
+            fSynchronizer.countDown();
+            assertTrue(fSynchronizer.await(TIMEOUT, TimeUnit.SECONDS));
+            fTwo = Thread.currentThread();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="283" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<file line="416" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\Assert.java"/>
+<codefragment>
+<![CDATA[
+    public static void assertArrayEquals(String message, Object[] expecteds,
+            Object[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(Object[] expecteds, Object[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+    public static void assertArrayEquals(String message, boolean[] expecteds,
+            boolean[] actuals) throws ArrayComparisonFailure {
+        internalArrayEquals(message, expecteds, actuals);
+    public static void assertArrayEquals(boolean[] expecteds, boolean[] actuals) {
+        assertArrayEquals(null, expecteds, actuals);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="298" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\assertion\AssertionTest.java"/>
+<file line="293" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\assertion\AssertionTest.java"/>
+<codefragment>
+<![CDATA[
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{}, {true}},
+                new Object[][]{{}, {}},
+                "not equal: array lengths differed, expected.length=1 actual.length=0; arrays first differed at element [1][0]; expected:<true> but was:<end of array>");
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{}, {}},
+                new Object[][]{{true}, {}},
+                "not equal: array lengths differed, expected.length=0 actual.length=1; arrays first differed at element [0][0]; expected:<end of array> but was:<true>");
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="303" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\assertion\AssertionTest.java"/>
+<file line="293" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\assertion\AssertionTest.java"/>
+<codefragment>
+<![CDATA[
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{}, {}},
+                new Object[][]{{true}, {}},
+                "not equal: array lengths differed, expected.length=0 actual.length=1; arrays first differed at element [0][0]; expected:<end of array> but was:<true>");
+        assertArrayEqualsFailure(
+                "not equal",
+                new Object[][]{{}, {}},
+                new Object[][]{{}, {true}},
+                "not equal: array lengths differed, expected.length=0 actual.length=1; arrays first differed at element [1][0]; expected:<end of array> but was:<true>");
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="17" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\matchers\ThrowableMessageMatcher.java"/>
+<file line="25" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\matchers\ThrowableCauseMatcher.java"/>
+<codefragment>
+<![CDATA[
+    public void describeTo(Description description) {
+        description.appendText("exception with message ");
+        description.appendDescriptionOf(matcher);
+    @Override
+    protected boolean matchesSafely(T item) {
+        return matcher.matches(item.getMessage());
+    @Override
+    protected void describeMismatchSafely(T item, Description description) {
+        description.appendText("message ");
+        matcher.describeMismatch(item.getMessage(), description);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="123" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\MethodSorterTest.java"/>
+<file line="153" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\internal\MethodSorterTest.java"/>
+<codefragment>
+<![CDATA[
+    @FixMethodOrder(MethodSorters.JVM)
+    static class DummySortJvm {
+        Object alpha(int i, double d, Thread t) {
+            return null;
+        }
+
+
+        void beta(int[][] x) {
+        }
+
+
+        int gamma() {
+            return 0;
+        }
+
+
+        void gamma(boolean b) {
+        }
+
+
+        void delta() {
+        }
+
+
+        void epsilon() {
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="39" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<file line="22" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    protected Collection<Field> getDataPointsFields(ParameterSignature sig) {
+        Collection<Field> fields = super.getDataPointsFields(sig);
+        String requestedName = sig.getAnnotation(FromDataPoints.class).value();
+        
+
+        List<Field> fieldsWithMatchingNames = new ArrayList<Field>();
+        
+
+        for (Field field : fields) {
+            String[] fieldNames = field.getAnnotation(DataPoints.class).value();
+            if (Arrays.asList(fieldNames).contains(requestedName)) {
+                fieldsWithMatchingNames.add(field);
+            }
+        }
+        
+
+        return fieldsWithMatchingNames;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="73" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<file line="56" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    protected Collection<FrameworkMethod> getDataPointsMethods(ParameterSignature sig) {
+        Collection<FrameworkMethod> methods = super.getDataPointsMethods(sig);
+        String requestedName = sig.getAnnotation(FromDataPoints.class).value();
+        
+
+        List<FrameworkMethod> methodsWithMatchingNames = new ArrayList<FrameworkMethod>();
+        
+
+        for (FrameworkMethod method : methods) {
+            String[] methodNames = method.getAnnotation(DataPoints.class).value();
+            if (Arrays.asList(methodNames).contains(requestedName)) {
+                methodsWithMatchingNames.add(method);
+            }
+        }
+        
+
+        return methodsWithMatchingNames;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="56" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<file line="22" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    protected Collection<FrameworkMethod> getSingleDataPointMethods(ParameterSignature sig) {
+        Collection<FrameworkMethod> methods = super.getSingleDataPointMethods(sig);
+        String requestedName = sig.getAnnotation(FromDataPoints.class).value();
+        
+
+        List<FrameworkMethod> methodsWithMatchingNames = new ArrayList<FrameworkMethod>();
+        
+
+        for (FrameworkMethod method : methods) {
+            String[] methodNames = method.getAnnotation(DataPoint.class).value();
+            if (Arrays.asList(methodNames).contains(requestedName)) {
+                methodsWithMatchingNames.add(method);
+            }
+        }
+        
+
+        return methodsWithMatchingNames;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="73" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<file line="39" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\experimental\theories\internal\SpecificDataPointsSupplier.java"/>
+<codefragment>
+<![CDATA[
+    @Override
+    protected Collection<FrameworkMethod> getDataPointsMethods(ParameterSignature sig) {
+        Collection<FrameworkMethod> methods = super.getDataPointsMethods(sig);
+        String requestedName = sig.getAnnotation(FromDataPoints.class).value();
+        
+
+        List<FrameworkMethod> methodsWithMatchingNames = new ArrayList<FrameworkMethod>();
+        
+
+        for (FrameworkMethod method : methods) {
+            String[] methodNames = method.getAnnotation(DataPoints.class).value();
+            if (Arrays.asList(methodNames).contains(requestedName)) {
+                methodsWithMatchingNames.add(method);
+            }
+        }
+        
+
+        return methodsWithMatchingNames;
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="656" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\TestRuleTest.java"/>
+<file line="109" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\rules\ClassRulesTest.java"/>
+<codefragment>
+<![CDATA[
+    private static class OrderTestRule implements TestRule {
+        private String name;
+
+
+        public OrderTestRule(String name) {
+            this.name = name;
+        }
+
+
+        public Statement apply(final Statement base, final Description description) {
+            return new Statement() {
+                @Override
+                public void evaluate() throws Throwable {
+                    orderList.add(name);
+                    base.evaluate();
+]]>
+</codefragment>
+</duplication>
+<duplication lines="11" tokens="0">
+<file line="244" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\runners\rules\RuleMemberValidator.java"/>
+<file line="231" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\runners\rules\RuleMemberValidator.java"/>
+<codefragment>
+<![CDATA[
+    private static final class MethodMustBeARule implements RuleValidator {
+        public void validate(FrameworkMember<?> member, Class<? extends Annotation> annotation, List<Throwable> errors) {
+            if (!isRuleType(member)) {
+                errors.add(new ValidationError(member, annotation,
+                        "must return an implementation of MethodRule or TestRule."));
+    private static final class MethodMustBeATestRule implements RuleValidator {
+        public void validate(FrameworkMember<?> member,
+                Class<? extends Annotation> annotation, List<Throwable> errors) {
+            if (!isTestRule(member)) {
+                errors.add(new ValidationError(member, annotation,
+                        "must return an implementation of TestRule."));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="12" tokens="0">
+<file line="256" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\runners\rules\RuleMemberValidator.java"/>
+<file line="231" path="C:\Users\User\workspace\Asig4\src\main\java\org\junit\internal\runners\rules\RuleMemberValidator.java"/>
+<codefragment>
+<![CDATA[
+    private static final class MethodMustBeATestRule implements RuleValidator {
+        public void validate(FrameworkMember<?> member,
+                Class<? extends Annotation> annotation, List<Throwable> errors) {
+            if (!isTestRule(member)) {
+                errors.add(new ValidationError(member, annotation,
+                        "must return an implementation of TestRule."));
+    private static final class FieldMustBeATestRule implements RuleValidator {
+
+
+        public void validate(FrameworkMember<?> member,
+                Class<? extends Annotation> annotation, List<Throwable> errors) {
+            if (!isTestRule(member)) {
+                errors.add(new ValidationError(member, annotation,
+                        "must implement TestRule."));
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="160" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<file line="114" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public void sortingForwardWorksOnTestClassRunner() {
+            Request forward = Request.aClass(SortMe.class).sortWith(forward());
+
+
+            new JUnitCore().run(forward);
+            assertEquals("abc", log);
+        @Test
+        public void sortingBackwardWorksOnTestClassRunner() {
+            Request backward = Request.aClass(SortMe.class).sortWith(backward());
+
+
+            new JUnitCore().run(backward);
+            assertEquals("cba", log);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="114" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<file line="61" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\manipulation\SortableTest.java"/>
+<codefragment>
+<![CDATA[
+        @Test
+        public void sortingForwardWorksOnSuite() {
+            Request forward = Request.aClass(Enclosing.class).sortWith(forward());
+
+
+            new JUnitCore().run(forward);
+            assertEquals("AaAbAcBaBbBc", log);
+        @Test
+        public void sortingBackwardWorksOnSuite() {
+            Request backward = Request.aClass(Enclosing.class).sortWith(backward());
+
+
+            new JUnitCore().run(backward);
+            assertEquals("BcBbBaAcAbAa", log);
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="91" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\max\MaxStarterTest.java"/>
+<file line="74" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\tests\experimental\max\MaxStarterTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void preferNewTestsOverTestsThatFailed() {
+        Request one = Request.method(TwoTests.class, "dontSucceed");
+        fMax.run(one);
+        Request two = Request.aClass(TwoTests.class);
+        List<Description> things = fMax.sortedLeavesForTest(two);
+        Description succeed = Description.createTestDescription(TwoTests.class,
+                "succeed");
+        assertEquals(succeed, things.get(0));
+        assertEquals(2, things.size());
+]]>
+</codefragment>
+</duplication>
+<duplication lines="10" tokens="0">
+<file line="48" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\notification\RunNotifierTest.java"/>
+<file line="84" path="C:\Users\User\workspace\Asig4\src\test\java\org\junit\runner\notification\RunNotifierTest.java"/>
+<codefragment>
+<![CDATA[
+    @Test
+    public void addAndRemoveWithNonThreadSafeListener() {
+        CountingListener listener = new CountingListener();
+        assertThat(listener.fTestStarted.get(), is(0));
+        fNotifier.addListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+        fNotifier.removeListener(listener);
+        fNotifier.fireTestStarted(null);
+        assertThat(listener.fTestStarted.get(), is(1));
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>

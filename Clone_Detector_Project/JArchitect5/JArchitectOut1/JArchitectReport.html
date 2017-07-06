@@ -1,0 +1,1034 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"><title>JArchitect Report</title><link rel="stylesheet" type="text/css" href="./JArchitectReportFiles/NDependReport.css"><script type="text/javascript" src="./JArchitectReportFiles/NDependReport.js"></script></head><body><noscript><style type="text/css">
+            div.ndependScreen { display: block; }
+          </style></noscript><div style="display:none"><div id="inline_DependenciesDiagram" class="inlineHelp"><p><strong>Dependency Graph</strong></p><ul><li>
+              This diagram represents the Graph of Dependencies beetween the Java Projects of your application.
+              </li><li>
+              This static diagram can be useful but it is just a coarse view of your application architecture.
+              </li><li>
+              It is recommended to use the JArchitect <b>interactive</b> dependency Graph and interactive Dependency Matrix for an in-depth exploration of the actual architecture of your code.<br></li></ul><p>
+              Online documentation:
+            </p><ul><li><a href="http://www.jarchitect.com/Doc_VS_Arch.aspx" target="_blank">JArchitect Interactive Dependency Graph</a></li><li><a href="http://www.jarchitect.com/Doc_Matrix.aspx" target="_blank">JArchitect Interactive Dependency Matrix</a></li></ul></div><div id="inline_DependenciesMatrix" class="inlineHelp"><p><strong>Dependency Matrix</strong></p><ul><li>This diagram represents the DSM (Dependency Structure Matrix) beetween the Java Projects of your application.</li><li>The Dependency Matrix is a compact way to represent and navigate across dependencies between components.</li><li>The number on cells of the Dependency Matrix included in the report, represent the number of types involved in the coupling</li><li>It is recommended to use the JArchitect <b>interactive</b> dependency Graph and interactive Dependency Matrix for an in-depth exploration of the actual architecture of your code.</li></ul><p>
+              Online documentation:
+            </p><ul><li><a href="http://www.jarchitect.com/Doc_Matrix.aspx" target="_blank">JArchitect Interactive Dependency Matrix</a></li><li><a href="http://www.jarchitect.com/Doc_VS_Arch.aspx" target="_blank">JArchitect Interactive Dependency Graph</a></li></ul></div><div id="inline_Treemap" class="inlineHelp"><p><strong>Visualizing Code Metrics through Treemaping</strong></p><ul><li>In this Metric View, the code base is represented through a Treemap.</li><li>Treemapping is a method for displaying tree-structured data by using nested rectangles.</li><li>In the present treemap, each rectangle represents a method and the area of a rectangle is proportional to the number of lines of code of the corresponding method.</li></ul><p>
+              With the Online documentation, understand how Treemaping can help you see patterns in your code base, that would be hard to spot with other ways. <br></p><ul><li><a href="http://www.jarchitect.com/Doc_Treemap.aspx" target="_blank">Visualizing Code Metrics with Treemap</a></li></ul></div><div id="inline_AbstractnessVersusInstability" class="inlineHelp"><p><strong>Abstractness versus Instability Diagram</strong></p><p>
+              The <i>Abstractness versus Instability Diagram</i> helps to detect which projects are potentially painful to maintain (i.e concrete and stable) and which projects are potentially useless (i.e abstract and instable).
+            </p><ul><li><strong>Abstractness</strong>:
+                If an project contains many abstract types (i.e interfaces and abstract classes) and few concrete types, it is considered as abstract.<br></li><li><strong>Stability</strong>:
+                An project is considered stable if its types are used by a lot of types of tier projects. In this conditions <i>stable</i> means <i>painful to modify</i>.
+              </li></ul><p>
+              Online documentation:
+            </p><ul><li><a href="http://www.jarchitect.com/Metrics.aspx#MetricsOnAssemblies" target="_blank">Definitions of related Code Metrics</a></li></ul></div><div id="inline_ForBeginnersMain" class="inlineHelp"><p><strong>For beginners: Where to start</strong></p><ul><li>
+                Search for unwanted dependencies.
+              </li><li>
+                Look for complex methods listed through the standard Rule <b>Quick Summary of methods to refactor</b>.
+              </li><li>
+                Inspect other standard Rules that were violated.
+              </li><li>
+                See how standard Rules are written and customize some Rules to your needs.
+              </li><li>
+                Look at <a href="http://www.jarchitect.com/Metrics.aspx" target="_blank">Code Metrics definitions</a> to see how Code Metrics can help increase code quality.
+              </li><li>
+                Use the <a href="http://www.jarchitect.com/Doc_VS_Diff.aspx" target="_blank">Code Diff feature</a> to review code changes (pro edition only).
+              </li><li><a href="http://www.jarchitect.com/Coverage.aspx" target="_blank">Import test coverage data</a> to assess possible improvements in your testing strategy (pro edition only).
+              </li></ul></div><div id="inline_TruncatedQueryResult" class="inlineHelp"><p><strong>Code queries and rules results are truncated to list a maximum of 100 code elements in this report</strong></p><ul><li>
+                It is recommended to use the JArchitect interactive UI capabilities to browse a large list of code elements matched.
+              </li><li>
+                To enable or disable this setting, there is a tickbox labelled <i>Don't show more than 100 matched items for a Rule violated</i>
+                in the <i>JArchitect Project Properties panel &gt; Report tab &gt; Avoid too big report for large code base section</i></li><li>
+                This setting is enabled by default to avoid to have too large reports when analyzing large code bases.
+              </li></ul></div><div id="inline_NONTruncatedQueryResult" class="inlineHelp"><p><strong>Does this report gets too large?</strong></p><ul><li>
+                There is a setting enabled by default to avoid to have too large reports when analyzing large code bases.
+              </li><li>
+                To enable or disable this setting, there is a tickbox labelled <i>Don't show more than 100 matched items for a Rule violated</i>
+                in the <i>JArchitect Project Properties panel &gt; Report tab &gt; Avoid too big report for large code base section</i></li><li>
+                It is recommended to use the JArchitect interactive UI capabilities to browse a large list of code elements matched.
+              </li></ul></div><div id="inline_RecentViolationsONLY" class="inlineHelp"><p><strong>The list contains only code elements refactored or added since the baseline for comparison.</strong></p><ul><li>
+                This is because the setting <b>Recent Violations Only</b> is enabled.
+              </li><li>
+                This setting reduces the violations set of code rules violated, to match only code elements refactored or added since the <a href="http://www.jarchitect.com/Doc_VS_Diff.aspx#Baseline" target="_blank">baseline for comparison</a>.
+              </li><li>
+                Typically, when running code rules on an existing code base, thousands of violations are shown.
+                It is not practicable to stop the development for days or weeks to fix all violations.
+                Focusing on fixing recent violations only, represents a convenient way to prioritize violations, and fix the most relevant ones without stopping the development.
+              </li><li>
+                To enable or disable the setting <b>Recent Violations Only</b> there is a tick box labelled <i>Recent Violations Only</i> on the <i>JArchitect Dashboard panel &gt; Code Rules</i></li></ul></div><div id="inline_RecentViolationsOnlyONHelp" class="inlineHelp"><p><strong>The setting Recent Violations Only is enabled</strong></p><ul><li>
+                This setting reduces the violations set of code rules violated, to match only code elements refactored or added since the <a href="http://www.jarchitect.com/Doc_VS_Diff.aspx#Baseline" target="_blank">baseline for comparison</a>.
+              </li><li>
+                Typically, when running code rules on an existing code base, thousands of violations are shown.
+                It is not practicable to stop the development for days or weeks to fix all violations.
+                Focusing on fixing recent violations only, represents a convenient way to prioritize violations, and fix the most relevant ones without stopping the development.
+              </li><li>
+                To disable the setting <b>Recent Violations Only</b> there is a tick box labelled <i>Recent Violations Only</i> on the <i>JArchitect Dashboard panel &gt; Code Rules</i></li></ul></div><div id="inline_RecentViolationsOnlyOFFHelp" class="inlineHelp"><p><strong>Why should I enable the setting Recent Violations Only ?</strong></p><ul><li>
+                The setting <b>Recent Violations Only</b> reduces the violations set of code rules violated, to match only code elements refactored or added since the <a href="http://www.jarchitect.com/Doc_VS_Diff.aspx#Baseline" target="_blank">baseline for comparison</a>.
+              </li><li>
+                Typically, when running code rules on an existing code base, thousands of violations are shown.
+                It is not practicable to stop the development for days or weeks to fix all violations.
+                Focusing on fixing recent violations only, represents a convenient way to prioritize violations, and fix the most relevant ones without stopping the development.
+              </li><li>
+                To enable the setting <b>Recent Violations Only</b> there is a tick box labelled <i>Recent Violations Only</i> on the <i>JArchitect Dashboard panel &gt; Code Rules</i></li></ul></div><div id="inline_QuickTipsMain" class="inlineHelp"><p><strong>Quick Tips</strong></p><ul><li>
+                In addition to the JArchitect report, use the <b>interactive UI</b> through the standalone executable <b>VisualJArchitect.exe</b>.
+              </li><li>
+                With the interactive UI, browse more detailed data and have Rules checking updated each time the code is modified and recompiled.
+              </li><li>
+                The analysis execution and the report options are configurable through the interactive UI, in the panel <b>Project Properties</b>.
+              </li><li>
+                Plain HTML report (single HTML page, no javascript, no menu) is also available.
+              </li><li>
+                Full JArchitect documentation is available on the <a href="http://www.jarchitect.com/Coverage.aspx" target="_blank">JArchitect website</a> under the <b>Documentation menu</b>.
+              </li></ul></div></div><div id="divNavBars"><div class="ndependNavbar" id="ndependNavbar-Main"><a rel="address:/" href="#Main">
+        Main
+      </a></div><div class="ndependNavbar" id="ndependNavbar-Rules"><a rel="address:/" href="#Main">
+        Main
+      </a> \ Rules
+    </div><div class="ndependNavbar" id="ndependNavbar-ApplicationMetrics"><a rel="address:/" href="#Main">
+        Main
+      </a> \ Metrics
+     \
+      <a rel="address:/?screen=ApplicationMetrics" href="#ApplicationMetrics">
+        Application Statistics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-AssembliesMetrics"><a rel="address:/" href="#Main">
+        Main
+      </a> \ Metrics
+     \
+      <a rel="address:/?screen=AssembliesMetrics" href="#AssembliesMetrics">
+        Projects Metrics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-NamespacesMetrics"><a rel="address:/" href="#Main">
+        Main
+      </a> \ Metrics
+     \
+      <a rel="address:/?screen=NamespacesMetrics" href="#NamespacesMetrics">
+        Packages Metrics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-TypesMetrics"><a rel="address:/" href="#Main">
+        Main
+      </a> \ Metrics
+     \
+      <a rel="address:/?screen=TypesMetrics" href="#TypesMetrics">
+        Types Metrics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-AssembliesDependencies"><a rel="address:/" href="#Main">
+        Main
+      </a> \
+      <a rel="address:/?screen=AssembliesDependencies" href="#AssembliesDependencies">
+        Projects Dependencies
+      </a></div><div class="ndependNavbar" id="ndependNavbar-NamespacesDependencies"><a rel="address:/" href="#Main">
+        Main
+      </a> \
+      <a rel="address:/?screen=NamespacesDependencies" href="#NamespacesDependencies">
+        Packages Dependencies
+      </a></div><div class="ndependNavbar" id="ndependNavbar-TypesDependencies"><a rel="address:/" href="#Main">
+        Main
+      </a> \
+      <a rel="address:/?screen=TypesDependencies" href="#TypesDependencies">
+        Types Dependencies
+      </a></div><div class="ndependNavbar" id="ndependNavbar-AssembliesBuildOrder"><a rel="address:/" href="#Main">
+        Main
+      </a> \
+      <a rel="address:/?screen=AssembliesBuildOrder" href="#AssembliesBuildOrder">
+        Build Order
+      </a></div><div class="ndependNavbar" id="ndependNavbar-InfoWarnings"><a rel="address:/" href="#Main">
+        Main
+      </a> \
+      <a rel="address:/?screen=InfoWarnings" href="#InfoWarnings">
+        Analysis Log
+      </a></div><div class="ndependNavbar" id="ndependNavbar-TrendCharts"><a rel="address:/" href="#Main">
+        Main
+      </a> \
+      <a rel="address:/?screen=TrendCharts" href="#TrendCharts">
+        Trend Charts
+      </a></div></div><div id="header-wrap"><div id="header-container"><div id="header"><div id="header"><div id="MenuArrow"></div><div id="MenuLabel">menu</div><div class="menu" id="Menu"><ul class="sf-menu sf-vertical sf-js-enabled sf-shadow"><li class="current"><a href="#Main">Main</a></li><li><a href="#"><table cellpadding="0" cellspacing="4"><tr><td>Rules</td></tr><tr><td><span class="okCount">12</span><span class="warnCount">0</span><span class="errorCount">0</span></td></tr></table></a><ul></ul></li><li><a rel="address:/?screen=TrendCharts" href="#TrendCharts">Trend Charts</a></li><li><a href="#">Metrics</a><ul><li><a rel="address:/?screen=ApplicationMetrics" href="#ApplicationMetrics">Application Statistics</a></li><li><a rel="address:/?screen=TypesMetrics" href="#TypesMetrics">Types Metrics</a></li></ul></li><li><a href="#">Dependencies</a><ul><li><a rel="address:/?screen=AssembliesDependencies" href="#AssembliesDependencies">Projects Dependencies</a></li></ul></li><li><a rel="address:/?screen=AssembliesBuildOrder" href="#AssembliesBuildOrder">Build Order</a></li><li><a rel="address:/?screen=InfoWarnings" href="#InfoWarnings">Analysis Log</a></li></ul></div></div></div></div></div><div id="container"><noscript><div class="ndependScreen warning" id="jscriptWarning2">
+              WARNING: JavaScript is currently disabled in your browser. All the data will still be displayed, as single page, but several functionalities will be missing (Grid search, etc.).
+            </div></noscript><div id="content"><div class="ndependScreen" id="Main"><div class="info" id="ReportInfo"><span class="heading"><span class="ndepend"><span class="then">j</span>architect
+        </span> report summary
+      </span><span class="line"><span class="name">application name</span>jproject (v1.0)</span><span class="line"><span class="name">report build date</span>11/30/2016 03:29:05</span><span class="line"><span class="name">analysis duration</span>00:08</span><span class="line"><span class="name"><span class="ndepend"><span class="then">j</span>architect
+          </span> version
+        </span>5.0.0.4687 (Evaluation: 11 days left)</span><span class="line"><span class="name">baseline for comparison</span>
+            Not Defined. To define a Baseline for Comparison, please read this <a href="http://www.jarchitect.com/Doc_CI_Diff.aspx" target="_blank">online documentation</a>.
+          </span><span class="line"><span class="name">code coverage data</span>
+            Not Defined. To import Code Coverage Data, please read this <a href="http://www.jarchitect.com/Coverage.aspx" target="_blank">online documentation</a>.
+          </span><div class="explanations if-js-on"><span class="links"><a id="ForBeginnersMain" href="#" class="cboxElement">Get started.</a><a id="QuickTipsMain" href="#" class="cboxElement">Quick tips.</a><a id="BackToSite" href="http://www.jarchitect.com/" target="_blank">Back to JArchitect.</a></span><span class="text">
+          The present HTML report is a summary of data gathered by the analysis.<br>
+           It is recommended to use the JArchitect interactive UI capabilities<br>
+					to make the most of JArchitect by mastering all aspects of your code.
+				</span></div></div><div id="Diagrams" class="diagrams"><h4>Diagrams</h4><div class="diagramCell"><a href=".\JArchitectReportFiles\ComponentDependenciesDiagram.png" target="_blank" class="diagramImage cboxElement" title="Java Projects Dependency Graph"><img src=".\JArchitectReportFiles\ComponentDependenciesDiagram.png" alt="Java Projects Dependency Graph" title="Java Projects Dependency Graph" height="152" width="223"></a><div class="diagramTitle">Dependency Graph</div><div class="diagramButtons">
+                        View as
+                        <a id="DependenciesDiagramHelp" href="#" class="help cboxElement">?</a><a href=".\JArchitectReportFiles\ComponentDependenciesDiagram.png" target="_blank" class="fullImage" title="Component Dependency Graph">full</a><a href=".\JArchitectReportFiles\ComponentDependenciesDiagram.png" target="_blank" class="diagramImage cboxElement" title="Java Projects Dependency Graph">scaled</a></div></div><div class="diagramCell"><a href=".\JArchitectReportFiles\ComponentDependenciesMatrix.png" target="_blank" class="diagramImage cboxElement" title="Java Projects Dependency Matrix"><img src=".\JArchitectReportFiles\ComponentDependenciesMatrix.png" alt="Java Projects Dependency Matrix" title="Java Projects Dependency Matrix" height="152" width="223"></a><div class="diagramTitle">Dependency Matrix</div><div class="diagramButtons">
+                        View as
+                        <a id="DependenciesMatrixHelp" href="#" class="help cboxElement">?</a><a href=".\JArchitectReportFiles\ComponentDependenciesMatrix.png" target="_blank" class="fullImage" title="Component Dependency Graph">full</a><a href=".\JArchitectReportFiles\ComponentDependenciesMatrix.png" target="_blank" class="diagramImage cboxElement" title="Java Projects Dependency Matrix">scaled</a></div></div><div class="diagramCell"><a href=".\JArchitectReportFiles\VisualNDependView.png" target="_blank" class="diagramImage cboxElement" title="Treemap View"><img src=".\JArchitectReportFiles\VisualNDependView.png" alt="Treemap View" title="Treemap View" height="152" width="223"></a><div class="diagramTitle">Treemap Metric View</div><div class="diagramButtons">
+                        View as
+                        <a id="TreemapHelp" href="#" class="help cboxElement">?</a><a href=".\JArchitectReportFiles\VisualNDependView.png" target="_blank" class="fullImage" title="Treemap View">full</a><a href=".\JArchitectReportFiles\VisualNDependView.png" target="_blank" class="diagramImage cboxElement" title="Treemap View">scaled</a></div></div><div class="diagramCell last"><a href=".\JArchitectReportFiles\AbstractnessVSInstability.png" target="_blank" class="diagramImage cboxElement" title="Abstractness versus Instability"><img src=".\JArchitectReportFiles\AbstractnessVSInstability.png" alt="Abstractness versus Instability" title="Abstractness versus Instability" height="152" width="223"></a><div class="diagramTitle">Abstractness vs. Instability</div><div class="diagramButtons">
+                        View as
+                        <a id="AbstractnessVersusInstabilityHelp" href="#" class="help cboxElement">?</a><a href=".\JArchitectReportFiles\AbstractnessVSInstability.png" target="_blank" class="fullImage" title="Abstractness versus Instability">full</a><a href=".\JArchitectReportFiles\AbstractnessVSInstability.png" target="_blank" class="diagramImage cboxElement" title="Abstractness versus Instability">scaled</a></div></div></div><div class="separatorLine"></div><div id="divDashboardHeader" class="info"><h4>Application Metrics</h4><span class="note">
+        Note: Further <a rel="address:/?screen=ApplicationMetrics" href="#ApplicationMetrics" address="true">Application Statistics</a> are available.
+      </span></div><div id="divDashboard" class="info"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><table class="tableVisible" cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><span class="title"># Lines of Code</span><table><tr><td><span class="title">8 032</span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="diff"></span></span></td></tr></table></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">0  (NotMyCode)</span></td></tr></tbody></table></td></tr><tr class="tableNotVisible"><td class="separator"></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><table class="tableVisible" cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><span class="title"># Types</span><table><tr><td><span class="title">1 338</span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="diff"></span></span></td></tr></table></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">1&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">63&nbsp;&nbsp;&nbsp;Packages&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">4 941&nbsp;&nbsp;&nbsp;Methods&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">820&nbsp;&nbsp;&nbsp;Fields&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">441&nbsp;&nbsp;&nbsp;Source Files&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr></tbody></table></td></tr><tr class="tableNotVisible"><td class="separator"></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><table class="tableVisible" cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><span class="title">Comment</span><table><tr><td><span class="title">43.74%</span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="diff"></span></span></td></tr></table></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">6 245&nbsp;&nbsp;&nbsp;Lines of Comment&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr></tbody></table></td></tr></tbody></table></td><td class="separator"></td><td class="tableNotVisible"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><table class="tableVisible" cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><span class="title">Method Complexity</span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">21&nbsp;&nbsp;&nbsp;Max&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">1.41&nbsp;&nbsp;&nbsp;Average&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr></tbody></table></td></tr><tr class="tableNotVisible"><td class="separator"></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><table class="tableVisible" cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><span class="title">Code Coverage by Tests</span><span class="error">N/A because no coverage data specified</span><br></td></tr></tbody></table></td></tr><tr class="tableNotVisible"><td class="separator"></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><table class="tableVisible" cellpadding="0px" cellspacing="0px"><tbody><tr class="tableNotVisible"><td class="tableNotVisible"><span class="title">Third-Party Usage</span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">2&nbsp;&nbsp;&nbsp;Projects used&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">23&nbsp;&nbsp;&nbsp;Packages used&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">223&nbsp;&nbsp;&nbsp;Types used&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">543&nbsp;&nbsp;&nbsp;Methods used&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr><tr class="tableNotVisible"><td class="tableNotVisible"><span class="sub">18&nbsp;&nbsp;&nbsp;Fields used&nbsp;&nbsp;&nbsp;<span class="diff">&nbsp;&nbsp;&nbsp;</span></span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div class="info" id="divRulesSummary"><h4>Rules summary</h4><span class="score"><span class="okCount">12</span><span class="warnCount">0</span><span class="errorCount">0</span></span><span class="counthead">This section lists all Rules violated, and Rules or Queries with Error</span><ul class="countlist"><li>
+          Number of Rules or Queries with Error (syntax error, exception thrown, time-out): <span class="count">0</span></li><li>
+          Number of Rules violated: <span class="count">0</span></li></ul></div></div><div class="ndependScreen" id="ApplicationMetrics"><div class="info"><h4>Application Statistics</h4><div class="divTable"><table class="ndependTable" id="ApplicationMetricsStatsTable"><thead><tr><th>
+                  Stat
+                </th><th>
+                  # Occurences
+                </th><th>
+                  Avg
+                </th><th>
+                  StdDev
+                </th><th>
+                  Max
+                </th></tr></thead><tbody><tr class="data0"><td class="firstColumn">
+        Properties on interfaces
+      </td><td>61 interfaces
+      </td><td>0</td><td>0</td><td><font color="#FF0000">0</font> properties on <font color="#FF0000">junit.extensions.package-info</font></td></tr><tr class="data1"><td class="firstColumn">
+        Methods on interfaces
+      </td><td>61 interfaces
+      </td><td>0.69</td><td>1.41</td><td><font color="#FF0000">8</font> methods on <font color="#FF0000">junit.samples.money.IMoney</font></td></tr><tr class="data0"><td class="firstColumn">
+        Arguments on methods on interfaces
+      </td><td>42 methods
+      </td><td>0.98</td><td>0.83</td><td><font color="#FF0000">3</font> arguments on <font color="#FF0000">junit.runner.TestRunListener.testFailed(int,String,String)</font></td></tr><tr class="data1"><td class="firstColumn">
+        Public properties on classes
+      </td><td>1,273 Classes
+      </td><td>0</td><td>0</td><td><font color="#FF0000">0</font> public properties on <font color="#FF0000">junit.extensions.ActiveTestSuite$1</font></td></tr><tr class="data0"><td class="firstColumn">
+        Public methods on classes
+      </td><td>1,273 classes
+      </td><td>3.49</td><td>4.94</td><td><font color="#FF0000">93</font> public methods on <font color="#FF0000">org.junit.tests.assertion.AssertionTest</font></td></tr><tr class="data1"><td class="firstColumn">
+        Arguments on public methods on classes
+      </td><td>4,444 methods
+      </td><td>0.48</td><td>0.81</td><td><font color="#FF0000">6</font> arguments on <font color="#FF0000">org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms$TypeVariablesAbound.forItem(Object,Collection,Map,List,Object[],Collection[])&lt;D,E,F,G&gt;</font></td></tr><tr class="data0"><td class="firstColumn">
+        BC instructions in non-abstract methods
+      </td><td>5,195 methods
+      </td><td>10.31</td><td>13.46</td><td><font color="#FF0000">293</font> BC instructions in <font color="#FF0000">org.junit.rules.ExpectedExceptionTest.testsWithEventMatcher()</font></td></tr><tr class="data1"><td class="firstColumn">
+        Cyclomatic complexity on non abstract Methods
+      </td><td>5,195 Methods
+      </td><td>1.25</td><td>0.82</td><td>
+        CC = <font color="#FF0000">16</font> for <font color="#FF0000">org.junit.internal.ComparisonCriteria.arrayEquals(String,Object,Object,boolean)</font></td></tr></tbody></table></div></div></div><div class="ndependScreen" id="TypesMetrics"><div class="info"><h4>Types Metrics : Code Quality</h4><div class="explanations if-js-on" style="display: block; visibility: visible; ">
+           For a particular Code Metric defined for types, values in red represent the 15% highest values.<br>
+           If you wish to define thresholds on types' Code Metrics, consider writing some Rule.<br>
+           Clicking column header arrows sorts values.<br>
+           Clicking column header title text redirect to the online Code Metric definition.<br></div><div class="spacer"></div><div class="restrictions if-js-on">
+              If the code base analyzed has too many types, JArchitect doesn't list Types Metrics to avoid a too big report. The section Types Metrics can be activated by unchecking the option: <br><i>JArchitect Project Properties &gt; Report &gt; Avoid too big report for large code base  &gt; Hide section Types Metrics if...</i><br>
+              It is recommended to use the JArchitect interactive UI capabilities to browse large applications.<br></div><div class="spacer"></div><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                  Type Name
+                </th><th><a href="http://www.jarchitect.com/Metrics.aspx#TypeRank" target="_blank">Type Rank</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#NbLinesOfCode" target="_blank"># Lines Of Code</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#NbILInstructions" target="_blank"># BC Instructions</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#NbLinesOfComment" target="_blank"># Lines Of Comment</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#PercentageComment" target="_blank">% Comment</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#CC" target="_blank">Cyclomatic Complexity</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#ILCC" target="_blank">BC Cyclomatic Complexity</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#PercentageCoverage" target="_blank">% Coverage</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#TypeCa" target="_blank">Afferent Coupling</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#TypeCe" target="_blank">Efferent Coupling</a></th><th>
+                  Type Package
+                </th></tr></thead><tbody></tbody></table></div></div><div class="info"><h4>Types Metrics : Code Members and Inheritance</h4><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                  Type Name
+                </th><th><a href="http://www.jarchitect.com/Metrics.aspx#NbMethods" target="_blank"># Instance Methods</a></th><th>
+                  Nb Static Methods
+                </th><th>
+                  Nb Properties
+                </th><th><a href="http://www.jarchitect.com/Metrics.aspx#NbFields" target="_blank"># Fields</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#NOC" target="_blank"># Children Classes</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#DIT" target="_blank">Depth Of Inheritance Tree</a></th><th>
+                  Type Package
+                </th></tr></thead><tbody></tbody></table></div></div><div class="info"><h4>Types Metrics : Lack Of Cohesion Of Methods and Association Between Classes</h4><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                  Type Name
+                </th><th><a href="http://www.jarchitect.com/Metrics.aspx#LCOM" target="_blank">Lack Of Cohesion Of Methods</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#LCOM" target="_blank">Lack Of Cohesion Of Methods HS</a></th><th><a href="http://www.jarchitect.com/Metrics.aspx#ABC" target="_blank">Association Between Classes</a></th><th>
+                  Type Package
+                </th></tr></thead><tbody></tbody></table></div></div></div><div id="Groups"></div><div class="ndependScreen" id="TrendCharts"><h4>Trend Charts</h4>
+
+<hr/>
+<div id='chart0' class='chart'>
+    <h4>Lines of Code</h4>
+</div>
+<hr/>
+<div id='chart1' class='chart'>
+    <h4>Rules Violated</h4>
+</div>
+<hr/>
+<div id='chart2' class='chart'>
+    <h4>Rules Violations</h4>
+</div>
+<hr/>
+<div id='chart3'>
+    <h4>Percentage Coverage by Tests</h4>
+    <img src=".\JArchitectReportFiles\StatusError.png"/> No Trend Data has been logged for this Chart.
+</div>
+<hr/>
+<div id='chart4' class='chart'>
+    <h4>Max</h4>
+</div>
+<hr/>
+<div id='chart5' class='chart'>
+    <h4>Average</h4>
+</div>
+<hr/>
+<div id='chart6' class='chart'>
+    <h4>Third-Party Usage</h4>
+</div>
+
+
+<script>
+var ChartData0 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Lines of Code",'line'],
+    ['x1',"# Lines of Code Covered",'area'],
+    ['x2',"# Lines of Code (NotMyCode)",'area'],
+    ['x3',"# Lines of Comments",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 8032,
+    x1: 0,
+    x2: 0,
+    x3: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 8032,
+    x1: 0,
+    x2: 0,
+    x3: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData1 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Rules",'line'],
+    ['x1',"# Rules Violated",'area'],
+    ['x2',"# Critical Rules Violated",'area'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 78,
+    x1: 43,
+    x2: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 78,
+    x1: 43,
+    x2: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData2 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Rules Violations",'area'],
+    ['x1',"# Critical Rules Violations",'area'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 9543,
+    x1: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 9543,
+    x1: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData3 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Percentage Code Coverage",'area'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+]
+};
+var ChartData4 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Max BC Cyclomatic Complexity for Methods",'line'],
+    ['x1',"Max # Lines of Code for Methods (JustMyCode)",'line'],
+    ['x2',"Max # of Methods for Types",'line'],
+    ['x3',"Max BC Nesting Depth for Methods",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 16,
+    x1: 34,
+    x2: 97,
+    x3: 5,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 16,
+    x1: 34,
+    x2: 97,
+    x3: 5,
+    tooltip: "v1.0"},
+]
+};
+var ChartData5 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Average BC Cyclomatic Complexity for Methods",'line'],
+    ['x1',"Average # Lines of Code for Methods",'line'],
+    ['x2',"Average # Methods for Types",'line'],
+    ['x3',"Average BC Nesting Depth for Methods",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 1.25,
+    x1: 2.73,
+    x2: 3.88,
+    x3: 0.06,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 1.25,
+    x1: 2.73,
+    x2: 3.88,
+    x3: 0.06,
+    tooltip: "v1.0"},
+]
+};
+var ChartData6 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Third-Party Types Used",'line'],
+    ['x1',"# Third-Party Methods Used",'line'],
+    ['x2',"# Third-Party Projects Used  x 10",'line'],
+    ['x3',"# Third-Party Packages Used  x 10",'line'],
+    ['x4',"# Third-Party Fields Used  x 10",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2016,10,30,3,16,27),
+    x0: 223,
+    x1: 543,
+    x2: 20,
+    x3: 230,
+    x4: 180,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2016,10,30,3,17,27),
+    x0: 223,
+    x1: 543,
+    x2: 20,
+    x3: 230,
+    x4: 180,
+    tooltip: "v1.0"},
+]
+};
+
+</script>
+
+
+<script>
+    (function ($) {
+        var MND3 = {
+            init: function (target, obj) {
+                if (!obj) {
+                    console.log('No data available');
+                    return false;
+                }
+
+                var data = obj.ChartValues;
+		        if(data.length == 0) {
+		            console.log('No data value available');
+                    return false;
+		        }
+
+                if (!MND3.initiated) {
+                   $(document).mousemove(function(event) {
+                      MND3.x = event.pageX;
+                      MND3.y = event.pageY;
+                   });
+                   MND3.initiated = 1;
+                }
+     
+                var labels = obj.ChartLabels;
+                var lines = [];
+
+                var minDate = data[0].date,
+                    maxDate = data[data.length - 1].date;
+
+                $(labels).each(function () {
+                    var exclude = ['date', 'tooltip', 'annotation'];
+                    if (exclude.indexOf(this[0]) === -1) {
+                        lines.push([this[0], this[2], data[0][this[0]]]);
+                    }
+                });
+
+                var minValue = data[0][lines[0][0]],
+                    maxValue = data[0][lines[0][0]];
+
+                var minDate = data[0]['date'],
+                    maxDate = data[0]['date'];
+
+                $(data).each(function () {
+                    var _this = this;
+                    $(lines).each(function () {
+                        var value = _this[this[0]];
+                        if (value < minValue) {
+                            minValue = value;
+                        }
+                        if (value > maxValue) {
+                            maxValue = value;
+                        }
+                        if (value > this[2]) {
+                            this[2] = value;
+                        }
+                    });
+                    var date = this['date'];
+                    if (date < minDate) {
+                       minDate = date;
+                    }
+                    if (date > maxDate) {
+                       maxDate = date;
+                    }
+                });
+
+                lines.sort(MND3.sortLayers);
+
+                var w = 620,
+                    h = 380,
+                    pl = 60,
+                    pr = 0,
+                    pb = 70,
+                    pt = 15,
+                    th = h + pt + pb,
+                    tw = w + pr + pl,
+                    y = d3.scale.linear().domain([minValue, maxValue]).range([h, 0]),
+                    x = d3.time.scale().domain([minDate, maxDate]).range([0, w]);
+
+                var vis = d3.select(target)
+                .data([data])
+                .append("svg:svg")
+                .attr("width", tw)
+                .attr("height", th)
+                .append("svg:g")
+                .attr("transform", "translate(" + pl + ", " + pt + ")");
+
+                target = $(target);
+                this.populateTooltip(labels, target);
+                this.populateDefinitions(labels, lines, target);
+
+                var text = vis.selectAll("text")
+                            .data(data)
+                            .enter()
+                            .append("text");
+
+                var versionCount = 0;
+
+                var textLabels = text
+                     .attr("x", function (d) { return x(d.date); })
+                     .attr("y", function (d) { return th - 20; })
+                     .text(function (d) {
+                         if (d['annotation']) {
+                             versionCount++;
+                             return d['annotation'];
+                         }
+                     });
+
+                var axisTick = Math.floor(20 / versionCount);
+
+                vis.append("svg:path")
+                .attr("class", "annotation")
+                .attr("d", d3.svg.line()
+                    .x(function (d) { return x(d.date) })
+                    .y(function (d) { if (d['annotation']) { versionCount-- }; return (th - 50 + (versionCount * axisTick)); })
+                );
+
+                
+                
+
+                // Define the right date tick to show on chart x-axis
+                var ticks;
+                var timeDiff = (maxDate - minDate) / 60 / 60 / 24;  
+
+                // In timeDiff one day equals 1000  
+                if (timeDiff < 10) {  // 10 is like 7 minutes, tick every minute  (1440 minutes in a day)
+                    ticks = [d3.time.minute, 1];
+
+                } else if (timeDiff < 250) {  // 250 is like 6h, tick every hour
+                    ticks = [d3.time.hour, 1];
+
+                } else if (timeDiff < 6*1000) { // 6 days, tick every day
+                    ticks = [d3.time.day, 1];
+
+                } else if (timeDiff < 3*7*1000) { // 3 weeks, tick every 3 days
+                    ticks = [d3.time.day, 3];
+
+                } else if (timeDiff < 6*7*1000) { // 6 weeks, tick every week
+                    ticks = [d3.time.week, 1];
+
+                } else if (timeDiff < 3*30*1000) { // 3 months, tick every 2 weeks
+                    ticks = [d3.time.week, 2];
+
+                } else if (timeDiff < 6*30*1000) { // 6 monthes, tick every month
+                    ticks = [d3.time.month, 1];
+
+                } else if (timeDiff < 18*30*1000) { // 18 monthes, tick every 3 monthes
+                    ticks = [d3.time.month, 3];
+
+                } else if (timeDiff < 36*30*1000) { // 36 monthes, tick every 6 monthes
+                    ticks = [d3.time.month, 6];
+
+                } else if (timeDiff < 10*365*1000) { // 10 years, tick every year
+                    ticks = [d3.time.year, 1];
+
+                } else { // Tick every 3 years
+                    ticks = [d3.time.year, 3];
+                }
+  
+                var dateFormat;
+                if (timeDiff < 36*30*1000) { // 36 months, 3 years, show the day!
+                    dateFormat = "%m/%d/%Y";
+                } else {
+                    dateFormat = "%m/%Y";
+                }
+
+                var xAxis = d3.svg.axis()
+                  .outerTickSize(2)
+                  .scale(x)
+                  .orient("bottom")
+                  .ticks(ticks[0], ticks[1])
+                  .tickFormat(d3.time.format(dateFormat));
+
+                vis.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0, " + h + ")")
+                  .call(xAxis);
+
+                var yAxis = d3.svg.axis()
+                  .outerTickSize(2)
+                  .scale(y)
+                  .orient("left");
+
+                vis.append("g")
+                  .attr("class", "y axis")
+                  .call(yAxis);
+
+                vis.append("g")
+                    .attr("class", "grid")
+                    .attr("transform", "translate(0," + h + ")")
+                    .call(xAxis
+                        .tickSize(-h, 0, 0)
+                        .tickFormat("")
+                    )
+
+                vis.append("g")
+                    .attr("class", "grid")
+                    .call(yAxis
+                        .tickSize(-w, 0, 0)
+                        .tickFormat("")
+                    )
+                $(lines).each(function () {
+
+                    var lineLabel = this[0];
+                    var lineType = this[1];
+
+                    if (lineType === 'line') {
+                        vis.append("svg:path")
+                        .attr("class", "line")
+                        .attr("data-group", lineLabel)
+                        .attr("data-type", 'line')
+                        .attr("d", d3.svg.line()
+                            .x(function (d) { return x(d.date) })
+                            .y(function (d) { return y(d[lineLabel]) })
+                        )
+                        .on('mouseover', MND3.nearestPointFocus)
+                        .on('mousemove', MND3.nearestPointFocus)
+                        .on('click', MND3.lockTooltip);
+                    }
+                    if (lineType === 'area') {
+                        vis.append("svg:path")
+                        .attr("class", "area")
+                        .attr("data-group", lineLabel)
+                        .attr("data-type", 'area')
+                        .attr("d", d3.svg.area()
+                            .x(function (d) { return x(d.date) })
+                            .y0(function (d) { return y(minValue) })
+                            .y1(function (d) { return y(d[lineLabel]) })
+                        )
+                        .on('mouseover', MND3.nearestPointFocus)
+                        .on('mousemove', MND3.nearestPointFocus)
+                        .on('click', MND3.lockTooltip);
+                    }
+
+                    vis.selectAll("circle.line")
+                    .data(data)
+                    .enter().append("svg:circle")
+                    .attr("class", "point")
+                    .attr("data-group", lineLabel)
+                    .attr("data-value", function(d) { return d[lineLabel] })
+                    .attr("data-date", function(d) { return d.date })
+                    .attr("data-version", function(d) { return d['tooltip'] })
+                    .attr("cx", function (d) { return x(d.date) })
+                    .attr("cy", function (d) { return y(d[lineLabel]) })
+                    .attr("r", 3)
+                    .on('mouseover', MND3.pointFocus)
+                    .on('click', MND3.lockTooltip);
+
+                });
+
+            },
+            nearestPointFocus: function(useless, useless2, useless3, _this) {
+                _this = _this || this;
+                var target = $(_this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    return false;
+                }
+                var grp = $(_this).attr('data-group');
+                var nearest = $.nearest(
+                    {x: MND3.x, y: MND3.y},
+                    target.find(".point[data-group='" + grp + "']"),
+                    {onlyX: true}
+                ).first();
+                if (nearest[0] !== MND3.last) {
+                    MND3.groupBlur(target);
+                    MND3.pointFocus({}, null, null, nearest[0]);
+                }
+            },
+            pointFocus: function(data, useless, useless2, _this) {
+                _this = _this || this;
+                var target = $(_this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    return false;
+                }
+                MND3.groupBlur(target);
+                var grp = $(_this).attr('data-group');
+                var type = $(_this).attr('data-type');
+                var line = target.find("path[data-group='" + grp + "']");
+                if (type === 'line') {
+                    line.attr("class", "active line");
+                }
+                if (type === 'area') {
+                    line.attr("class", "active area");
+                }
+
+                var groupCoord = $(_this).attr('data-date');
+                var circleOffset = $(_this).offset();
+                var chartOffset = $(target).offset();
+                var tooltipPosition = {top: circleOffset.top - chartOffset.top, left: circleOffset.left - chartOffset.left};
+  
+
+                MND3.groupFocus(groupCoord, target);
+                MND3.updateTooltip(groupCoord, target, tooltipPosition, grp);
+            },
+            groupFocus: function(groupCoord, target){
+                target.find(".point[data-date='" + groupCoord + "']").attr('r', 5).attr('class','point active');
+            },
+            pointBlur: function () {
+                var target = $(this).parents('.chart');
+                var grp = $(this).attr('data-group');
+                var type = $(this).attr('data-type');
+                var line = target.find("path[data-group='" + grp + "']");
+                if (type === 'line') {
+                    line.attr("class", "active line");
+                }
+                if (type === 'area') {
+                    line.attr("class", "active area");
+                }
+
+                MND3.groupBlur(target);
+            },
+            groupBlur: function (target) {
+                target.find('.point.active').attr('r', 3).attr('class', 'point');
+                target.find('.tooltip .focused').removeClass('focused');
+                target.find('.tooltip').hide();
+            },
+            populateTooltip: function (labels, target) {
+                var tooltip = $("<div class='tooltip'><div class='close'>x</div></div>");
+                var row = $("<div class='row'><span class='color'></span><span class='label'></span><span class='value'></span></div>");
+                $(labels).each(function () {
+                    var thisRow = row.clone();
+                    thisRow.attr('data-group', this[0]);
+                    thisRow.find('.label').html(this[1] + ' : ');
+                    tooltip.append(thisRow);
+                });
+                $(target).on('click', '.tooltip .close', function() {
+                    MND3.groupBlur(target);
+                    MND3.unlockTooltip(target);
+                });
+                target.append(tooltip);
+            },
+            updateTooltip: function(groupCoord, target, tooltipPosition, grp){
+                target.find('.tooltip').css('top', tooltipPosition.top);
+                target.find('.tooltip').css('left', tooltipPosition.left + 20);
+
+                target.find('.tooltip .row').hide();
+
+                var date = new Date(groupCoord);
+                var format = d3.time.format("%m/%d/%Y %H:%M:%S");
+                date = date ? format(date) : 'N/A';
+                target.find(".tooltip .row[data-group='date']").show().find('.value').text(date);
+
+                var one = target.find(".point[data-date='" + groupCoord + "']").first();
+                var version = one.attr('data-version');
+                target.find(".tooltip .row[data-group='tooltip']").show().find('.value').text(version);
+
+                target.find(".point[data-date='" + groupCoord + "']").each(function(){
+                    var group = $(this).attr('data-group');
+                    var row = target.find(".tooltip .row[data-group='"+ group +"']");
+                    if(grp === group){
+                        row.addClass('focused');
+                    }
+                    var val = $(this).attr('data-value');
+                    row.find(".value").text(val);
+                    row.show();
+                });
+
+                target.find('.tooltip').show();
+            },        
+            lockTooltip: function() {
+                var target = $(this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    MND3.unlockTooltip(target);
+                    MND3.nearestPointFocus(null, null, null, this);
+                } else {
+                    target.addClass('locked');
+                }
+            },
+            unlockTooltip: function(target) {
+                target.removeClass('locked');
+            },
+            populateDefinitions: function (labels, lines, target) {
+                var definitions = $("<div class='definitions'></div>");
+                var row = $("<div class='row'><span class='color'></span><span class='label'></span></div>");
+                $(lines).each(function () {
+                    var thisRow = row.clone();
+                    thisRow.attr('data-group', this[0]);
+                    definitions.append(thisRow);
+                });
+                $(labels).each(function () {
+                    definitions.find("[data-group='" + this[0] + "'] .label").html(this[1]);
+                });
+                target.append(definitions);
+            },
+            sortLayers: function (a, b) {
+                if (a[2] < b[2])
+                    return 1;
+                if (a[2] > b[2])
+                    return -1;
+                return 0;
+            },
+            x:0,
+            y:0,
+            last:{},
+            initiated:0
+        };
+
+        $(document).ready(function () {
+                MND3.init('#chart0', ChartData0);
+    MND3.init('#chart1', ChartData1);
+    MND3.init('#chart2', ChartData2);
+
+    MND3.init('#chart4', ChartData4);
+    MND3.init('#chart5', ChartData5);
+    MND3.init('#chart6', ChartData6);
+
+        });
+    }(jQuery));
+</script>
+<style type='text/css'>
+.chart{
+    font-family:Arial; 
+    font-size:14px;
+    position: relative;
+    width:940px;
+    float:left;
+    padding-bottom:30px;
+}
+.chart > svg{
+    position:relative;
+    float:left;
+}
+.tooltip{
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 5px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+.tooltip .color, .definitions .color{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    margin-top:2px;
+    margin-right:6px;
+}
+.tooltip .focused{
+    font-weight:bold;
+}
+.tooltip .close{
+    position: absolute;
+    top:0;
+    right:5px;
+    cursor:pointer;
+}
+.tooltip .close:hover{
+    font-weight:bold;
+}
+.definitions{
+    float:right;
+}
+.grid{
+    stroke:#888888;
+}
+
+.annotation {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.line {
+    fill: none;
+    stroke-width: 3px;
+}
+.line.active, .line:hover {
+    stroke-width: 5px;
+}
+
+.area {
+    fill-opacity: 0.6;
+    stroke-width: 3px;
+}
+.area.active, .area:hover {
+    stroke-width: 5px;
+}
+
+.point {
+    stroke: none;
+    fill-opacity: 0;
+}
+
+.point.active {
+    fill-opacity: 1;
+}
+
+#chart0 .line[data-group="x0"]{stroke: #00BFFF;}
+#chart0 .line[data-group="x1"]{stroke: #32CD32;}
+#chart0 .line[data-group="x2"]{stroke: #A9A9A9;}
+#chart0 .line[data-group="x3"]{stroke: #008000;}
+#chart0 .area[data-group="x0"]{stroke: #00BFFF; fill: #00D2FF;}
+#chart0 .area[data-group="x1"]{stroke: #32CD32; fill: #37E137;}
+#chart0 .area[data-group="x2"]{stroke: #A9A9A9; fill: #B9B9B9;}
+#chart0 .area[data-group="x3"]{stroke: #008000; fill: #008C00;}
+#chart0 .point[data-group="x0"]{fill: #00BFFF;}
+#chart0 .point[data-group="x1"]{fill: #32CD32;}
+#chart0 .point[data-group="x2"]{fill: #A9A9A9;}
+#chart0 .point[data-group="x3"]{fill: #008000;}
+#chart0 .row[data-group="x0"] .color{background: #00BFFF;}
+#chart0 .row[data-group="x1"] .color{background: #32CD32;}
+#chart0 .row[data-group="x2"] .color{background: #A9A9A9;}
+#chart0 .row[data-group="x3"] .color{background: #008000;}
+
+#chart1 .line[data-group="x0"]{stroke: #66CDAA;}
+#chart1 .line[data-group="x1"]{stroke: #FF8C00;}
+#chart1 .line[data-group="x2"]{stroke: #FF0000;}
+#chart1 .area[data-group="x0"]{stroke: #66CDAA; fill: #70E1BB;}
+#chart1 .area[data-group="x1"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart1 .area[data-group="x2"]{stroke: #FF0000; fill: #FF0000;}
+#chart1 .point[data-group="x0"]{fill: #66CDAA;}
+#chart1 .point[data-group="x1"]{fill: #FF8C00;}
+#chart1 .point[data-group="x2"]{fill: #FF0000;}
+#chart1 .row[data-group="x0"] .color{background: #66CDAA;}
+#chart1 .row[data-group="x1"] .color{background: #FF8C00;}
+#chart1 .row[data-group="x2"] .color{background: #FF0000;}
+
+#chart2 .line[data-group="x0"]{stroke: #FF8C00;}
+#chart2 .line[data-group="x1"]{stroke: #FF0000;}
+#chart2 .area[data-group="x0"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart2 .area[data-group="x1"]{stroke: #FF0000; fill: #FF0000;}
+#chart2 .point[data-group="x0"]{fill: #FF8C00;}
+#chart2 .point[data-group="x1"]{fill: #FF0000;}
+#chart2 .row[data-group="x0"] .color{background: #FF8C00;}
+#chart2 .row[data-group="x1"] .color{background: #FF0000;}
+
+
+#chart4 .line[data-group="x0"]{stroke: #FF0000;}
+#chart4 .line[data-group="x1"]{stroke: #0000FF;}
+#chart4 .line[data-group="x2"]{stroke: #32CD32;}
+#chart4 .line[data-group="x3"]{stroke: #FFD700;}
+#chart4 .area[data-group="x0"]{stroke: #FF0000; fill: #FF0000;}
+#chart4 .area[data-group="x1"]{stroke: #0000FF; fill: #0000FF;}
+#chart4 .area[data-group="x2"]{stroke: #32CD32; fill: #37E137;}
+#chart4 .area[data-group="x3"]{stroke: #FFD700; fill: #FFEC00;}
+#chart4 .point[data-group="x0"]{fill: #FF0000;}
+#chart4 .point[data-group="x1"]{fill: #0000FF;}
+#chart4 .point[data-group="x2"]{fill: #32CD32;}
+#chart4 .point[data-group="x3"]{fill: #FFD700;}
+#chart4 .row[data-group="x0"] .color{background: #FF0000;}
+#chart4 .row[data-group="x1"] .color{background: #0000FF;}
+#chart4 .row[data-group="x2"] .color{background: #32CD32;}
+#chart4 .row[data-group="x3"] .color{background: #FFD700;}
+
+#chart5 .line[data-group="x0"]{stroke: #FF0000;}
+#chart5 .line[data-group="x1"]{stroke: #0000FF;}
+#chart5 .line[data-group="x2"]{stroke: #32CD32;}
+#chart5 .line[data-group="x3"]{stroke: #FFD700;}
+#chart5 .area[data-group="x0"]{stroke: #FF0000; fill: #FF0000;}
+#chart5 .area[data-group="x1"]{stroke: #0000FF; fill: #0000FF;}
+#chart5 .area[data-group="x2"]{stroke: #32CD32; fill: #37E137;}
+#chart5 .area[data-group="x3"]{stroke: #FFD700; fill: #FFEC00;}
+#chart5 .point[data-group="x0"]{fill: #FF0000;}
+#chart5 .point[data-group="x1"]{fill: #0000FF;}
+#chart5 .point[data-group="x2"]{fill: #32CD32;}
+#chart5 .point[data-group="x3"]{fill: #FFD700;}
+#chart5 .row[data-group="x0"] .color{background: #FF0000;}
+#chart5 .row[data-group="x1"] .color{background: #0000FF;}
+#chart5 .row[data-group="x2"] .color{background: #32CD32;}
+#chart5 .row[data-group="x3"] .color{background: #FFD700;}
+
+#chart6 .line[data-group="x0"]{stroke: #0000FF;}
+#chart6 .line[data-group="x1"]{stroke: #FF0000;}
+#chart6 .line[data-group="x2"]{stroke: #646464;}
+#chart6 .line[data-group="x3"]{stroke: #32CD32;}
+#chart6 .line[data-group="x4"]{stroke: #FFD700;}
+#chart6 .area[data-group="x0"]{stroke: #0000FF; fill: #0000FF;}
+#chart6 .area[data-group="x1"]{stroke: #FF0000; fill: #FF0000;}
+#chart6 .area[data-group="x2"]{stroke: #646464; fill: #6E6E6E;}
+#chart6 .area[data-group="x3"]{stroke: #32CD32; fill: #37E137;}
+#chart6 .area[data-group="x4"]{stroke: #FFD700; fill: #FFEC00;}
+#chart6 .point[data-group="x0"]{fill: #0000FF;}
+#chart6 .point[data-group="x1"]{fill: #FF0000;}
+#chart6 .point[data-group="x2"]{fill: #646464;}
+#chart6 .point[data-group="x3"]{fill: #32CD32;}
+#chart6 .point[data-group="x4"]{fill: #FFD700;}
+#chart6 .row[data-group="x0"] .color{background: #0000FF;}
+#chart6 .row[data-group="x1"] .color{background: #FF0000;}
+#chart6 .row[data-group="x2"] .color{background: #646464;}
+#chart6 .row[data-group="x3"] .color{background: #32CD32;}
+#chart6 .row[data-group="x4"] .color{background: #FFD700;}
+
+
+
+</style>
+
+</div><div class="ndependScreen" id="AssembliesBuildOrder"><div class="info"><h4>Projects Build Order</h4><div class="explanations if-js-on">
+          Some dependency cycles exist between Java Projects of your application.<br>
+          Dependency cycles between Java Projects is a major code smell and it is recommended to refactor the code to avoid cycles.<br>
+          Also, dependency cycles between Java Projects prevent from finding a build order between Java Projects
+                      </div></div></div><div class="ndependScreen" id="InfoWarnings"><div class="info"><h4>Analysis Log : Information and Warnings</h4><div class="explanations if-js-on">
+          Here are Logs emitted during JArchitect analysis.<br>
+          The <b>Warnings</b> can reveal potential flaws concerning the <a href="http://www.jarchitect.com/Doc_CI_Details.aspx#Warns" target="_blank">health of the build process</a>.<br>
+          A particular <b>warn</b> can be disabled through the JArchitect interactive UI, panel <i>Error List</i>, tick the checkbox <i>Disabled</i> corresponding to the <b>warn</b> to disable.
+        </div><br><br><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0"><thead><tr><th>
+                  Kind
+                </th><th>
+                  Message
+                </th></tr></thead><tbody>
+  <tr style="color:#505050;"><td>Info</td><td>Begin full analysis with JArchitect v5.0.0.4687</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>No Baseline for Comparison loaded.</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>Bytecode parsing</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>Third Party parsing</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>Parsing Source Files</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>PMD is disabled.You can enable it from 'Project Properties=&gt;Plugins Tab' to have more checks</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>CheckStyle is disabled.You can enable it from 'Project Properties=&gt;Plugins Tab' to have more checks</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>FindBugs is disabled.You can enable it from 'Project Properties=&gt;Plugins Tab' to have more checks</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>No dependency cycle detected in assemblies referencement graph.</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>Analyse dependencies of your application.</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>Execute queries and rules</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>JArchitect analysis done. Duration: 00:08</td></tr>
+  <tr style="color:#505050;"><td>Info</td><td>Building the report (standard).</td></tr>
+</tbody></table></div></div></div></div></div></body></html>

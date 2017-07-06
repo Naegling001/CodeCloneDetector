@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<RuleResult NbQueries="12" NbErrors="0" NbWarns="0" NbWarnsCritical="0">
+  <Group Name="Project Rules" FullName="Project Rules" GroupId="GroupOfRules115547692" NbQueries="206" NbErrors="0" NbWarns="38" NbWarnsCritical="0" HasChildren="True" Status="Ok">
+    <Group Name="Code Quality Regression" FullName="Project Rules \ Code Quality Regression" GroupId="GroupOfRules210516795" NbQueries="12" NbErrors="0" NbWarns="0" NbWarnsCritical="0" Status="Ok" />
+  </Group>
+  <Group Name="Rules extracted from Source Code" FullName="Rules extracted from Source Code" GroupId="GroupOfRules1206142379" NbQueries="0" NbErrors="0" NbWarns="0" NbWarnsCritical="0" Status="Not yet compiled" />
+</RuleResult>

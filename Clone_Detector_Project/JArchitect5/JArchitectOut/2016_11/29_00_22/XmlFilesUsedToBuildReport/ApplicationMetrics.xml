@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ApplicationMetrics NAsm="1" NbSourceFiles="0" NbLinesOfCode="8053" NbLinesOfComment="6245" PercentageComment="43" NType="1343" NClass="1279" NAbstractClass="30" NInterface="60" NValueType="0" NExceptionType="25" NAttributeType="31" NDelegateType="0" NEnumType="4" NGenericMethodsDefinition="0" NGenericTypesDefinition="11" NILInstruction="53639" NMethods="5207" NFields="1109" NPackages="63" NThirdPartyProjects="2" NThirdPartyPackages="22" NThirdPartyTypes="218" NThirdPartyMethods="543" NThirdPartyFields="18" PercentCodeCoverage="0" PercentPublicType="75.65" PercentPublicMethod="86.63" PercentClassWithAtLeastOnePublicField="17.27">
+  <PropertyOnInterface Occ="61" Avg="0" StdDev="0" MaxVal="0" MaxName="junit.extensions.package-info" />
+  <MethodOnInterface Occ="61" Avg="0.69" StdDev="1.41" MaxVal="8" MaxName="junit.samples.money.IMoney" />
+  <ArgOnMethodOnInterface Occ="42" Avg="0.98" StdDev="0.83" MaxVal="3" MaxName="junit.runner.TestRunListener.testFailed(int,String,String)" />
+  <PublicPropertyOnClass Occ="1278" Avg="0" StdDev="0" MaxVal="0" MaxName="junit.extensions.ActiveTestSuite$1" />
+  <PublicMethodOnClass Occ="1278" Avg="3.49" StdDev="4.93" MaxVal="93" MaxName="org.junit.tests.assertion.AssertionTest" />
+  <ArgOnPublicMethodOnClass Occ="4456" Avg="0.48" StdDev="0.81" MaxVal="6" MaxName="org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms$TypeVariablesAbound.forItem(Object,Collection,Map,List,Object[],Collection[])&lt;D,E,F,G&gt;" />
+  <ILInstructionInNonAbstractMethods Occ="5207" Avg="10.3" StdDev="13.45" MaxVal="293" MaxName="org.junit.rules.ExpectedExceptionTest.testsWithEventMatcher()" />
+  <TypeWithTheMostILInstruction Occ="1279" Avg="41.76" StdDev="93.13" MaxVal="1941" MaxName="org.junit.tests.assertion.AssertionTest" />
+  <MethodCC Occ="5207" Avg="1.25" StdDev="0.82" MaxVal="16" MaxName="org.junit.internal.ComparisonCriteria.arrayEquals(String,Object,Object,boolean)" />
+</ApplicationMetrics>

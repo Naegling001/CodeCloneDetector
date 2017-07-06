@@ -1,0 +1,2223 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<RuleResult NbQueries="1" NbErrors="0" NbWarns="1" NbWarnsCritical="0">
+  <Group Name="Project Rules" FullName="Project Rules" GroupId="GroupOfRules115547692" NbQueries="194" NbErrors="0" NbWarns="11" NbWarnsCritical="0" HasChildren="True" Status="Warn">
+    <Group Name="Code Quality Regression" FullName="Project Rules \ Code Quality Regression" GroupId="GroupOfRules210516795" NbQueries="1" NbErrors="0" NbWarns="1" NbWarnsCritical="0" Status="Warn">
+      <Query Status="Warn" Name=" Clone Detectors Query" ContentTruncatedThreshold="100" NbNodeListed="131" FullName="Project Rules \ Code Quality Regression \  Clone Detectors Query" QueryId="Query339466882" NbNodeMatched="131" NbNodeTested="267" KindOfNode=" methods">
+        <QueryHtml caption="View Rule Source Code (Description Not Available)" textKind="sourcecode">&amp;#0160;&lt;font color='#008000'&gt;//&amp;#0160;&amp;lt;Name&amp;gt;&lt;/font&gt;&lt;b style="color:#008000;background-color:#DCFFDC"&gt;&amp;#0160;Clone&amp;#0160;Detectors&amp;#0160;Query&lt;/b&gt;&lt;font color='#008000'&gt;&amp;lt;/Name&amp;gt;&lt;br/&gt;&lt;/font&gt;&lt;font color='#0000FF'&gt;warnif&lt;/font&gt;&amp;#0160;&lt;b style="color:#000064;background-color:#E8E8FF"&gt;count&lt;/b&gt;&amp;#0160;&lt;font color='#000000'&gt;&amp;gt;&lt;/font&gt;&amp;#0160;&lt;b style="color:#000000;background-color:#FFFF99"&gt;0&lt;/b&gt;&amp;#0160;&lt;font color='#0000FF'&gt;from&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&amp;#0160;&lt;font color='#0000FF'&gt;in&lt;/font&gt;&amp;#0160;&lt;b style="color:#000064;background-color:#E8E8FF"&gt;JustMyCode&lt;/b&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;Methods&lt;/font&gt;&amp;#0160;&lt;font color='#0000FF'&gt;where&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;(&lt;/font&gt;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;IsMethod&lt;/font&gt;&lt;font color='#000000'&gt;)&lt;/font&gt;&lt;font color='#000000'&gt;&lt;br/&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color='#0000FF'&gt;select&lt;/font&gt;&amp;#0160;&lt;font color='#0000FF'&gt;new&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;{&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;FullName&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;Name&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;CyclomaticComplexity&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;MethodsCalled&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&lt;font color='#000000'&gt;&amp;#0160;&lt;br/&gt;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&lt;/font&gt;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;NbMethodsCalled&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;MethodsCallingMe&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;NbMethodsCallingMe&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&lt;font color='#000000'&gt;&amp;#0160;&lt;br/&gt;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&lt;/font&gt;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;NbParameters&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;NbVariables&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;Rank&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&lt;font color='#000000'&gt;&amp;#0160;&lt;br/&gt;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&lt;/font&gt;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;IsOverloaded&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;ParentType&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&lt;font color='#000000'&gt;&amp;#0160;&lt;br/&gt;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&amp;#0160;&lt;/font&gt;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;ParentProject&lt;/font&gt;&lt;font color='#000000'&gt;,&lt;/font&gt;&amp;#0160;&lt;font color='#000000'&gt;m&lt;/font&gt;&lt;font color='#000000'&gt;.&lt;/font&gt;&lt;font color='#000000'&gt;ParentPackage&lt;/font&gt;&lt;font color='#000000'&gt;}&lt;/font&gt;</QueryHtml>
+        <Columns>
+          <Column>methods</Column>
+          <Column>FullName</Column>
+          <Column>Name</Column>
+          <Column>Cyclomatic Complexity (CC)</Column>
+          <Column>MethodsCalled</Column>
+          <Column>NbMethodsCalled</Column>
+          <Column>MethodsCallingMe</Column>
+          <Column>NbMethodsCallingMe</Column>
+          <Column># Parameters</Column>
+          <Column># Variables</Column>
+          <Column>Rank</Column>
+          <Column>IsOverloaded</Column>
+          <Column>ParentType</Column>
+          <Column>ParentProject</Column>
+          <Column>ParentPackage</Column>
+        </Columns>
+        <Rows>
+          <Row Name="Ball(String,String,String,String,String)" FullName="com.github.mihirsinghal.cricket.Ball .Ball(String,String,String,String,String )">
+            <Val>com.github.mihirsinghal.cricket.Ball.Ball(String,String,String,String,String)</Val>
+            <Val>Ball(String,String,String,String,String)</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>5</Val>
+            <Val>0</Val>
+            <Val>1.17</Val>
+            <Val>True</Val>
+            <Val>Ball</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Ball(String,String,String,String,String ,String)" FullName="com.github.mihirsinghal.cricket.Ball .Ball(String,String,String,String,String ,String)">
+            <Val>com.github.mihirsinghal.cricket.Ball.Ball(String,String,String,String,String,String)</Val>
+            <Val>Ball(String,String,String,String,String,String)</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>6</Val>
+            <Val>0</Val>
+            <Val>1.17</Val>
+            <Val>True</Val>
+            <Val>Ball</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Ball(String,String,String,String,String ,String,Ball)" FullName="com.github.mihirsinghal.cricket.Ball .Ball(String,String,String,String,String ,String,Ball)">
+            <Val>com.github.mihirsinghal.cricket.Ball.Ball(String,String,String,String,String,String,Ball)</Val>
+            <Val>Ball(String,String,String,String,String,String,Ball)</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>7</Val>
+            <Val>0</Val>
+            <Val>0.41</Val>
+            <Val>True</Val>
+            <Val>Ball</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="CricketGame()" FullName="com.github.mihirsinghal.cricket .CricketGame.CricketGame()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.CricketGame()</Val>
+            <Val>CricketGame()</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>True</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="CricketGame(PlayCricket,int)" FullName="com.github.mihirsinghal.cricket .CricketGame.CricketGame(PlayCricket,int )">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.CricketGame(PlayCricket,int)</Val>
+            <Val>CricketGame(PlayCricket,int)</Val>
+            <Val>1</Val>
+            <Val>7 methods</Val>
+            <Val>7</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.59</Val>
+            <Val>True</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="askBatOrField()" FullName="com.github.mihirsinghal.cricket .CricketGame.askBatOrField()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.askBatOrField()</Val>
+            <Val>askBatOrField()</Val>
+            <Val>3</Val>
+            <Val>5 methods</Val>
+            <Val>5</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.37</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="promptWktkeeper()" FullName="com.github.mihirsinghal.cricket .CricketGame.promptWktkeeper()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.promptWktkeeper()</Val>
+            <Val>promptWktkeeper()</Val>
+            <Val>1</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.49</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="striker()" FullName="com.github.mihirsinghal.cricket .CricketGame.striker()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.striker()</Val>
+            <Val>striker()</Val>
+            <Val>2</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>5 methods</Val>
+            <Val>5</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1.38</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="nonStriker()" FullName="com.github.mihirsinghal.cricket .CricketGame.nonStriker()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.nonStriker()</Val>
+            <Val>nonStriker()</Val>
+            <Val>2</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.87</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="currBowler()" FullName="com.github.mihirsinghal.cricket .CricketGame.currBowler()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.currBowler()</Val>
+            <Val>currBowler()</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>2.1</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="offBowler()" FullName="com.github.mihirsinghal.cricket .CricketGame.offBowler()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.offBowler()</Val>
+            <Val>offBowler()</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.64</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="switchSides()" FullName="com.github.mihirsinghal.cricket .CricketGame.switchSides()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.switchSides()</Val>
+            <Val>switchSides()</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.46</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="start()" FullName="com.github.mihirsinghal.cricket .CricketGame.start()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.start()</Val>
+            <Val>start()</Val>
+            <Val>2</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.2</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getReadyForSecondInns()" FullName="com.github.mihirsinghal.cricket .CricketGame.getReadyForSecondInns()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.getReadyForSecondInns()</Val>
+            <Val>getReadyForSecondInns()</Val>
+            <Val>1</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="startSecondInns()" FullName="com.github.mihirsinghal.cricket .CricketGame.startSecondInns()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.startSecondInns()</Val>
+            <Val>startSecondInns()</Val>
+            <Val>2</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.2</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getRunRate()" FullName="com.github.mihirsinghal.cricket .CricketGame.getRunRate()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.getRunRate()</Val>
+            <Val>getRunRate()</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="executeBall(String)" FullName="com.github.mihirsinghal.cricket .CricketGame.executeBall(String)">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.executeBall(String)</Val>
+            <Val>executeBall(String)</Val>
+            <Val>21</Val>
+            <Val>17 methods</Val>
+            <Val>17</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>9</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="addRuns(int)" FullName="com.github.mihirsinghal.cricket .CricketGame.addRuns(int)">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.addRuns(int)</Val>
+            <Val>addRuns(int)</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="addBatsman(Player,boolean)" FullName="com.github.mihirsinghal.cricket .CricketGame.addBatsman(Player,boolean)">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.addBatsman(Player,boolean)</Val>
+            <Val>addBatsman(Player,boolean)</Val>
+            <Val>3</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>0.2</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="setBowler(Player)" FullName="com.github.mihirsinghal.cricket .CricketGame.setBowler(Player)">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.setBowler(Player)</Val>
+            <Val>setBowler(Player)</Val>
+            <Val>3</Val>
+            <Val>5 methods</Val>
+            <Val>5</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0.23</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="incrementBall()" FullName="com.github.mihirsinghal.cricket .CricketGame.incrementBall()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.incrementBall()</Val>
+            <Val>incrementBall()</Val>
+            <Val>3</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getReadyForNextBall()" FullName="com.github.mihirsinghal.cricket .CricketGame.getReadyForNextBall()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.getReadyForNextBall()</Val>
+            <Val>getReadyForNextBall()</Val>
+            <Val>6</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.31</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getReadyForOverStart()" FullName="com.github.mihirsinghal.cricket .CricketGame.getReadyForOverStart()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.getReadyForOverStart()</Val>
+            <Val>getReadyForOverStart()</Val>
+            <Val>1</Val>
+            <Val>5 methods</Val>
+            <Val>5</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.49</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="ballsElapsed()" FullName="com.github.mihirsinghal.cricket .CricketGame.ballsElapsed()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.ballsElapsed()</Val>
+            <Val>ballsElapsed()</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1.75</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="playNextBall()" FullName="com.github.mihirsinghal.cricket .CricketGame.playNextBall()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.playNextBall()</Val>
+            <Val>playNextBall()</Val>
+            <Val>8</Val>
+            <Val>22 methods</Val>
+            <Val>22</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>4</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getBall()" FullName="com.github.mihirsinghal.cricket .CricketGame.getBall()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.getBall()</Val>
+            <Val>getBall()</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="formatBall()" FullName="com.github.mihirsinghal.cricket .CricketGame.formatBall()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.formatBall()</Val>
+            <Val>formatBall()</Val>
+            <Val>4</Val>
+            <Val>5 methods</Val>
+            <Val>5</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="formatString(String,List)" FullName="com.github.mihirsinghal.cricket .CricketGame.formatString(String,List)">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.formatString(String,List)</Val>
+            <Val>formatString(String,List)</Val>
+            <Val>4</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>0.41</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="selectNextBowler()" FullName="com.github.mihirsinghal.cricket .CricketGame.selectNextBowler()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.selectNextBowler()</Val>
+            <Val>selectNextBowler()</Val>
+            <Val>5</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>4</Val>
+            <Val>0.26</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getExtraList()" FullName="com.github.mihirsinghal.cricket .CricketGame.getExtraList()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.getExtraList()</Val>
+            <Val>getExtraList()</Val>
+            <Val>5</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="isBall(String)" FullName="com.github.mihirsinghal.cricket .CricketGame.isBall(String)">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.isBall(String)</Val>
+            <Val>isBall(String)</Val>
+            <Val>2</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="nextIsFreeHit(String)" FullName="com.github.mihirsinghal.cricket .CricketGame.nextIsFreeHit(String)">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.nextIsFreeHit(String)</Val>
+            <Val>nextIsFreeHit(String)</Val>
+            <Val>2</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="inningsFinished()" FullName="com.github.mihirsinghal.cricket .CricketGame.inningsFinished()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.inningsFinished()</Val>
+            <Val>inningsFinished()</Val>
+            <Val>4</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.26</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="winnerMessage()" FullName="com.github.mihirsinghal.cricket .CricketGame.winnerMessage()">
+            <Val>com.github.mihirsinghal.cricket.CricketGame.winnerMessage()</Val>
+            <Val>winnerMessage()</Val>
+            <Val>5</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.41</Val>
+            <Val>False</Val>
+            <Val>CricketGame</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="DataLoader()" FullName="com.github.mihirsinghal.cricket .DataLoader.DataLoader()">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.DataLoader()</Val>
+            <Val>DataLoader()</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="init()" FullName="com.github.mihirsinghal.cricket .DataLoader.init()">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.init()</Val>
+            <Val>init()</Val>
+            <Val>5</Val>
+            <Val>12 methods</Val>
+            <Val>12</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>15</Val>
+            <Val>0.91</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="randomBall()" FullName="com.github.mihirsinghal.cricket .DataLoader.randomBall()">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.randomBall()</Val>
+            <Val>randomBall()</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="writeAllTeams(List)" FullName="com.github.mihirsinghal.cricket .DataLoader.writeAllTeams(List)">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.writeAllTeams(List)</Val>
+            <Val>writeAllTeams(List)</Val>
+            <Val>3</Val>
+            <Val>11 methods</Val>
+            <Val>11</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>3</Val>
+            <Val>1.72</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="writeTeam(Team,PrintWriter)" FullName="com.github.mihirsinghal.cricket .DataLoader.writeTeam(Team,PrintWriter)">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.writeTeam(Team,PrintWriter)</Val>
+            <Val>writeTeam(Team,PrintWriter)</Val>
+            <Val>3</Val>
+            <Val>7 methods</Val>
+            <Val>7</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>2</Val>
+            <Val>0.55</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="writePlayer(Player,PrintWriter)" FullName="com.github.mihirsinghal.cricket .DataLoader.writePlayer(Player ,PrintWriter)">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.writePlayer(Player,PrintWriter)</Val>
+            <Val>writePlayer(Player,PrintWriter)</Val>
+            <Val>3</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>0.46</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="readAllTeams()" FullName="com.github.mihirsinghal.cricket .DataLoader.readAllTeams()">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.readAllTeams()</Val>
+            <Val>readAllTeams()</Val>
+            <Val>4</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>5</Val>
+            <Val>1.79</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="readTeam(BufferedReader)" FullName="com.github.mihirsinghal.cricket .DataLoader.readTeam(BufferedReader)">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.readTeam(BufferedReader)</Val>
+            <Val>readTeam(BufferedReader)</Val>
+            <Val>5</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>8</Val>
+            <Val>0.59</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="readPlayer(BufferedReader)" FullName="com.github.mihirsinghal.cricket .DataLoader.readPlayer(BufferedReader)">
+            <Val>com.github.mihirsinghal.cricket.DataLoader.readPlayer(BufferedReader)</Val>
+            <Val>readPlayer(BufferedReader)</Val>
+            <Val>4</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>5</Val>
+            <Val>0.53</Val>
+            <Val>False</Val>
+            <Val>DataLoader</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Functions()" FullName="com.github.mihirsinghal.cricket .Functions.Functions()">
+            <Val>com.github.mihirsinghal.cricket.Functions.Functions()</Val>
+            <Val>Functions()</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="red(String)" FullName="com.github.mihirsinghal.cricket .Functions.red(String)">
+            <Val>com.github.mihirsinghal.cricket.Functions.red(String)</Val>
+            <Val>red(String)</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>7 methods</Val>
+            <Val>7</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2.35</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="bold(String)" FullName="com.github.mihirsinghal.cricket .Functions.bold(String)">
+            <Val>com.github.mihirsinghal.cricket.Functions.bold(String)</Val>
+            <Val>bold(String)</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.35</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="size(String,float)" FullName="com.github.mihirsinghal.cricket .Functions.size(String,float)">
+            <Val>com.github.mihirsinghal.cricket.Functions.size(String,float)</Val>
+            <Val>size(String,float)</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="boldSize(String,float)" FullName="com.github.mihirsinghal.cricket .Functions.boldSize(String,float)">
+            <Val>com.github.mihirsinghal.cricket.Functions.boldSize(String,float)</Val>
+            <Val>boldSize(String,float)</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.56</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="isValidName(String)" FullName="com.github.mihirsinghal.cricket .Functions.isValidName(String)">
+            <Val>com.github.mihirsinghal.cricket.Functions.isValidName(String)</Val>
+            <Val>isValidName(String)</Val>
+            <Val>6</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0.51</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="indexInArray(Object[],Object)&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.indexInArray(Object[],Object) &lt;T&gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.indexInArray(Object[],Object)&lt;T&gt;</Val>
+            <Val>indexInArray(Object[],Object)&lt;T&gt;</Val>
+            <Val>4</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>2.32</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="listFromArray(Object[])&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.listFromArray(Object[])&lt;T&gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.listFromArray(Object[])&lt;T&gt;</Val>
+            <Val>listFromArray(Object[])&lt;T&gt;</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>2.04</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="listWithoutElem(List,Object)&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.listWithoutElem(List,Object) &lt;T&gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.listWithoutElem(List,Object)&lt;T&gt;</Val>
+            <Val>listWithoutElem(List,Object)&lt;T&gt;</Val>
+            <Val>N/A</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>1.84</Val>
+            <Val>True</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="listWithoutElem(Object[],Object)&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.listWithoutElem(Object[] ,Object)&lt;T&gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.listWithoutElem(Object[],Object)&lt;T&gt;</Val>
+            <Val>listWithoutElem(Object[],Object)&lt;T&gt;</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.2</Val>
+            <Val>True</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="listSubtract(List,List)&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.listSubtract(List,List)&lt;T&gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.listSubtract(List,List)&lt;T&gt;</Val>
+            <Val>listSubtract(List,List)&lt;T&gt;</Val>
+            <Val>N/A</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>2</Val>
+            <Val>0.15</Val>
+            <Val>True</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="listSubtract(Object[],List)&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.listSubtract(Object[],List)&lt;T &gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.listSubtract(Object[],List)&lt;T&gt;</Val>
+            <Val>listSubtract(Object[],List)&lt;T&gt;</Val>
+            <Val>N/A</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>2</Val>
+            <Val>0.26</Val>
+            <Val>True</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="listSubtract(List,Object[])&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.listSubtract(List,Object[])&lt;T &gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.listSubtract(List,Object[])&lt;T&gt;</Val>
+            <Val>listSubtract(List,Object[])&lt;T&gt;</Val>
+            <Val>N/A</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>2</Val>
+            <Val>0.15</Val>
+            <Val>True</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="listSubtract(Object[],Object[])&lt;T&gt;" FullName="com.github.mihirsinghal.cricket .Functions.listSubtract(Object[] ,Object[])&lt;T&gt;">
+            <Val>com.github.mihirsinghal.cricket.Functions.listSubtract(Object[],Object[])&lt;T&gt;</Val>
+            <Val>listSubtract(Object[],Object[])&lt;T&gt;</Val>
+            <Val>3</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>2</Val>
+            <Val>0.15</Val>
+            <Val>True</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="max(int,int)" FullName="com.github.mihirsinghal.cricket .Functions.max(int,int)">
+            <Val>com.github.mihirsinghal.cricket.Functions.max(int,int)</Val>
+            <Val>max(int,int)</Val>
+            <Val>2</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="setUnimplemented(JButton)" FullName="com.github.mihirsinghal.cricket .Functions.setUnimplemented(JButton)">
+            <Val>com.github.mihirsinghal.cricket.Functions.setUnimplemented(JButton)</Val>
+            <Val>setUnimplemented(JButton)</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="ballsToOvers(int)" FullName="com.github.mihirsinghal.cricket .Functions.ballsToOvers(int)">
+            <Val>com.github.mihirsinghal.cricket.Functions.ballsToOvers(int)</Val>
+            <Val>ballsToOvers(int)</Val>
+            <Val>3</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.24</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="arraySum(int[])" FullName="com.github.mihirsinghal.cricket .Functions.arraySum(int[])">
+            <Val>com.github.mihirsinghal.cricket.Functions.arraySum(int[])</Val>
+            <Val>arraySum(int[])</Val>
+            <Val>2</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0.21</Val>
+            <Val>False</Val>
+            <Val>Functions</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Innings()" FullName="com.github.mihirsinghal.cricket.Innings .Innings()">
+            <Val>com.github.mihirsinghal.cricket.Innings.Innings()</Val>
+            <Val>Innings()</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>Innings</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="clone()" FullName="com.github.mihirsinghal.cricket.Innings .clone()">
+            <Val>com.github.mihirsinghal.cricket.Innings.clone()</Val>
+            <Val>clone()</Val>
+            <Val>3</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.6</Val>
+            <Val>False</Val>
+            <Val>Innings</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getSR()" FullName="com.github.mihirsinghal.cricket.Innings .getSR()">
+            <Val>com.github.mihirsinghal.cricket.Innings.getSR()</Val>
+            <Val>getSR()</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.27</Val>
+            <Val>False</Val>
+            <Val>Innings</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="incorporateInnings(PlayerStats)" FullName="com.github.mihirsinghal.cricket.Innings .incorporateInnings(PlayerStats)">
+            <Val>com.github.mihirsinghal.cricket.Innings.incorporateInnings(PlayerStats)</Val>
+            <Val>incorporateInnings(PlayerStats)</Val>
+            <Val>15</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1.17</Val>
+            <Val>False</Val>
+            <Val>Innings</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="PlayCricket()" FullName="com.github.mihirsinghal.cricket .PlayCricket.PlayCricket()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.PlayCricket()</Val>
+            <Val>PlayCricket()</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.43</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createContentPane()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createContentPane()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createContentPane()</Val>
+            <Val>createContentPane()</Val>
+            <Val>2</Val>
+            <Val>18 methods</Val>
+            <Val>18</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.43</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createHMV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createHMV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createHMV()</Val>
+            <Val>createHMV()</Val>
+            <Val>1</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createCTV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createCTV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createCTV()</Val>
+            <Val>createCTV()</Val>
+            <Val>2</Val>
+            <Val>24 methods</Val>
+            <Val>24</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createETV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createETV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createETV()</Val>
+            <Val>createETV()</Val>
+            <Val>1</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createAPV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createAPV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createAPV()</Val>
+            <Val>createAPV()</Val>
+            <Val>1</Val>
+            <Val>16 methods</Val>
+            <Val>16</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createCDV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createCDV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createCDV()</Val>
+            <Val>createCDV()</Val>
+            <Val>1</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createSMV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createSMV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createSMV()</Val>
+            <Val>createSMV()</Val>
+            <Val>1</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createSEV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createSEV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createSEV()</Val>
+            <Val>createSEV()</Val>
+            <Val>1</Val>
+            <Val>10 methods</Val>
+            <Val>10</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createPSV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createPSV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createPSV()</Val>
+            <Val>createPSV()</Val>
+            <Val>3</Val>
+            <Val>15 methods</Val>
+            <Val>15</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>3</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createEPV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createEPV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createEPV()</Val>
+            <Val>createEPV()</Val>
+            <Val>1</Val>
+            <Val>16 methods</Val>
+            <Val>16</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createMGV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createMGV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createMGV()</Val>
+            <Val>createMGV()</Val>
+            <Val>1</Val>
+            <Val>21 methods</Val>
+            <Val>21</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createSV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createSV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createSV()</Val>
+            <Val>createSV()</Val>
+            <Val>14</Val>
+            <Val>14 methods</Val>
+            <Val>14</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>7</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="createPBV()" FullName="com.github.mihirsinghal.cricket .PlayCricket.createPBV()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.createPBV()</Val>
+            <Val>createPBV()</Val>
+            <Val>6</Val>
+            <Val>12 methods</Val>
+            <Val>12</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>5</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="setup()" FullName="com.github.mihirsinghal.cricket .PlayCricket.setup()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.setup()</Val>
+            <Val>setup()</Val>
+            <Val>2</Val>
+            <Val>10 methods</Val>
+            <Val>10</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0.91</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="main(String[])" FullName="com.github.mihirsinghal.cricket .PlayCricket.main(String[])">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.main(String[])</Val>
+            <Val>main(String[])</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="actionPerformed(ActionEvent)" FullName="com.github.mihirsinghal.cricket .PlayCricket.actionPerformed(ActionEvent )">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.actionPerformed(ActionEvent)</Val>
+            <Val>actionPerformed(ActionEvent)</Val>
+            <Val>42</Val>
+            <Val>42 methods</Val>
+            <Val>42</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>3</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="ePCancelClicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.ePCancelClicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.ePCancelClicked()</Val>
+            <Val>ePCancelClicked()</Val>
+            <Val>4</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="ePSubmitClicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.ePSubmitClicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.ePSubmitClicked()</Val>
+            <Val>ePSubmitClicked()</Val>
+            <Val>7</Val>
+            <Val>16 methods</Val>
+            <Val>16</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="sECancelClicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.sECancelClicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.sECancelClicked()</Val>
+            <Val>sECancelClicked()</Val>
+            <Val>9</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="sESelectClicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.sESelectClicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.sESelectClicked()</Val>
+            <Val>sESelectClicked()</Val>
+            <Val>18</Val>
+            <Val>28 methods</Val>
+            <Val>28</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>4</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="sMButtonClicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.sMButtonClicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.sMButtonClicked()</Val>
+            <Val>sMButtonClicked()</Val>
+            <Val>9</Val>
+            <Val>13 methods</Val>
+            <Val>13</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="cDButton1Clicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.cDButton1Clicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.cDButton1Clicked()</Val>
+            <Val>cDButton1Clicked()</Val>
+            <Val>10</Val>
+            <Val>11 methods</Val>
+            <Val>11</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="cDButton2Clicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.cDButton2Clicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.cDButton2Clicked()</Val>
+            <Val>cDButton2Clicked()</Val>
+            <Val>11</Val>
+            <Val>18 methods</Val>
+            <Val>18</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>3</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="aPFinishClicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.aPFinishClicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.aPFinishClicked()</Val>
+            <Val>aPFinishClicked()</Val>
+            <Val>5</Val>
+            <Val>12 methods</Val>
+            <Val>12</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="cTFinishClicked()" FullName="com.github.mihirsinghal.cricket .PlayCricket.cTFinishClicked()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.cTFinishClicked()</Val>
+            <Val>cTFinishClicked()</Val>
+            <Val>3</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>3</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="cTClearFields()" FullName="com.github.mihirsinghal.cricket .PlayCricket.cTClearFields()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.cTClearFields()</Val>
+            <Val>cTClearFields()</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.26</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="updateScore(boolean)" FullName="com.github.mihirsinghal.cricket .PlayCricket.updateScore(boolean)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.updateScore(boolean)</Val>
+            <Val>updateScore(boolean)</Val>
+            <Val>28</Val>
+            <Val>21 methods</Val>
+            <Val>21</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>1</Val>
+            <Val>13</Val>
+            <Val>1.02</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="updateMidGameViewEndOfInns()" FullName="com.github.mihirsinghal.cricket .PlayCricket.updateMidGameViewEndOfInns( )">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.updateMidGameViewEndOfInns()</Val>
+            <Val>updateMidGameViewEndOfInns()</Val>
+            <Val>3</Val>
+            <Val>11 methods</Val>
+            <Val>11</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.26</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="setMidGameViewVisible()" FullName="com.github.mihirsinghal.cricket .PlayCricket.setMidGameViewVisible()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.setMidGameViewVisible()</Val>
+            <Val>setMidGameViewVisible()</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="hideCurrPanel()" FullName="com.github.mihirsinghal.cricket .PlayCricket.hideCurrPanel()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.hideCurrPanel()</Val>
+            <Val>hideCurrPanel()</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.6</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="switchToPanel(JPanel)" FullName="com.github.mihirsinghal.cricket .PlayCricket.switchToPanel(JPanel)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.switchToPanel(JPanel)</Val>
+            <Val>switchToPanel(JPanel)</Val>
+            <Val>6</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>17 methods</Val>
+            <Val>17</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>4.53</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="selectPlr(String,boolean,List,State)" FullName="com.github.mihirsinghal.cricket .PlayCricket.selectPlr(String,boolean ,List,State)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.selectPlr(String,boolean,List,State)</Val>
+            <Val>selectPlr(String,boolean,List,State)</Val>
+            <Val>2</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>4</Val>
+            <Val>1</Val>
+            <Val>0.65</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="selectTeam(String,boolean,List,State)" FullName="com.github.mihirsinghal.cricket .PlayCricket.selectTeam(String,boolean ,List,State)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.selectTeam(String,boolean,List,State)</Val>
+            <Val>selectTeam(String,boolean,List,State)</Val>
+            <Val>2</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>4</Val>
+            <Val>1</Val>
+            <Val>0.72</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="checkTeamToCreate(String,String[],String ,String)" FullName="com.github.mihirsinghal.cricket .PlayCricket.checkTeamToCreate(String ,String[],String,String)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.checkTeamToCreate(String,String[],String,String)</Val>
+            <Val>checkTeamToCreate(String,String[],String,String)</Val>
+            <Val>22</Val>
+            <Val>14 methods</Val>
+            <Val>14</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>4</Val>
+            <Val>5</Val>
+            <Val>0.35</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="playT20()" FullName="com.github.mihirsinghal.cricket .PlayCricket.playT20()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.playT20()</Val>
+            <Val>playT20()</Val>
+            <Val>1</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="loadTeams()" FullName="com.github.mihirsinghal.cricket .PlayCricket.loadTeams()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.loadTeams()</Val>
+            <Val>loadTeams()</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.43</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="commit()" FullName="com.github.mihirsinghal.cricket .PlayCricket.commit()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.commit()</Val>
+            <Val>commit()</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.26</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="confirm(String,String,String,State)" FullName="com.github.mihirsinghal.cricket .PlayCricket.confirm(String,String ,String,State)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.confirm(String,String,String,State)</Val>
+            <Val>confirm(String,String,String,State)</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>4</Val>
+            <Val>0</Val>
+            <Val>0.98</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="showMessage(String,String,State)" FullName="com.github.mihirsinghal.cricket .PlayCricket.showMessage(String,String ,State)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.showMessage(String,String,State)</Val>
+            <Val>showMessage(String,String,State)</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>3</Val>
+            <Val>0</Val>
+            <Val>0.36</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="updateStatsView(Player)" FullName="com.github.mihirsinghal.cricket .PlayCricket.updateStatsView(Player)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.updateStatsView(Player)</Val>
+            <Val>updateStatsView(Player)</Val>
+            <Val>3</Val>
+            <Val>9 methods</Val>
+            <Val>9</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>4</Val>
+            <Val>0.2</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getPassword(Team,State)" FullName="com.github.mihirsinghal.cricket .PlayCricket.getPassword(Team,State)">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.getPassword(Team,State)</Val>
+            <Val>getPassword(Team,State)</Val>
+            <Val>1</Val>
+            <Val>7 methods</Val>
+            <Val>7</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.2</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="switchToMidOver()" FullName="com.github.mihirsinghal.cricket .PlayCricket.switchToMidOver()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.switchToMidOver()</Val>
+            <Val>switchToMidOver()</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>5 methods</Val>
+            <Val>5</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1.45</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="switchToEndOver()" FullName="com.github.mihirsinghal.cricket .PlayCricket.switchToEndOver()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.switchToEndOver()</Val>
+            <Val>switchToEndOver()</Val>
+            <Val>1</Val>
+            <Val>5 methods</Val>
+            <Val>5</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.38</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="resetInGameViews()" FullName="com.github.mihirsinghal.cricket .PlayCricket.resetInGameViews()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.resetInGameViews()</Val>
+            <Val>resetInGameViews()</Val>
+            <Val>5</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>4</Val>
+            <Val>0.72</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="$SWITCH_TABLE$com$github$mihirsinghal$cr icket$State()" FullName="com.github.mihirsinghal.cricket .PlayCricket .$SWITCH_TABLE$com$github$mihirsinghal$c ricket$State()">
+            <Val>com.github.mihirsinghal.cricket.PlayCricket.$SWITCH_TABLE$com$github$mihirsinghal$cricket$State()</Val>
+            <Val>$SWITCH_TABLE$com$github$mihirsinghal$cricket$State()</Val>
+            <Val>N/A</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>7 methods</Val>
+            <Val>7</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1.32</Val>
+            <Val>False</Val>
+            <Val>PlayCricket</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Player(String)" FullName="com.github.mihirsinghal.cricket.Player .Player(String)">
+            <Val>com.github.mihirsinghal.cricket.Player.Player(String)</Val>
+            <Val>Player(String)</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1.32</Val>
+            <Val>True</Val>
+            <Val>Player</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Player(String,int[])" FullName="com.github.mihirsinghal.cricket.Player .Player(String,int[])">
+            <Val>com.github.mihirsinghal.cricket.Player.Player(String,int[])</Val>
+            <Val>Player(String,int[])</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.63</Val>
+            <Val>True</Val>
+            <Val>Player</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="incorporateInnings()" FullName="com.github.mihirsinghal.cricket.Player .incorporateInnings()">
+            <Val>com.github.mihirsinghal.cricket.Player.incorporateInnings()</Val>
+            <Val>incorporateInnings()</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>Player</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="PlayerStats()" FullName="com.github.mihirsinghal.cricket .PlayerStats.PlayerStats()">
+            <Val>com.github.mihirsinghal.cricket.PlayerStats.PlayerStats()</Val>
+            <Val>PlayerStats()</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1.16</Val>
+            <Val>True</Val>
+            <Val>PlayerStats</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="PlayerStats(int[])" FullName="com.github.mihirsinghal.cricket .PlayerStats.PlayerStats(int[])">
+            <Val>com.github.mihirsinghal.cricket.PlayerStats.PlayerStats(int[])</Val>
+            <Val>PlayerStats(int[])</Val>
+            <Val>1</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1.01</Val>
+            <Val>True</Val>
+            <Val>PlayerStats</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getBatStats()" FullName="com.github.mihirsinghal.cricket .PlayerStats.getBatStats()">
+            <Val>com.github.mihirsinghal.cricket.PlayerStats.getBatStats()</Val>
+            <Val>getBatStats()</Val>
+            <Val>5</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.31</Val>
+            <Val>False</Val>
+            <Val>PlayerStats</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getBowlStats()" FullName="com.github.mihirsinghal.cricket .PlayerStats.getBowlStats()">
+            <Val>com.github.mihirsinghal.cricket.PlayerStats.getBowlStats()</Val>
+            <Val>getBowlStats()</Val>
+            <Val>4</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0.31</Val>
+            <Val>False</Val>
+            <Val>PlayerStats</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="State()" FullName="com.github.mihirsinghal.cricket.State .State()">
+            <Val>com.github.mihirsinghal.cricket.State.State()</Val>
+            <Val>State()</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>State</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="State(String,int)" FullName="com.github.mihirsinghal.cricket.State .State(String,int)">
+            <Val>com.github.mihirsinghal.cricket.State.State(String,int)</Val>
+            <Val>State(String,int)</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.25</Val>
+            <Val>False</Val>
+            <Val>State</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="values()" FullName="com.github.mihirsinghal.cricket.State .values()">
+            <Val>com.github.mihirsinghal.cricket.State.values()</Val>
+            <Val>values()</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.28</Val>
+            <Val>False</Val>
+            <Val>State</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="valueOf(String)" FullName="com.github.mihirsinghal.cricket.State .valueOf(String)">
+            <Val>com.github.mihirsinghal.cricket.State.valueOf(String)</Val>
+            <Val>valueOf(String)</Val>
+            <Val>N/A</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>False</Val>
+            <Val>State</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="ordinal()" FullName="com.github.mihirsinghal.cricket.State .ordinal()">
+            <Val>com.github.mihirsinghal.cricket.State.ordinal()</Val>
+            <Val>ordinal()</Val>
+            <Val>N/A</Val>
+            <Val>0 method</Val>
+            <Val>0</Val>
+            <Val>8 methods</Val>
+            <Val>8</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1.45</Val>
+            <Val>False</Val>
+            <Val>State</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Team(String,String,String[])" FullName="com.github.mihirsinghal.cricket.Team .Team(String,String,String[])">
+            <Val>com.github.mihirsinghal.cricket.Team.Team(String,String,String[])</Val>
+            <Val>Team(String,String,String[])</Val>
+            <Val>2</Val>
+            <Val>4 methods</Val>
+            <Val>4</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>3</Val>
+            <Val>1</Val>
+            <Val>0.23</Val>
+            <Val>True</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Team(String,String,Player[],List)" FullName="com.github.mihirsinghal.cricket.Team .Team(String,String,Player[],List)">
+            <Val>com.github.mihirsinghal.cricket.Team.Team(String,String,Player[],List)</Val>
+            <Val>Team(String,String,Player[],List)</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>4</Val>
+            <Val>0</Val>
+            <Val>0.53</Val>
+            <Val>True</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="addPlayer(String)" FullName="com.github.mihirsinghal.cricket.Team .addPlayer(String)">
+            <Val>com.github.mihirsinghal.cricket.Team.addPlayer(String)</Val>
+            <Val>addPlayer(String)</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.23</Val>
+            <Val>False</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="containsPlayerWithName(String)" FullName="com.github.mihirsinghal.cricket.Team .containsPlayerWithName(String)">
+            <Val>com.github.mihirsinghal.cricket.Team.containsPlayerWithName(String)</Val>
+            <Val>containsPlayerWithName(String)</Val>
+            <Val>7</Val>
+            <Val>6 methods</Val>
+            <Val>6</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0.33</Val>
+            <Val>False</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getAllPlrs()" FullName="com.github.mihirsinghal.cricket.Team .getAllPlrs()">
+            <Val>com.github.mihirsinghal.cricket.Team.getAllPlrs()</Val>
+            <Val>getAllPlrs()</Val>
+            <Val>2</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0.2</Val>
+            <Val>False</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="getMainPlrsAsList()" FullName="com.github.mihirsinghal.cricket.Team .getMainPlrsAsList()">
+            <Val>com.github.mihirsinghal.cricket.Team.getMainPlrsAsList()</Val>
+            <Val>getMainPlrsAsList()</Val>
+            <Val>2</Val>
+            <Val>2 methods</Val>
+            <Val>2</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>2</Val>
+            <Val>0.18</Val>
+            <Val>False</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="switchPlrs(Player,Player)" FullName="com.github.mihirsinghal.cricket.Team .switchPlrs(Player,Player)">
+            <Val>com.github.mihirsinghal.cricket.Team.switchPlrs(Player,Player)</Val>
+            <Val>switchPlrs(Player,Player)</Val>
+            <Val>1</Val>
+            <Val>3 methods</Val>
+            <Val>3</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>2</Val>
+            <Val>0</Val>
+            <Val>0.23</Val>
+            <Val>False</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="removePlr(Player)" FullName="com.github.mihirsinghal.cricket.Team .removePlr(Player)">
+            <Val>com.github.mihirsinghal.cricket.Team.removePlr(Player)</Val>
+            <Val>removePlr(Player)</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1 method</Val>
+            <Val>1</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0.23</Val>
+            <Val>False</Val>
+            <Val>Team</Val>
+            <Val>Cricket</Val>
+            <Val>com.github.mihirsinghal.cricket</Val>
+          </Row>
+          <Row Name="Sum:" FullName="Stat">
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>446</Val>
+            <Val>0</Val>
+            <Val>776</Val>
+            <Val>0</Val>
+            <Val>220</Val>
+            <Val>109</Val>
+            <Val>169</Val>
+            <Val>69.04</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+          </Row>
+          <Row Name="Average:" FullName="Stat">
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>3.84</Val>
+            <Val>0</Val>
+            <Val>5.92</Val>
+            <Val>0</Val>
+            <Val>1.68</Val>
+            <Val>0.83</Val>
+            <Val>1.29</Val>
+            <Val>0.53</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+          </Row>
+          <Row Name="Minimum:" FullName="Stat">
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>1</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0.15</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+          </Row>
+          <Row Name="Maximum:" FullName="Stat">
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>42</Val>
+            <Val>0</Val>
+            <Val>42</Val>
+            <Val>0</Val>
+            <Val>17</Val>
+            <Val>7</Val>
+            <Val>15</Val>
+            <Val>4.53</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+          </Row>
+          <Row Name="Standard deviation:" FullName="Stat">
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>5.7</Val>
+            <Val>0</Val>
+            <Val>6.51</Val>
+            <Val>0</Val>
+            <Val>2.02</Val>
+            <Val>1.3</Val>
+            <Val>2.29</Val>
+            <Val>0.61</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+          </Row>
+          <Row Name="Variance:" FullName="Stat">
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>32.51</Val>
+            <Val>0</Val>
+            <Val>42.38</Val>
+            <Val>0</Val>
+            <Val>4.1</Val>
+            <Val>1.68</Val>
+            <Val>5.24</Val>
+            <Val>0.37</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+            <Val>0</Val>
+          </Row>
+        </Rows>
+      </Query>
+    </Group>
+    <Group Name="New Group #0" FullName="Project Rules \ New Group #0" GroupId="GroupOfRules229847492" NbQueries="0" NbErrors="0" NbWarns="0" NbWarnsCritical="0" Status="Not yet compiled" />
+  </Group>
+  <Group Name="Rules extracted from Source Code" FullName="Rules extracted from Source Code" GroupId="GroupOfRules1206142379" NbQueries="0" NbErrors="0" NbWarns="0" NbWarnsCritical="0" Status="Not yet compiled" />
+</RuleResult>

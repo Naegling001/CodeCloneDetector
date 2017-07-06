@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<PackagesMetrics>
+  <Package Package="com.github.mihirsinghal.cricket" NTypes="10" NILInstruction="10672" NbLinesOfCode="1646" NbLinesOfComment="0" PercentageComment="0" PercentageCoverage="-" AfferentCoupling="0" EfferentCoupling="7" />
+</PackagesMetrics>

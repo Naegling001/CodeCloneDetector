@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ProjectsMetrics>
+  <Project Project="junit v1.0" NTypes="1338" NAbstractTypes="90" NILInstructionInAsm="53546" NbLinesOfCodeInAsm="8032" NbLinesOfCommentInAsm="6245" PercentageCommentInAsm="43" PercentageCoverageInAsm="-" AfferentCoupling="0" EfferentCoupling="154" RelationalCohesion="3.04" Instability="1" Abstractness="0.07" DistFrMainSeq="0.05" NormDistFrMainSeq="0.07" />
+</ProjectsMetrics>

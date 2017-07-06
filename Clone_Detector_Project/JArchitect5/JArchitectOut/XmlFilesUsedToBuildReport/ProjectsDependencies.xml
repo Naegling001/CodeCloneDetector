@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ProjectDependencies>
+  <Dependencies_For Project="MISSING v1.0" />
+  <Dependencies_For Project="Cricket v1.0">
+    <DependsOn>
+      <DependsOn_Name>MISSING v1.0</DependsOn_Name>
+    </DependsOn>
+  </Dependencies_For>
+</ProjectDependencies>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ApplicationMetrics NAsm="1" NbSourceFiles="0" NbLinesOfCode="1646" NbLinesOfComment="202" PercentageComment="10" NType="10" NClass="9" NAbstractClass="0" NInterface="0" NValueType="0" NExceptionType="0" NAttributeType="0" NDelegateType="0" NEnumType="1" NGenericMethodsDefinition="0" NGenericTypesDefinition="0" NILInstruction="10672" NMethods="131" NFields="230" NPackages="1" NThirdPartyProjects="1" NThirdPartyPackages="7" NThirdPartyTypes="48" NThirdPartyMethods="136" NThirdPartyFields="7" PercentCodeCoverage="0" PercentPublicType="100" PercentPublicMethod="95.42" PercentClassWithAtLeastOnePublicField="90">
+  <PropertyOnInterface Occ="0" Avg="0" StdDev="0" MaxVal="-1" MaxName="" />
+  <MethodOnInterface Occ="0" Avg="0" StdDev="0" MaxVal="-1" MaxName="" />
+  <ArgOnMethodOnInterface Occ="0" Avg="0" StdDev="0" MaxVal="-1" MaxName="" />
+  <PublicPropertyOnClass Occ="9" Avg="0" StdDev="0" MaxVal="0" MaxName="com.github.mihirsinghal.cricket.Ball" />
+  <PublicMethodOnClass Occ="9" Avg="13.44" StdDev="14.35" MaxVal="46" MaxName="com.github.mihirsinghal.cricket.PlayCricket" />
+  <ArgOnPublicMethodOnClass Occ="121" Avg="0.82" StdDev="1.33" MaxVal="7" MaxName="com.github.mihirsinghal.cricket.Ball.Ball(String,String,String,String,String,String,Ball)" />
+  <ILInstructionInNonAbstractMethods Occ="131" Avg="81.47" StdDev="129.21" MaxVal="801" MaxName="com.github.mihirsinghal.cricket.PlayCricket.updateScore(boolean)" />
+  <TypeWithTheMostILInstruction Occ="9" Avg="1152.67" StdDev="2038.91" MaxVal="6718" MaxName="com.github.mihirsinghal.cricket.PlayCricket" />
+  <MethodCC Occ="131" Avg="3.87" StdDev="6.03" MaxVal="42" MaxName="com.github.mihirsinghal.cricket.PlayCricket.actionPerformed(ActionEvent)" />
+</ApplicationMetrics>

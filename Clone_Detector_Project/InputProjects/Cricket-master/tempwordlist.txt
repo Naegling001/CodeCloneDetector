@@ -1,0 +1,1 @@
+['midwicket', 'long-on', 'long-off', 'legspinner', 'c', 'b', 'fullish', 'non-striker']
